@@ -1,0 +1,175 @@
+.single {
+    .entry-header {
+        border-bottom: 1px solid $border-border;
+        padding: 0 0 2em 0;
+        text-align: center;
+
+        .wp-post-image {
+            margin-bottom: 1em;
+        }
+    }
+
+    .site-main > article {
+        padding: 2em;
+        margin-bottom: 2em;
+    }
+}
+
+/**
+ * Comments
+ */
+.logged-in-as > a:last-child {
+    color: #f44336;
+}
+#cancel-comment-reply-link {
+    background: $color__background-danger;
+    color: $white-color;
+    font-size: 0.8rem;
+    padding: 0.5em 1em;
+    font-weight: normal;
+}
+
+.comments-area {
+    margin: 2em 0 0 0;
+    padding: 0;
+}
+
+.comments-title {
+    margin-bottom: 0.5em;
+    background: $white-color;
+    padding: 0.5em 1em;
+}
+
+.pingback {
+    background: white;
+    padding: 0 1.5em 0.5em;
+    list-style-type: none;
+    font-size: 1rem;
+    &:first-child {
+        padding-top: 1em;
+    }
+}
+
+.comment {
+    list-style: none;
+    margin-bottom: 1em;
+
+    > article {
+        background: $white-color;
+        padding: 1.5em;
+    }
+
+    ol.children {
+        margin: 1em 0 0 0;
+    }
+}
+
+.comment-respond {
+    background: $white-color;
+    padding: 1em 1.5em;
+    margin-top: 1em;
+}
+
+.comment-list {
+    margin: 0;
+    padding: 0;
+    > .comment {
+        padding: 0;
+    }
+}
+
+.comment-meta {
+    margin-bottom: 1em;
+}
+
+.reply {
+    margin-top: 1em;
+}
+
+.reply,
+.comment-meta {
+    font-size: 0.9rem;
+}
+
+.comment-metadata {
+    font-weight: 600;
+    display: inline-block;
+    float: right;
+    margin-top: 0.5em;
+}
+
+.comment-author {
+    display: inline-block;
+
+	img {
+	    vertical-align: -1em;
+	    border-radius: 50%;
+    	margin-right: 0.5em;
+	}
+}
+
+@media all and ( min-width: 768px ) {
+    .comment-form-author,
+    .comment-form-url,
+    .comment-form-email {
+        width: 33.33%;
+        display: inline-block;
+        float: left;
+
+        label {
+            width: 100%;
+            display: inline-block;
+        }
+    }
+}
+
+/**
+ * Page Content
+ */
+.page-content {
+    .error404 &,
+    .search & {
+        background: $white-color;
+        padding: 0.5em 1.5em 1.5em 1.5em;
+    }
+}
+
+/**
+ * Navigation
+ */
+.link-title {
+    font-size: 1.5rem;
+}
+
+.link-caption {
+    display: block;
+    font-size: 0.9rem;
+    color: $color__link-caption;
+}
+
+.link-wrap {
+    display: inline-block;
+}
+
+.nav-next,
+.nav-previous {
+    .link-icon {
+        color: $color__link-caption;
+        vertical-align: 50%;
+    }
+}
+
+.nav-previous .link-icon {
+    padding-right: 0.5em;
+}
+
+.nav-next .link-icon {
+    padding-left: 0.5em;
+}
+
+/**
+ * => Password Protected
+ */
+.post-password-form {
+    text-align: center;
+}

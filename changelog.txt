@@ -1,0 +1,4 @@
+=== changelog ===
+
+= (11/Jan/2017) - 1.0.0 =
+* Initial release

@@ -1,0 +1,126 @@
+
+/**
+ * Site Header
+ */
+.site-header {
+    background: $white-color;
+    padding: 1em 0 0 0;
+}
+
+/**
+ * Branding
+ */
+.site-branding {
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+.site-title,
+.site-description {
+    margin: 0;
+}
+
+.site-title a {
+    font-size: 3rem;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+/**
+ * Navigation
+ */
+.menu-toggle {
+    border-bottom: 1px solid $color__link-hover;
+    width: 100%;
+    i {
+        margin-right: 0.5em;
+    }
+}
+
+
+.main-navigation {
+    background: $color__link;
+    color: $color__link-menu;
+
+    @media screen and (min-width: 768px) {
+        text-align: center;
+        float: none;
+
+        li {
+            float: none;
+            display: inline-block;
+        }
+
+        ul ul {
+            background: $color__link;
+
+            li {
+                text-align: left;
+                font-size: 0.9rem;
+            }
+        }
+
+        .menu-item-has-children {
+            &:after {
+                content: "\f107";
+                display: inline-block;
+                font: normal normal normal 14px/1 FontAwesome;
+                font-size: inherit;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 1rem;
+                right: 0.5em;
+
+                @media screen and (max-width: 768px) {
+                    top: 2em;
+                    right: 1.5em;
+                }
+            }
+            a {
+                padding-right: 1.8em;
+            }
+        }
+
+    }
+
+    a {
+        padding: 0 1em;
+        line-height: 4;
+        font-size: 1rem;
+        color: $color__link-menu;
+
+        &:hover {
+            background-color: $color__link-hover;
+        }
+    }
+    .current-menu-item a {
+        background-color: $color__link-hover;
+    }
+
+    @media screen and (max-width: 768px) {
+        .sub-menu a {
+            padding-left: 2em;
+        }
+        .sub-menu ul a {
+            padding-left: 3em;
+        }
+        .sub-menu ul ul a {
+            padding-left: 4em;
+        }
+    }
+}
+
+/**
+ * Custom Header
+ */
+.custom-headers {
+    text-align: center;
+    line-height: 0;
+    margin-left: auto;
+    margin-top: 3em;
+    margin-right: auto;
+}

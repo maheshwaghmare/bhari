@@ -1,0 +1,11 @@
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+table,
+td,
+th {
+    border: 1px solid $border-border;
+    padding: 0.3em;
+}

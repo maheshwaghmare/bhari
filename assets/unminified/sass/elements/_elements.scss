@@ -1,0 +1,69 @@
+html {
+	box-sizing: border-box;
+	@media screen and (max-width: 768px) {
+		font-size: 85%;
+	}
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	font-size: $font_size__body;
+	line-height: $font__line-height-body;
+	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+	
+	@media screen and (max-width: 768px) {
+		font-size: $mobile_font_size__body;
+	}
+}
+
+blockquote {
+	quotes: "" "";
+
+	&:before,
+	&:after {
+		content: "";
+	}
+}
+
+q {
+	quotes: "" "";
+
+	&:after,
+	&:before {
+		content: '"';
+		font-style: italic;
+	}
+
+	&:after {
+		padding-right: 0.2em;
+	}
+
+	&:before {
+		padding-left: 0.2em;
+	}
+}
+
+hr {
+	background-color: $color__background-hr;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+@import "lists";
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+figure {
+	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+@import "tables";
