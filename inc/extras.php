@@ -17,8 +17,8 @@ if( ! function_exists('bhari_strings') ) :
 		$defaults = apply_filters( 'bhari/default_strings', array(
 			'pagination-prev'        => ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-angle-left"></i> ' . __( ' Previous', 'bhari' ) : '' . __( ' Previous', 'bhari' ),
 			'pagination-next'        => ( BHARI_SUPPORT_FONTAWESOME ) ? __( 'Next', 'bhari' ) . ' <i class="fa fa-angle-right"></i>' : __( 'Next', 'bhari' ),
-			'single-pagination-prev' => ( BHARI_SUPPORT_FONTAWESOME ) ? __( '<span class="link-icon"><i class="fa fa-angle-left"></i></span><span class="link-wrap"><span class="link-caption">Previous Article</span><span class="link-title">%title</span></span>' ) : __( '<span class="link-wrap"><span class="link-caption">Previous Article</span><span class="link-title">%title</span></span>' ),
-			'single-pagination-next' => ( BHARI_SUPPORT_FONTAWESOME ) ? __( '<span class="link-wrap"><span class="link-caption">Next Article</span><span class="link-title">%title</span></span><span class="link-icon"><i class="fa fa-angle-right"></i></span>' ) : __( '<span class="link-wrap"><span class="link-caption">Next Article</span><span class="link-title">%title</span></span>' ),
+			'single-pagination-prev' => ( BHARI_SUPPORT_FONTAWESOME ) ? __( '<span class="link-icon"><i class="fa fa-angle-left"></i></span><span class="link-wrap"><span class="link-caption">Previous Article</span><span class="link-title">%title</span></span>', 'bhari' ) : __( '<span class="link-wrap"><span class="link-caption">Previous Article</span><span class="link-title">%title</span></span>', 'bhari' ),
+			'single-pagination-next' => ( BHARI_SUPPORT_FONTAWESOME ) ? __( '<span class="link-wrap"><span class="link-caption">Next Article</span><span class="link-title">%title</span></span><span class="link-icon"><i class="fa fa-angle-right"></i></span>', 'bhari' ) : __( '<span class="link-wrap"><span class="link-caption">Next Article</span><span class="link-title">%title</span></span>', 'bhari' ),
 		) );
 
 		if( array_key_exists($request_string, $defaults) ) {
@@ -129,7 +129,7 @@ if( ! function_exists('bhari_wp_head') ) :
 		?>
 		<style type="text/css">
 			.site-content {
-				max-width: <?php esc_attr_e( $content_width ); ?>px;
+				max-width: <?php echo esc_attr( $content_width ); ?>px;
 			}
 		</style>
 		<?php
