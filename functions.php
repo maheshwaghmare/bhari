@@ -78,7 +78,7 @@ if ( ! function_exists( 'bhari_setup' ) ) :
 		) ) );
 
 		//	Added editor style support
-		add_editor_style( 'assets/css/editor-style.css' );
+		add_editor_style( bhari_asset_url( 'editor-style', 'css' ) );
 
 		/**
 		 * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -147,9 +147,83 @@ if( ! function_exists('bhari_widgets_init') ) :
 endif;
 
 /**
+ * Generate asset URL depend on RTL & SCRIPT_DEBUG.
+ *
+ * For request bhari_asset_url( 'editor-style', 'css' );
+ * 
+ *	if( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
+ *		$asset_url = 'assets/unminified/css/editor-style.css'
+ *		if( is_rtl() ) {
+ *			$asset_url = assets/unminified/css/rtl/editor-style-rtl.css';
+ *		}
+ *	} else {
+ *		$asset_url = assets/minified/css/editor-style.css';
+ *		if( is_rtl() ) {
+ *			$asset_url = assets/minified/css/rtl/editor-style.rtl.css';
+ *		}
+ *	}
+ */
+
+if( ! function_exists( 'bhari_asset_url' ) ) :
+
+	/**
+	 * Generate asset URL depend on RTL & SCRIPT_DEBUG.
+	 *
+	 * @param  string  $handle   Asset ( CSS / JS ) file name.
+	 * @param  string  $type     Asset type either CSS or JS.
+	 * @param  boolean $is_admin Use argument for loading admin assets.
+	 * @return string            URL of asset depend on RTL & SCRIPT_DEBUG.
+	 */
+	function bhari_asset_url( $handle = '', $type = '', $has_rtl_support = true, $is_admin = false ) {
+
+		/**
+		 * Load admin assets
+		 */
+		if( $is_admin ) {
+			$assets_dir = '/inc/assets/';
+		} else {
+			$assets_dir = '/assets/';
+		}
+
+		/**
+		 * Load unminified assets
+		 */
+		if( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
+
+			//	For request bhari_asset_url( 'editor-style', 'css' );
+			//	Here, It generate file URL 'assets/unminified/css/editor-style.css'
+			$asset_url = $assets_dir . 'unminified/'.$type.'/'.$handle.'.'.$type.'';
+
+			/**
+			 * Load unminified RTL assets
+			 */
+			if( $has_rtl_support && is_rtl() ) {
+				$asset_url = $assets_dir . 'unminified/'.$type.'/rtl/'.$handle.'-rtl.'.$type.'';
+			}
+
+		/**
+		 * Load minified assets
+		 */
+		} else {
+
+			$asset_url = $assets_dir . 'minified/'.$type.'/'.$handle.'.min.'.$type.'';
+
+			/**
+			 * Load minified RTL assets
+			 */
+			if( $has_rtl_support && is_rtl() ) {
+				$asset_url = $assets_dir . 'minified/'.$type.'/rtl/'.$handle.'-rtl.min.'.$type.'';
+			}
+		}
+
+		return get_template_directory_uri() . $asset_url;
+	}
+endif;
+
+/**
  * Enqueue scripts and styles.
  */
-if( ! function_exists('bhari_scripts') ) :
+if( ! function_exists( 'bhari_scripts' ) ) :
 	function bhari_scripts() {
 
 		/**
@@ -160,20 +234,16 @@ if( ! function_exists('bhari_scripts') ) :
 			wp_enqueue_script( 'bhari-navigation', get_template_directory_uri() . '/assets/unminified/js/navigation.js', array(), '20151215', true );
 			wp_enqueue_script( 'bhari-skip-link-focus-fix', get_template_directory_uri() . '/assets/unminified/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-			if( BHARI_SUPPORT_FONTAWESOME ) {
-				wp_enqueue_style( 'bhari-font-awesome', get_template_directory_uri() . '/assets/unminified/css/font-awesome.css' );
-			}
-
 		/**
 		 * Minified + Combined
 		 */
 		} else {
 			wp_enqueue_style( 'bhari-core-css', get_template_directory_uri() . '/assets/minified/css/bhari.min.css' );
 			wp_enqueue_script( 'bhari-core-js', get_template_directory_uri() . '/assets/minified/js/bhari.min.js', array(), '20151215', true );
+		}
 
-			if( BHARI_SUPPORT_FONTAWESOME ) {
-				wp_enqueue_style( 'bhari-font-awesome', get_template_directory_uri() . '/assets/minified/css/font-awesome.min.css' );
-			}
+		if( BHARI_SUPPORT_FONTAWESOME ) {
+			wp_enqueue_style( 'bhari-font-awesome', bhari_asset_url( 'font-awesome', 'css' ) );
 		}
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
