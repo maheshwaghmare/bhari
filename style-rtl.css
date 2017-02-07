@@ -620,7 +620,7 @@ a:hover, a:active {
     right: 100%;
   }
   .main-navigation ul ul a {
-    width: 200px;
+    width: 300px;
   }
 }
 
@@ -659,7 +659,7 @@ a:hover, a:active {
   overflow: hidden;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .comment-navigation .nav-previous,
   .posts-navigation .nav-previous,
   .post-navigation .nav-previous {
@@ -672,6 +672,14 @@ a:hover, a:active {
     float: left;
     text-align: left;
     width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .comment-navigation .nav-previous,
+  .posts-navigation .nav-previous,
+  .post-navigation .nav-previous {
+    margin-bottom: 1em;
   }
 }
 
@@ -1407,14 +1415,21 @@ input.search-submit {
 
 @media all and (min-width: 768px) {
   .comment-form-author,
+  .comment-form-email {
+    padding-left: 1em;
+  }
+  .comment-form-author,
   .comment-form-url,
   .comment-form-email {
     width: 33.33%;
     display: inline-block;
     float: right;
   }
+  .comment-form-author input,
   .comment-form-author label,
+  .comment-form-url input,
   .comment-form-url label,
+  .comment-form-email input,
   .comment-form-email label {
     width: 100%;
     display: inline-block;

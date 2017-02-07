@@ -110,12 +110,18 @@
 
 @media all and ( min-width: 768px ) {
     .comment-form-author,
+    .comment-form-email {
+        padding-right: 1em;
+    }
+
+    .comment-form-author,
     .comment-form-url,
     .comment-form-email {
         width: 33.33%;
         display: inline-block;
         float: left;
 
+        input,
         label {
             width: 100%;
             display: inline-block;

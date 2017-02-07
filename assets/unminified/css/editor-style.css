@@ -609,7 +609,7 @@ a:hover, a:active {
     left: 100%;
   }
   .main-navigation ul ul a {
-    width: 200px;
+    width: 300px;
   }
 }
 
@@ -648,7 +648,7 @@ a:hover, a:active {
   overflow: hidden;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .comment-navigation .nav-previous,
   .posts-navigation .nav-previous,
   .post-navigation .nav-previous {
@@ -661,6 +661,14 @@ a:hover, a:active {
     float: right;
     text-align: right;
     width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .comment-navigation .nav-previous,
+  .posts-navigation .nav-previous,
+  .post-navigation .nav-previous {
+    margin-bottom: 1em;
   }
 }
 

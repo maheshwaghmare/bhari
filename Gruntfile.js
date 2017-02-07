@@ -226,6 +226,7 @@ module.exports = function (grunt) {
                     '!*.map',
                     '!.gitignore',
                     '!phpunit.xml',
+                    '!README.md',
                     '!CONTRIBUTING.md',
                     '!codesniffer.ruleset.xml',
 

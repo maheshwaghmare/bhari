@@ -1,4 +1,4 @@
 === changelog ===
 
-= (11/Jan/2017) - 1.0.0 =
+= (8/Feb/2017) - 1.0.0 =
 * Initial release
