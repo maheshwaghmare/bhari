@@ -231,10 +231,11 @@ module.exports = function (grunt) {
                     '!codesniffer.ruleset.xml',
 
                     /**
-                     * Disable for master
+                     * Are you developer? Then add below files.
                      */
                     '!Gruntfile.js',
                     '!package.json',
+                    '!assets/unminified/sass/**',
                 ],
                 dest: 'bhari/'
             }
