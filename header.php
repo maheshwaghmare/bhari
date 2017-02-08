@@ -34,7 +34,7 @@
 			endif;
 
 			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
+if ( $description || is_customize_preview() ) : ?>
 				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
 			<?php
 			endif; ?>
@@ -42,7 +42,7 @@
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-				<?php if( BHARI_SUPPORT_FONTAWESOME ) : ?>
+				<?php if ( BHARI_SUPPORT_FONTAWESOME ) : ?>
 					<i class="fa fa-reorder"></i>
 				<?php endif; ?>
 				<?php esc_html_e( 'Primary Menu', 'bhari' ); ?></button>

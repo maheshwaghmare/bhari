@@ -17,7 +17,7 @@ get_header(); ?>
 
 			<header class="page-header">
 				<h1 class="page-title">
-				<?php if( BHARI_SUPPORT_FONTAWESOME ) : ?>
+				<?php if ( BHARI_SUPPORT_FONTAWESOME ) : ?>
 					<i class="fa fa-search"></i>
 				<?php endif; ?>
 				<?php echo sprintf( esc_html__( 'Search Results for: %s', 'bhari' ), '<span>' . get_search_query() . '</span>' ); ?>

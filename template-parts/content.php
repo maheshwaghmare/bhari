@@ -16,7 +16,7 @@
 		<?php
 		if ( is_single() ) :
 
-			if( has_post_thumbnail( get_the_ID() ) ) : ?>
+			if ( has_post_thumbnail( get_the_ID() ) ) : ?>
 				<div class="entry-thumbnail">
 					<?php the_post_thumbnail(); ?>
 				</div><!-- .entry-thumbnail -->	
@@ -25,7 +25,7 @@
 
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
-			if( has_post_thumbnail( get_the_ID() ) ) : ?>
+			if ( has_post_thumbnail( get_the_ID() ) ) : ?>
 				<div class="entry-thumbnail">
 					<?php the_post_thumbnail(); ?>
 				</div><!-- .entry-thumbnail -->	
@@ -38,10 +38,10 @@
 
 			/**
 			 * Print post meta
-			 * 
+			 *
 			 * @see  bhari_post_meta($meta_list, $before, $after)
 			 */
-			bhari_post_meta( array('author', 'date', 'category', 'tags'), '<div class="entry-meta">', '</div><!-- .entry-meta -->' );
+			bhari_post_meta( array( 'author', 'date', 'category', 'tags' ), '<div class="entry-meta">', '</div><!-- .entry-meta -->' );
 
 		endif;
 		?>

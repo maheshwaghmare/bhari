@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Bhari Theme Customizer.
  *
@@ -9,9 +8,12 @@
 /**
  * Set default options
  */
-if( ! function_exists('bhari_get_defaults') ) :
-	function bhari_get_defaults()
-	{
+if ( ! function_exists( 'bhari_get_defaults' ) ) :
+
+	/**
+	 * Set default options
+	 */
+	function bhari_get_defaults() {
 
 		$bhari_defaults = array(
 
@@ -29,19 +31,23 @@ if( ! function_exists('bhari_get_defaults') ) :
 			'sidebar-single'  => 'layout-no-sidebar',
 			'sidebar-archive' => 'layout-content-sidebar',
 		);
-		
-		return apply_filters( 'bhari/theme_defaults', $bhari_defaults );
+
+		return apply_filters( 'bhari_theme_defaults', $bhari_defaults );
 	}
+
 endif;
 
 /**
  * Add postMessage support for site title and description for the Theme Customizer.
- *
- * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-if( ! function_exists('bhari_customize_register') ) :
-	function bhari_customize_register( $wp_customize )
-	{
+if ( ! function_exists( 'bhari_customize_register' ) ) :
+
+	/**
+	 * Add postMessage support for site title and description for the Theme Customizer.
+	 *
+	 * @param object $wp_customize Theme Customizer object.
+	 */
+	function bhari_customize_register( $wp_customize ) {
 
 		/**
 		 * Override defaults
@@ -87,13 +93,13 @@ if( ! function_exists('bhari_customize_register') ) :
 		$wp_customize->add_section( 'bhari_section_container', array(
 			'title'      => __( 'Container', 'bhari' ),
 			'capability' => 'edit_theme_options',
-			'panel'      => 'bhari_panel_layout'
+			'panel'      => 'bhari_panel_layout',
 		) );
 
 		$wp_customize->add_section( 'bhari_sidebars', array(
 			'title'      => __( 'Sidebars', 'bhari' ),
 			'capability' => 'edit_theme_options',
-			'panel'      => 'bhari_panel_layout'
+			'panel'      => 'bhari_panel_layout',
 		) );
 
 		/**
@@ -107,12 +113,12 @@ if( ! function_exists('bhari_customize_register') ) :
 			'default'           => $defaults['container-width-archive'],
 			'type'              => 'option',
 			'sanitize_callback' => array( 'Bhari_Customize_Sanitize', '_sanitize_integer' ),
-			'transport'         => 'postMessage'
+			'transport'         => 'postMessage',
 		) );
 		$wp_customize->add_control( new Bhari_Customize_Width_Slider_Control( $wp_customize, 'bhari[container-width-archive]', array(
-			'label'           => __('Archive', 'bhari'),
-			'description'     => __('Container width for archive pages.', 'bhari'),
-			'tooltip'         => __('Container width is applied for the blog, category, tag and custom post type archive pages.', 'bhari'),
+			'label'           => __( 'Archive', 'bhari' ),
+			'description'     => __( 'Container width for archive pages.', 'bhari' ),
+			'tooltip'         => __( 'Container width is applied for the blog, category, tag and custom post type archive pages.', 'bhari' ),
 			'section'         => 'bhari_section_container',
 			'priority'        => 0,
 			'type'            => 'bhari-range-slider',
@@ -132,12 +138,12 @@ if( ! function_exists('bhari_customize_register') ) :
 			'default'           => $defaults['container-width-single'],
 			'type'              => 'option',
 			'sanitize_callback' => array( 'Bhari_Customize_Sanitize', '_sanitize_integer' ),
-			'transport'         => 'postMessage'
+			'transport'         => 'postMessage',
 		) );
 		$wp_customize->add_control( new Bhari_Customize_Width_Slider_Control( $wp_customize, 'bhari[container-width-single]', array(
-			'label'           => __('Single Post', 'bhari'),
-			'description'     => __('Container width for the single post.', 'bhari'),
-			'tooltip'         => __('Container width is applied for the single post.', 'bhari'),
+			'label'           => __( 'Single Post', 'bhari' ),
+			'description'     => __( 'Container width for the single post.', 'bhari' ),
+			'tooltip'         => __( 'Container width is applied for the single post.', 'bhari' ),
 			'section'         => 'bhari_section_container',
 			'priority'        => 0,
 			'type'            => 'bhari-range-slider',
@@ -157,12 +163,12 @@ if( ! function_exists('bhari_customize_register') ) :
 			'default'           => $defaults['container-width-page'],
 			'type'              => 'option',
 			'sanitize_callback' => array( 'Bhari_Customize_Sanitize', '_sanitize_integer' ),
-			'transport'         => 'postMessage'
+			'transport'         => 'postMessage',
 		) );
 		$wp_customize->add_control( new Bhari_Customize_Width_Slider_Control( $wp_customize, 'bhari[container-width-page]', array(
-			'label'           => __('Page', 'bhari'),
-			'description'     => __('Container width for the page.', 'bhari'),
-			'tooltip'         => __('Container width is applied for the pages.', 'bhari'),
+			'label'           => __( 'Page', 'bhari' ),
+			'description'     => __( 'Container width for the page.', 'bhari' ),
+			'tooltip'         => __( 'Container width is applied for the pages.', 'bhari' ),
 			'active_callback' => array( 'Bhari_Customize_Callback', '_sidebar_page' ),
 			'section'         => 'bhari_section_container',
 			'priority'        => 0,
@@ -252,54 +258,66 @@ if( ! function_exists('bhari_customize_register') ) :
 endif;
 
 /**
- * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
+ * Customizer Preview JS
  */
 if ( ! function_exists( 'bhari_customize_preview_js' ) ) :
-	function bhari_customize_preview_js()
-	{
 
-		if( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
+	/**
+	 * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
+	 */
+	function bhari_customize_preview_js() {
+
+		if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
 			wp_enqueue_script( 'bhari-customizer-js', get_template_directory_uri() . '/inc/assets/unminified/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 		} else {
 			wp_enqueue_script( 'bhari-customizer-js', get_template_directory_uri() . '/inc/assets/minified/js/customizer.min.js', array( 'customize-preview' ), '20151215', true );
 		}
 	}
 	add_action( 'customize_preview_init', 'bhari_customize_preview_js' );
+
 endif;
 
 /**
  * Add CSS for our controls
- *
- * @since 1.0.0
  */
 if ( ! function_exists( 'bhari_customizer_controls_css' ) ) :
-	function bhari_customizer_controls_css()
-	{
-		if( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
-			wp_enqueue_style( 'bhari-customizer-controls-css', get_template_directory_uri().'/inc/assets/unminified/css/customizer.css', array() );
+
+	/**
+	 * Add CSS for our controls
+	 *
+	 * @since 1.0.0
+	 */
+	function bhari_customizer_controls_css() {
+		if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
+			wp_enqueue_style( 'bhari-customizer-controls-css', get_template_directory_uri() . '/inc/assets/unminified/css/customizer.css', array() );
 		} else {
-			wp_enqueue_style( 'bhari-customizer-controls-css', get_template_directory_uri().'/inc/assets/minified/css/customizer.min.css', array() );
+			wp_enqueue_style( 'bhari-customizer-controls-css', get_template_directory_uri() . '/inc/assets/minified/css/customizer.min.css', array() );
 		}
 	}
 	add_action( 'customize_controls_enqueue_scripts', 'bhari_customizer_controls_css' );
+
 endif;
 
 /**
- * Generate Dynamic CSS from customizer option's
+ * Generate Dynamic CSS
  */
 if ( ! function_exists( 'bhari_dynamic_css' ) ) :
+
+	/**
+	 * Generate Dynamic CSS from customizer option's
+	 */
 	function bhari_dynamic_css() {
 
 		$space = ' ';
 
-		// Start the magic
-		$visual_css = array (
+		// Generate CSS.
+		$parse_css = array(
 
 			'.error404 .site-content,
 			 .page .site-content,
 			 .error404 .custom-headers,
 			 .page .custom-headers' => array(
-			 	'max-width' => bhari_get_option('container-width-page') . 'px',
+			 	'max-width' => bhari_get_option( 'container-width-page' ) . 'px',
 			),
 
 			'.archive .site-content,
@@ -308,41 +326,48 @@ if ( ! function_exists( 'bhari_dynamic_css' ) ) :
 			 .archive .custom-headers,
 			 .search .custom-headers,
 			 .blog .custom-headers' => array(
-			 	'max-width' => bhari_get_option('container-width-archive') . 'px',
+			 	'max-width' => bhari_get_option( 'container-width-archive' ) . 'px',
 			),
 
 			'.single .site-content,
 			 .single .custom-headers' => array(
-			 	'max-width' => bhari_get_option('container-width-single') . 'px',
+			 	'max-width' => bhari_get_option( 'container-width-single' ) . 'px',
 			),
 
 		);
-		
-		// Output the above CSS
+
+		// Output the above CSS.
 		$output = '';
-		foreach($visual_css as $k => $properties) {
-			if(!count($properties))
+
+		foreach ( $parse_css as $selector => $properties ) {
+
+			if ( ! count( $properties ) ) {
 				continue;
-
-			$temporary_output = $k . ' {';
-			$elements_added = 0;
-
-			foreach($properties as $p => $v) {
-				if(empty($v))
-					continue;
-
-				$elements_added++;
-				$temporary_output .= $p . ': ' . $v . '; ';
 			}
 
-			$temporary_output .= "}";
+			$temporary_output = $selector . ' {';
+			$elements_added   = 0;
 
-			if($elements_added > 0)
+			foreach ( $properties as $property => $css_value ) {
+				if ( empty( $css_value ) ) {
+					continue;
+				}
+
+				$elements_added++;
+				$temporary_output .= $property . ': ' . $css_value . '; ';
+			}
+
+			$temporary_output .= '}';
+
+			if ( 0 < $elements_added ) {
 				$output .= $temporary_output;
+			}
 		}
-		$output = str_replace(array("\r", "\n", "\t"), '', $output);
+
+		$output = str_replace( array( "\r", "\n", "\t" ), '', $output );
 
 		wp_add_inline_style( 'bhari-core-css', $output );
 	}
 	add_action( 'wp_enqueue_scripts', 'bhari_dynamic_css' );
+
 endif;

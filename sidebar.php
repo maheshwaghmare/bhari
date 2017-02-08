@@ -6,6 +6,7 @@
  *
  * @package Bhari
  */
+
 ?>
 
 <aside id="secondary-right" class="widget-area" role="complementary">

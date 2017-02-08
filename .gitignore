@@ -12,3 +12,7 @@ node_modules/
 
 # Skip package file from versoning
 bhari.zip
+
+# Avoid PHPCS report files
+phpcs-summary.log
+phpcs-full.log

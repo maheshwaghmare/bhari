@@ -15,7 +15,7 @@ get_header(); ?>
 			<section class="error-404 not-found">
 				<header class="page-header">
 					<h1 class="page-title">
-						<?php if( BHARI_SUPPORT_FONTAWESOME ) : ?>
+						<?php if ( BHARI_SUPPORT_FONTAWESOME ) : ?>
 							<i class="fa fa-window-close-o"></i>
 						<?php endif; ?>
 						<?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'bhari' ); ?>
