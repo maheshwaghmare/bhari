@@ -130,18 +130,10 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'Bhari_Customize_
 		 * Control assets
 		 */
 		public function enqueue() {
-
-			if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
-				wp_enqueue_script( 'bhari-customizer-control-slider-js', get_template_directory_uri() . '/inc/assets/unminified/js/customizer-control-slider.js', array( 'jquery-ui-core', 'jquery-ui-slider', 'customize-controls' ) );
-				wp_enqueue_style( 'bhari-customizer-control-slider-css', get_template_directory_uri() . '/inc/assets/unminified/css/customizer-control-slider.css' );
-				wp_enqueue_style( 'jquery-ui-slider', get_template_directory_uri() . '/inc/assets/unminified/css/jquery-ui-structure.css' );
-				wp_enqueue_style( 'jquery-ui-slider-theme', get_template_directory_uri() . '/inc/assets/unminified/css/jquery-ui-theme.css' );
-			} else {
-				wp_enqueue_script( 'bhari-customizer-control-slider-js', get_template_directory_uri() . '/inc/assets/minified/js/customizer-control-slider.min.js', array( 'jquery-ui-core', 'jquery-ui-slider', 'customize-controls' ) );
-				wp_enqueue_style( 'bhari-customizer-control-slider-css', get_template_directory_uri() . '/inc/assets/minified/css/customizer-control-slider.min.css' );
-				wp_enqueue_style( 'jquery-ui-slider', get_template_directory_uri() . '/inc/assets/minified/css/jquery-ui-structure.min.css' );
-				wp_enqueue_style( 'jquery-ui-slider-theme', get_template_directory_uri() . '/inc/assets/minified/css/jquery-ui-theme.min.css' );
-			}
+			wp_enqueue_script( 'bhari-customizer-control-slider-js', bhari_asset_url( 'customizer-control-slider', 'js', '', true ), array( 'jquery-ui-core', 'jquery-ui-slider', 'customize-controls' ) );
+			wp_enqueue_style( 'bhari-customizer-control-slider-css', bhari_asset_url( 'customizer-control-slider', 'css', '', true ) );
+			wp_enqueue_style( 'jquery-ui-slider', bhari_asset_url( 'jquery-ui-structure', 'css', '', true ) );
+			wp_enqueue_style( 'jquery-ui-slider-theme', bhari_asset_url( 'jquery-ui-theme', 'css', '', true ) );
 		}
 	}
 endif;

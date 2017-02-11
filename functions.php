@@ -211,16 +211,21 @@ endif;
  * E.g. For request bhari_asset_url( 'editor-style', 'css' ); 
  * Load one of the below file depends on RTL & SCRIPTS_DEBUG check.
  * 
- * /assets/unminified/css/editor-style.cs
- * /assets/unminified/css/rtl/editor-style-rtl.css
- * /assets/minified/css/editor-style.css
- * /assets/minified/css/rtl/editor-style.rtl.css
+ * NOTE: RTL support is now just for ONLY theme style.css file.
+ *
+ *	bhari.min.css 		Load normally.
+ *	bhari.min-rtl.css 	Load if RTL is on.
+ *
+ *	style.css 			Load if SCRIPT_DEBUG is true.
+ *	style-rtl.css 		Load if SCRIPT_DEBUG & RTL are true.
  */
 
 if ( ! function_exists( 'bhari_asset_url' ) ) :
 
 	/**
 	 * Generate asset URL depend on RTL & SCRIPT_DEBUG.
+	 *
+	 * How to use?
 	 *
 	 * @param  string  $handle   Asset ( CSS / JS ) file name.
 	 * @param  string  $type     Asset type either CSS or JS.
@@ -285,8 +290,13 @@ if ( ! function_exists( 'bhari_scripts' ) ) :
 	function bhari_scripts() {
 
 		/**
-		 * Minified
+		 * Theme Assets
 		 */
+		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+			wp_enqueue_script( 'comment-reply' );
+		}
+
+		// Unminified & Individual files.
 		if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
 
 			// CSS.
@@ -296,9 +306,7 @@ if ( ! function_exists( 'bhari_scripts' ) ) :
 			wp_enqueue_script( 'bhari-navigation', get_template_directory_uri() . '/assets/unminified/js/navigation.js', array(), '20151215', true );
 			wp_enqueue_script( 'bhari-skip-link-focus-fix', get_template_directory_uri() . '/assets/unminified/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-		/**
-		 * Minified + Combined
-		 */
+		// Minified & Combined single files.
 		} else {
 
 			// CSS.
@@ -308,13 +316,13 @@ if ( ! function_exists( 'bhari_scripts' ) ) :
 			wp_enqueue_script( 'bhari-core-js', get_template_directory_uri() . '/assets/minified/js/bhari.min.js', array(), '20151215', true );
 		}
 
+		/**
+		 * External assets.
+		 */
 		if ( BHARI_SUPPORT_FONTAWESOME ) {
 			wp_enqueue_style( 'bhari-font-awesome', bhari_asset_url( 'font-awesome', 'css' ) );
 		}
 
-		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-			wp_enqueue_script( 'comment-reply' );
-		}
 	}
 	add_action( 'wp_enqueue_scripts', 'bhari_scripts' );
 endif;

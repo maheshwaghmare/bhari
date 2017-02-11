@@ -38,21 +38,34 @@ module.exports = function (grunt) {
                     },
 
                     /**
-                     * All /unminified/ ** /.css
+                     * bhari.min.css => bhari.min-rtl.css
                      */
                     {
                         expand: true,
-                        cwd: 'assets/unminified/css/',
+                        cwd: 'assets/css/',
                         src: [
-                            '*.css',
-                            '!*-rtl.css',
-
-                            //  avoid
-                            '!font-awesome.css',
+                            'bhari.min.css',
                         ],
-                        dest: 'assets/unminified/css/rtl', 
-                        ext: '-rtl.css'
+                        dest: 'assets/css/rtl', 
+                        ext: '.min-rtl.css'
                     },
+
+                    /**
+                     * All /unminified/ ** /.css
+                     */
+                    // {
+                    //     expand: true,
+                    //     cwd: 'assets/unminified/css/',
+                    //     src: [
+                    //         '*.css',
+                    //         '!*-rtl.css',
+
+                    //         //  avoid
+                    //         '!font-awesome.css',
+                    //     ],
+                    //     dest: 'assets/unminified/css/rtl', 
+                    //     ext: '-rtl.css'
+                    // },
 
                 ]
             }
@@ -70,17 +83,17 @@ module.exports = function (grunt) {
                 files: [
 
                     /**
-                     * style.css => assets/unminified/sass/style.scss
+                     * style.css
                      */
                     {
-                        'style.css': 'assets/unminified/sass/style.scss'
+                        'style.css': 'assets/sass/style.scss'
                     },
 
                     /**
-                     * assets/unminified/css/editor-style.css => assets/unminified/sass/editor-style.scss
+                     * editor-style.css
                      */
                     {
-                        'assets/unminified/css/editor-style.css': 'assets/unminified/sass/editor-style.scss'
+                        'assets/css/editor-style.css': 'assets/sass/editor-style.scss'
                     },
                 ]
             }
@@ -126,21 +139,20 @@ module.exports = function (grunt) {
                 /**
                  * FRONTEND
                  */
-                { // ALL *.min.js
+                {  // ALL *.min.js
                     expand: true,
                     src: [
                         '*.js'
                     ],
-                    dest: 'assets/minified/js',
-                    cwd: 'assets/unminified/js',
+                    dest: 'assets/js/min',
+                    cwd: 'assets/js',
                     ext: '.min.js'
                 },
-                { // bhari.min.js
+                { // bhari.min.js from /assets/js/min/**.js
                     src: [
-                        'assets/minified/js/navigation.min.js',
-                        'assets/minified/js/skip-link-focus-fix.min.js',
+                        'assets/js/*.js',
                     ],
-                    dest: 'assets/minified/js/bhari.min.js',
+                    dest: 'assets/js/min/bhari.min.js',
                 },
 
                 /**
@@ -151,8 +163,8 @@ module.exports = function (grunt) {
                     src: [
                         '*.js'
                     ],
-                    dest: 'inc/assets/minified/js',
-                    cwd: 'inc/assets/unminified/js',
+                    dest: 'inc/assets/js/min',
+                    cwd: 'inc/assets/js',
                     ext: '.min.js'
                 } ]
             }
@@ -174,17 +186,17 @@ module.exports = function (grunt) {
                 { //  ALL *.min.css
                     expand: true,
                     src: [
-                        '**/*.css'
+                        '*.css'
                     ],
-                    dest: 'assets/minified/css',
-                    cwd: 'assets/unminified/css',
+                    dest: 'assets/css/min',
+                    cwd: 'assets/css',
                     ext: '.min.css'
                 },
                 {  //  bhari.min.css
                     src: [
                         'style.css'
                     ],
-                    dest: 'assets/minified/css/bhari.min.css'
+                    dest: 'assets/css/min/bhari.min.css'
                 },
 
                 /**
@@ -195,8 +207,8 @@ module.exports = function (grunt) {
                     src: [
                         '*.css'
                     ],
-                    dest: 'inc/assets/minified/css',
-                    cwd: 'inc/assets/unminified/css',
+                    dest: 'inc/assets/css/min',
+                    cwd: 'inc/assets/css',
                     ext: '.min.css'
                 }]
             }
@@ -235,7 +247,7 @@ module.exports = function (grunt) {
                      */
                     '!Gruntfile.js',
                     '!package.json',
-                    '!assets/unminified/sass/**',
+                    '!assets/sass/**',
                 ],
                 dest: 'bhari/'
             }
