@@ -249,15 +249,14 @@ if ( ! function_exists( 'bhari_asset_url' ) ) :
 		 */
 		if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
 
-			// For request bhari_asset_url( 'editor-style', 'css' );
-			// Here, It generate file URL 'assets/unminified/css/editor-style.css'.
-			$asset_url = $assets_dir . 'unminified/' . $type . '/' . $handle . '.' . $type . '';
+			// Load unminified assets
+			$asset_url = $assets_dir . '/' . $type . '/' . $handle . '.' . $type . '';
 
 			/**
 			 * Load unminified RTL assets
 			 */
 			if ( $has_rtl_support && is_rtl() ) {
-				$asset_url = $assets_dir . 'unminified/' . $type . '/rtl/' . $handle . '-rtl.' . $type . '';
+				$asset_url = $assets_dir . '/' . $type . '/rtl/' . $handle . '-rtl.' . $type . '';
 			}
 
 		/**
@@ -265,13 +264,13 @@ if ( ! function_exists( 'bhari_asset_url' ) ) :
 		 */
 		} else {
 
-			$asset_url = $assets_dir . 'minified/' . $type . '/' . $handle . '.min.' . $type . '';
+			$asset_url = $assets_dir . '/' . $type . '/min/' . $handle . '.min.' . $type . '';
 
 			/**
 			 * Load minified RTL assets
 			 */
 			if ( $has_rtl_support && is_rtl() ) {
-				$asset_url = $assets_dir . 'minified/' . $type . '/rtl/' . $handle . '-rtl.min.' . $type . '';
+				$asset_url = $assets_dir . '/' . $type . '/min/rtl/' . $handle . '-rtl.min.' . $type . '';
 			}
 		}
 
@@ -303,17 +302,17 @@ if ( ! function_exists( 'bhari_scripts' ) ) :
 			wp_enqueue_style( 'bhari-core-css', get_stylesheet_uri() );
 
 			// JS.
-			wp_enqueue_script( 'bhari-navigation', get_template_directory_uri() . '/assets/unminified/js/navigation.js', array(), '20151215', true );
-			wp_enqueue_script( 'bhari-skip-link-focus-fix', get_template_directory_uri() . '/assets/unminified/js/skip-link-focus-fix.js', array(), '20151215', true );
+			wp_enqueue_script( 'bhari-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20151215', true );
+			wp_enqueue_script( 'bhari-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 		// Minified & Combined single files.
 		} else {
 
 			// CSS.
-			wp_enqueue_style( 'bhari-core-css', get_template_directory_uri() . '/assets/minified/css/bhari.min.css' );
+			wp_enqueue_style( 'bhari-core-css', get_template_directory_uri() . '/assets/css/min/bhari.min.css' );
 
 			// JS.
-			wp_enqueue_script( 'bhari-core-js', get_template_directory_uri() . '/assets/minified/js/bhari.min.js', array(), '20151215', true );
+			wp_enqueue_script( 'bhari-core-js', get_template_directory_uri() . '/assets/js/min/bhari.min.js', array(), '20151215', true );
 		}
 
 		/**

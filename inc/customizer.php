@@ -266,12 +266,7 @@ if ( ! function_exists( 'bhari_customize_preview_js' ) ) :
 	 * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
 	 */
 	function bhari_customize_preview_js() {
-
-		if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
-			wp_enqueue_script( 'bhari-customizer-js', get_template_directory_uri() . '/inc/assets/unminified/js/customizer.js', array( 'customize-preview' ), '20151215', true );
-		} else {
-			wp_enqueue_script( 'bhari-customizer-js', get_template_directory_uri() . '/inc/assets/minified/js/customizer.min.js', array( 'customize-preview' ), '20151215', true );
-		}
+		wp_enqueue_script( 'bhari-customizer-js', bhari_asset_url( 'customizer', 'js', '', true ), array( 'customize-preview' ), '20151215', true );
 	}
 	add_action( 'customize_preview_init', 'bhari_customize_preview_js' );
 
@@ -288,11 +283,7 @@ if ( ! function_exists( 'bhari_customizer_controls_css' ) ) :
 	 * @since 1.0.0
 	 */
 	function bhari_customizer_controls_css() {
-		if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
-			wp_enqueue_style( 'bhari-customizer-controls-css', get_template_directory_uri() . '/inc/assets/unminified/css/customizer.css', array() );
-		} else {
-			wp_enqueue_style( 'bhari-customizer-controls-css', get_template_directory_uri() . '/inc/assets/minified/css/customizer.min.css', array() );
-		}
+		wp_enqueue_style( 'bhari-customizer-controls-css', bhari_asset_url( 'customizer', 'css', '', true ) );
 	}
 	add_action( 'customize_controls_enqueue_scripts', 'bhari_customizer_controls_css' );
 
