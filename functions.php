@@ -13,6 +13,57 @@
 define( 'BHARI_SUPPORT_FONTAWESOME', true );
 define( 'BHARI_POSTMETA_SUPPORT_AUTHOR_IMAGE', true );
 
+if ( ! function_exists( 'vl' ) ) :
+
+	/**
+	 * Replacement for print_r & var_dump.
+	 *
+	 * @param mixed $var
+	 * @param bool $dump. (default: false)
+	 */
+    function vl( $var, $dump = 0 ) {
+        ?>
+
+        <style type="text/css">
+            .vl_pre {
+                text-align: left;
+                margin: 30px 15px;
+                padding: 1em;
+                border: 0px;
+                outline: 0px;
+                font-size: 14px;
+                font-family: monospace;
+                vertical-align: baseline;
+                max-width: 100%;
+                overflow: auto;
+                color: rgb(248,248,242);
+                direction: ltr;
+                word-spacing: normal;
+                line-height: 1.5;
+                border-radius: 0.3em;
+                word-wrap: normal;
+                letter-spacing: 0.266667px;
+                background: rgb(61,69,75);
+            }
+        </style>
+
+        <?php
+        
+        echo "<pre class='vl_pre'><xmp>";
+        if ( true == $dump ) {
+            var_dump( $var );
+        } else {
+            if ( is_array( $var ) || is_object( $var ) ) {
+                print_r( $var );
+            } else {
+                echo $var;
+            }
+        }
+        echo "</xmp></pre>";
+    }
+
+endif;
+
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -157,19 +208,13 @@ endif;
 /**
  * Generate asset URL depend on RTL & SCRIPT_DEBUG.
  *
- * For request bhari_asset_url( 'editor-style', 'css' );
- *
- *	if( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
- *		$asset_url = 'assets/unminified/css/editor-style.css'
- *		if( is_rtl() ) {
- *			$asset_url = assets/unminified/css/rtl/editor-style-rtl.css';
- *		}
- *	} else {
- *		$asset_url = assets/minified/css/editor-style.css';
- *		if( is_rtl() ) {
- *			$asset_url = assets/minified/css/rtl/editor-style.rtl.css';
- *		}
- *	}
+ * E.g. For request bhari_asset_url( 'editor-style', 'css' ); 
+ * Load one of the below file depends on RTL & SCRIPTS_DEBUG check.
+ * 
+ * /assets/unminified/css/editor-style.cs
+ * /assets/unminified/css/rtl/editor-style-rtl.css
+ * /assets/minified/css/editor-style.css
+ * /assets/minified/css/rtl/editor-style.rtl.css
  */
 
 if ( ! function_exists( 'bhari_asset_url' ) ) :
@@ -210,7 +255,7 @@ if ( ! function_exists( 'bhari_asset_url' ) ) :
 				$asset_url = $assets_dir . 'unminified/' . $type . '/rtl/' . $handle . '-rtl.' . $type . '';
 			}
 
-			/**
+		/**
 		 * Load minified assets
 		 */
 		} else {
@@ -243,15 +288,23 @@ if ( ! function_exists( 'bhari_scripts' ) ) :
 		 * Minified
 		 */
 		if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
+
+			// CSS.
 			wp_enqueue_style( 'bhari-core-css', get_stylesheet_uri() );
+
+			// JS.
 			wp_enqueue_script( 'bhari-navigation', get_template_directory_uri() . '/assets/unminified/js/navigation.js', array(), '20151215', true );
 			wp_enqueue_script( 'bhari-skip-link-focus-fix', get_template_directory_uri() . '/assets/unminified/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-			/**
+		/**
 		 * Minified + Combined
 		 */
 		} else {
+
+			// CSS.
 			wp_enqueue_style( 'bhari-core-css', get_template_directory_uri() . '/assets/minified/css/bhari.min.css' );
+
+			// JS.
 			wp_enqueue_script( 'bhari-core-js', get_template_directory_uri() . '/assets/minified/js/bhari.min.js', array(), '20151215', true );
 		}
 
