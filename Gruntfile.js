@@ -32,19 +32,20 @@ module.exports = function (grunt) {
                         cwd: '',
                         src: [
                             'style.css',
+                            'editor-style.css',
                         ],
                         dest: '', 
                         ext: '-rtl.css'
                     },
 
                     /**
-                     * bhari.min.css => bhari.min-rtl.css
+                     * style.min.css => style.min-rtl.css
                      */
                     {
                         expand: true,
                         cwd: 'assets/css/min',
                         src: [
-                            'bhari.min.css',
+                            'style.min.css',
                         ],
                         dest: 'assets/css/min/rtl', 
                         ext: '.min-rtl.css'
@@ -93,7 +94,7 @@ module.exports = function (grunt) {
                      * editor-style.css
                      */
                     {
-                        'assets/css/editor-style.css': 'assets/sass/editor-style.scss'
+                        'editor-style.css': 'assets/sass/editor-style.scss'
                     },
                 ]
             }
@@ -139,20 +140,20 @@ module.exports = function (grunt) {
                 /**
                  * FRONTEND
                  */
-                {  // ALL *.min.js
-                    expand: true,
-                    src: [
-                        '*.js'
-                    ],
-                    dest: 'assets/js/min',
-                    cwd: 'assets/js',
-                    ext: '.min.js'
-                },
-                { // bhari.min.js from /assets/js/min/**.js
+                // {  // ALL *.min.js
+                //     expand: true,
+                //     src: [
+                //         '*.js'
+                //     ],
+                //     dest: 'assets/js/min',
+                //     cwd: 'assets/js',
+                //     ext: '.min.js'
+                // },
+                { // style.min.js from /assets/js/min/**.js
                     src: [
                         'assets/js/*.js',
                     ],
-                    dest: 'assets/js/min/bhari.min.js',
+                    dest: 'assets/js/min/style.min.js',
                 },
 
                 /**
@@ -186,17 +187,17 @@ module.exports = function (grunt) {
                 { //  ALL *.min.css
                     expand: true,
                     src: [
-                        '*.css'
+                        '*.css',
                     ],
                     dest: 'assets/css/min',
                     cwd: 'assets/css',
                     ext: '.min.css'
                 },
-                {  //  bhari.min.css
+                {  //  style.min.css
                     src: [
                         'style.css'
                     ],
-                    dest: 'assets/css/min/bhari.min.css'
+                    dest: 'assets/css/min/style.min.css'
                 },
 
                 /**

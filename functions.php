@@ -133,7 +133,7 @@ if ( ! function_exists( 'bhari_setup' ) ) :
 		) ) );
 
 		// Added editor style support.
-		add_editor_style( bhari_asset_url( 'editor-style', 'css' ) );
+		add_editor_style( 'editor-style.css' );
 
 		/**
 		 * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -213,8 +213,8 @@ endif;
  * 
  * NOTE: RTL support is now just for ONLY theme style.css file.
  *
- *	bhari.min.css 		Load normally.
- *	bhari.min-rtl.css 	Load if RTL is on.
+ *	style.min.css 		Load normally.
+ *	style.min-rtl.css 	Load if RTL is on.
  *
  *	style.css 			Load if SCRIPT_DEBUG is true.
  *	style-rtl.css 		Load if SCRIPT_DEBUG & RTL are true.
@@ -233,7 +233,7 @@ if ( ! function_exists( 'bhari_asset_url' ) ) :
 	 * @param  boolean $is_admin Use argument for loading admin assets.
 	 * @return string            URL of asset depend on RTL & SCRIPT_DEBUG.
 	 */
-	function bhari_asset_url( $handle = '', $type = '', $has_rtl_support = true, $is_admin = false ) {
+	function bhari_asset_url( $handle = '', $type = '', $has_rtl_support = false, $is_admin = false ) {
 
 		/**
 		 * Load admin assets
@@ -300,6 +300,7 @@ if ( ! function_exists( 'bhari_scripts' ) ) :
 
 			// CSS.
 			wp_enqueue_style( 'bhari-core-css', get_stylesheet_uri() );
+			wp_style_add_data( 'bhari-core-css', 'rtl', 'replace' );
 
 			// JS.
 			wp_enqueue_script( 'bhari-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20151215', true );
@@ -309,10 +310,14 @@ if ( ! function_exists( 'bhari_scripts' ) ) :
 		} else {
 
 			// CSS.
-			wp_enqueue_style( 'bhari-core-css', get_template_directory_uri() . '/assets/css/min/bhari.min.css' );
+			if( is_rtl() ) {
+				wp_enqueue_style( 'bhari-core-css', get_template_directory_uri() . '/assets/css/min/rtl/style.min-rtl.css' );
+			} else {
+				wp_enqueue_style( 'bhari-core-css', get_template_directory_uri() . '/assets/css/min/style.min.css' );
+			}
 
 			// JS.
-			wp_enqueue_script( 'bhari-core-js', get_template_directory_uri() . '/assets/js/min/bhari.min.js', array(), '20151215', true );
+			wp_enqueue_script( 'bhari-core-js', get_template_directory_uri() . '/assets/js/min/style.min.js', array(), '20151215', true );
 		}
 
 		/**
