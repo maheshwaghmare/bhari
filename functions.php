@@ -230,18 +230,24 @@ if ( ! function_exists( 'bhari_asset_url' ) ) :
 	 * @param  string  $handle   Asset ( CSS / JS ) file name.
 	 * @param  string  $type     Asset type either CSS or JS.
 	 * @param  boolean $has_rtl_support Use argument for RTL support.
-	 * @param  boolean $is_admin Use argument for loading admin assets.
+	 * @param  boolean $dir_path Use argument for loading admin assets.
 	 * @return string            URL of asset depend on RTL & SCRIPT_DEBUG.
 	 */
-	function bhari_asset_url( $handle = '', $type = '', $has_rtl_support = false, $is_admin = false ) {
+	function bhari_asset_url( $handle = '', $type = '', $has_rtl_support = false, $dir_path = '' ) {
 
 		/**
 		 * Load admin assets
 		 */
-		if ( $is_admin ) {
-			$assets_dir = '/inc/assets';
-		} else {
-			$assets_dir = '/assets';
+		switch ( $dir_path ) {
+			case 'vender':
+					$assets_dir = '/assets/vender';
+				break;
+			case 'admin':
+					$assets_dir = '/inc/assets';
+				break;
+			default:
+					$assets_dir = '/assets';
+				break;
 		}
 
 		/**
@@ -324,7 +330,7 @@ if ( ! function_exists( 'bhari_scripts' ) ) :
 		 * External assets.
 		 */
 		if ( BHARI_SUPPORT_FONTAWESOME ) {
-			wp_enqueue_style( 'bhari-font-awesome', bhari_asset_url( 'font-awesome', 'css' ) );
+			wp_enqueue_style( 'font-awesome', bhari_asset_url( 'font-awesome', 'css', '', 'vender' ) );
 		}
 
 	}

@@ -19,13 +19,14 @@ module.exports = function (grunt) {
                     preserveComments: true,
                     greedy: true
                 },
-                map: false  // generate source maps
+                map: false
             },
             dist: {
                 files: [
 
                     /**
-                     * style.css => style-rtl.css
+                     * style-rtl.css
+                     * editor-style-rtl.css
                      */
                     {
                         expand: true,
@@ -39,7 +40,7 @@ module.exports = function (grunt) {
                     },
 
                     /**
-                     * style.min.css => style.min-rtl.css
+                     * style.min-rtl.css
                      */
                     {
                         expand: true,
@@ -50,24 +51,6 @@ module.exports = function (grunt) {
                         dest: 'assets/css/min/rtl', 
                         ext: '.min-rtl.css'
                     },
-
-                    /**
-                     * All /unminified/ ** /.css
-                     */
-                    // {
-                    //     expand: true,
-                    //     cwd: 'assets/unminified/css/',
-                    //     src: [
-                    //         '*.css',
-                    //         '!*-rtl.css',
-
-                    //         //  avoid
-                    //         '!font-awesome.css',
-                    //     ],
-                    //     dest: 'assets/unminified/css/rtl', 
-                    //     ext: '-rtl.css'
-                    // },
-
                 ]
             }
         },
@@ -125,7 +108,8 @@ module.exports = function (grunt) {
             style: {
                 expand: true,
                 src: [
-                    'style.css'
+                    'style.css',
+                    'editor-style.css',
                 ]
             }
         },
@@ -140,15 +124,6 @@ module.exports = function (grunt) {
                 /**
                  * FRONTEND
                  */
-                // {  // ALL *.min.js
-                //     expand: true,
-                //     src: [
-                //         '*.js'
-                //     ],
-                //     dest: 'assets/js/min',
-                //     cwd: 'assets/js',
-                //     ext: '.min.js'
-                // },
                 { // style.min.js from /assets/js/min/**.js
                     src: [
                         'assets/js/*.js',
@@ -194,9 +169,7 @@ module.exports = function (grunt) {
                     ext: '.min.css'
                 },
                 {  //  style.min.css
-                    src: [
-                        'style.css'
-                    ],
+                    src: 'style.css',
                     dest: 'assets/css/min/style.min.css'
                 },
 
