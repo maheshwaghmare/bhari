@@ -239,9 +239,9 @@ if ( ! function_exists( 'bhari_asset_url' ) ) :
 		 * Load admin assets
 		 */
 		if ( $is_admin ) {
-			$assets_dir = '/inc/assets/';
+			$assets_dir = '/inc/assets';
 		} else {
-			$assets_dir = '/assets/';
+			$assets_dir = '/assets';
 		}
 
 		/**
