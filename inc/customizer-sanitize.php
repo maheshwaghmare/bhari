@@ -24,7 +24,7 @@ if ( ! class_exists( 'Bhari_Customize_Sanitize' ) ) :
 		 * @param  number $input Customizer setting input number.
 		 * @return number        Return absolute number.
 		 */
-		function _sanitize_integer( $input ) {
+		public static function _sanitize_integer( $input ) {
 			return absint( $input );
 		}
 
@@ -35,7 +35,7 @@ if ( ! class_exists( 'Bhari_Customize_Sanitize' ) ) :
 		 * @param  object $setting Settings object.
 		 * @return mixed          Return setting value.
 		 */
-		function _sanitize_choices( $input, $setting ) {
+		public static function _sanitize_choices( $input, $setting ) {
 
 			// Ensure input is a slug.
 			$input = sanitize_key( $input );
@@ -55,7 +55,7 @@ if ( ! class_exists( 'Bhari_Customize_Sanitize' ) ) :
 		 * @param  string $color Color code in HEX format.
 		 * @return mixed        Return valid color code.
 		 */
-		function _sanitize_hex_color( $color ) {
+		public static function _sanitize_hex_color( $color ) {
 
 		    if ( '' === $color ) {
 		        return '';
