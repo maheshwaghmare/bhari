@@ -215,6 +215,7 @@ module.exports = function (grunt) {
                     '!README.md',
                     '!CONTRIBUTING.md',
                     '!codesniffer.ruleset.xml',
+                    '!phpcs.ruleset.xml',
 
                     /**
                      * Are you developer? Then add below files.
