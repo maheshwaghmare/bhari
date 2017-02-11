@@ -42,11 +42,11 @@ module.exports = function (grunt) {
                      */
                     {
                         expand: true,
-                        cwd: 'assets/css/',
+                        cwd: 'assets/css/min',
                         src: [
                             'bhari.min.css',
                         ],
-                        dest: 'assets/css/rtl', 
+                        dest: 'assets/css/min/rtl', 
                         ext: '.min-rtl.css'
                     },
 
