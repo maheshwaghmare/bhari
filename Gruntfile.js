@@ -33,7 +33,7 @@ module.exports = function (grunt) {
                         cwd: '',
                         src: [
                             'style.css',
-                            'editor-style.css',
+                            'assets/css/editor-style.css',
                         ],
                         dest: '', 
                         ext: '-rtl.css'
@@ -47,6 +47,7 @@ module.exports = function (grunt) {
                         cwd: 'assets/css/min',
                         src: [
                             'style.min.css',
+                            '!editor-style.min.css',
                         ],
                         dest: 'assets/css/min/rtl', 
                         ext: '.min-rtl.css'
@@ -77,7 +78,7 @@ module.exports = function (grunt) {
                      * editor-style.css
                      */
                     {
-                        'editor-style.css': 'assets/sass/editor-style.scss'
+                        'assets/css/editor-style.css': 'assets/sass/editor-style.scss'
                     },
                 ]
             }
@@ -109,7 +110,7 @@ module.exports = function (grunt) {
                 expand: true,
                 src: [
                     'style.css',
-                    'editor-style.css',
+                    'assets/css/editor-style.css',
                 ]
             }
         },
@@ -163,6 +164,10 @@ module.exports = function (grunt) {
                     expand: true,
                     src: [
                         '*.css',
+
+                        //  Avoid 'editor-style'
+                        '!editor-style.css',
+                        '!editor-style-rtl.css',
                     ],
                     dest: 'assets/css/min',
                     cwd: 'assets/css',

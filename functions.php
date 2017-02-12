@@ -133,7 +133,7 @@ if ( ! function_exists( 'bhari_setup' ) ) :
 		) ) );
 
 		// Added editor style support.
-		add_editor_style( 'editor-style.css' );
+		add_editor_style( 'assets/css/editor-style.css' );
 
 		/**
 		 * Set the content width in pixels, based on the theme's design and stylesheet.
