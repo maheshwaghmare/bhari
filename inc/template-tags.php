@@ -16,8 +16,7 @@ if ( ! function_exists( 'bhari_get_sidebar_page' ) ) :
 	 * Get sidebar for single page, custom post type etc.
 	 */
 	function bhari_get_sidebar_page() {
-		$layout = bhari_get_option( 'sidebar-page' );
-		bhari_get_sidebar_layout( $layout );
+		bhari_get_sidebar_layout( bhari_get_option( 'sidebar-page' ) );
 	}
 
 endif;
@@ -31,8 +30,7 @@ if ( ! function_exists( 'bhari_get_sidebar_single' ) ) :
 	 * Get sidebar for single post only.
 	 */
 	function bhari_get_sidebar_single() {
-		$layout = bhari_get_option( 'sidebar-single' );
-		bhari_get_sidebar_layout( $layout );
+		bhari_get_sidebar_layout( bhari_get_option( 'sidebar-single' ) );
 	}
 
 endif;
@@ -46,8 +44,7 @@ if ( ! function_exists( 'bhari_get_sidebar_archive' ) ) :
 	 * Get sidebar for archive pages ( tag, category, date ) and search page.
 	 */
 	function bhari_get_sidebar_archive() {
-		$layout = bhari_get_option( 'sidebar-archive' );
-		bhari_get_sidebar_layout( $layout );
+		bhari_get_sidebar_layout( bhari_get_option( 'sidebar-archive' ) );
 	}
 
 endif;
@@ -241,17 +238,6 @@ if ( ! function_exists( 'bhari_entry_footer' ) ) :
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 */
 	function bhari_entry_footer() {
-
-		// Hide category and tag text for pages.
-		if ( 'post' === get_post_type() && is_single() ) {
-
-			// $byline = sprintf(
-			// esc_html_x( '%s', 'post author', 'bhari' ),
-			// '<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-			// );
-			// echo '<span class="byline"> ' . get_avatar( esc_url( get_the_author_meta( 'ID' ) ), 100 );
-			// echo $byline . '</span>';
-		}
 
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link"> <i class="fa fa-comments"></i> ';

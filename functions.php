@@ -227,26 +227,35 @@ if ( ! function_exists( 'bhari_asset_url' ) ) :
 	 *
 	 * How to use?
 	 *
-	 * @param  string  $handle   Asset ( CSS / JS ) file name.
+	 * @param  string  $file_name   Asset ( CSS / JS ) file name.
 	 * @param  string  $type     Asset type either CSS or JS.
 	 * @param  boolean $has_rtl_support Use argument for RTL support.
 	 * @param  boolean $dir_path Use argument for loading admin assets.
 	 * @return string            URL of asset depend on RTL & SCRIPT_DEBUG.
 	 */
-	function bhari_asset_url( $handle = '', $type = '', $has_rtl_support = false, $dir_path = '' ) {
+	function bhari_asset_url( $file_name = '', $type = '', $has_rtl_support = false, $dir_path = '' ) {
 
 		/**
 		 * Load admin assets
 		 */
 		switch ( $dir_path ) {
 			case 'vender':
-					$assets_dir = '/assets/vender';
+					$unmin_url     = '/assets/vender/' . $type . '/' . $file_name . '.' . $type;
+					$min_url       = '/assets/vender/' . $type . '/' . $file_name . '.min.' . $type;
+					$unmin_url_rtl = '/assets/vender/' . $type . '/rtl/' . $file_name . '-rtl.' . $type;
+					$min_url_rtl   = '/assets/vender/' . $type . '/rtl/' . $file_name . '-rtl.min.' . $type;
 				break;
 			case 'admin':
-					$assets_dir = '/inc/assets';
+					$unmin_url     = '/inc/assets/' . $type . '/' . $file_name . '.' . $type;
+					$min_url       = '/inc/assets/' . $type . '/min/' . $file_name . '.min.' . $type;
+					$unmin_url_rtl = '/inc/assets/' . $type . '/rtl/' . $file_name . '-rtl.' . $type;
+					$min_url_rtl   = '/inc/assets/' . $type . '/min/rtl/' . $file_name . '-rtl.min.' . $type;
 				break;
 			default:
-					$assets_dir = '/assets';
+					$unmin_url     = '/assets/' . $type . '/' . $file_name . '.' . $type;
+					$min_url       = '/assets/' . $type . '/min/' . $file_name . '.min.' . $type;
+					$unmin_url_rtl = '/assets/' . $type . '/rtl/' . $file_name . '-rtl.' . $type;
+					$min_url_rtl   = '/assets/' . $type . '/min/rtl/' . $file_name . '-rtl.min.' . $type;
 				break;
 		}
 
@@ -255,14 +264,10 @@ if ( ! function_exists( 'bhari_asset_url' ) ) :
 		 */
 		if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
 
-			// Load unminified assets
-			$asset_url = $assets_dir . '/' . $type . '/' . $handle . '.' . $type . '';
+			$asset_url = $unmin_url; // Load unminified assets
 
-			/**
-			 * Load unminified RTL assets
-			 */
 			if ( $has_rtl_support && is_rtl() ) {
-				$asset_url = $assets_dir . '/' . $type . '/rtl/' . $handle . '-rtl.' . $type . '';
+				$asset_url = $unmin_url_rtl; // Load unminified RTL assets
 			}
 
 		/**
@@ -270,13 +275,10 @@ if ( ! function_exists( 'bhari_asset_url' ) ) :
 		 */
 		} else {
 
-			$asset_url = $assets_dir . '/' . $type . '/min/' . $handle . '.min.' . $type . '';
+			$asset_url = $min_url; // Load minified assets
 
-			/**
-			 * Load minified RTL assets
-			 */
 			if ( $has_rtl_support && is_rtl() ) {
-				$asset_url = $assets_dir . '/' . $type . '/min/rtl/' . $handle . '-rtl.min.' . $type . '';
+				$asset_url = $min_url_rtl; // Load minified RTL assets
 			}
 		}
 
