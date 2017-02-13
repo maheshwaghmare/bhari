@@ -266,7 +266,7 @@ if ( ! function_exists( 'bhari_customize_preview_js' ) ) :
 	 * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
 	 */
 	function bhari_customize_preview_js() {
-		wp_enqueue_script( 'bhari-customizer-js', bhari_asset_url( 'customizer', 'js', '', true ), array( 'customize-preview' ), '20151215', true );
+		wp_enqueue_script( 'bhari-customizer-js', bhari_asset_url( 'customizer', 'js', '', 'admin' ), array( 'customize-preview' ), '20151215', true );
 	}
 	add_action( 'customize_preview_init', 'bhari_customize_preview_js' );
 
@@ -283,7 +283,7 @@ if ( ! function_exists( 'bhari_customizer_controls_css' ) ) :
 	 * @since 1.0.0
 	 */
 	function bhari_customizer_controls_css() {
-		wp_enqueue_style( 'bhari-customizer-controls-css', bhari_asset_url( 'customizer', 'css', '', true ) );
+		wp_enqueue_style( 'bhari-customizer-controls-css', bhari_asset_url( 'customizer', 'css', '', 'admin' ) );
 	}
 	add_action( 'customize_controls_enqueue_scripts', 'bhari_customizer_controls_css' );
 

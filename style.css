@@ -1225,6 +1225,7 @@ input.search-submit {
     text-align: left;
     font-size: 0.9rem;
   }
+  .main-navigation .page_item_has_children:after,
   .main-navigation .menu-item-has-children:after {
     content: "\f107";
     display: inline-block;
@@ -1244,6 +1245,7 @@ input.search-submit {
 }
 
 @media screen and (min-width: 768px) and (max-width: 768px) {
+  .main-navigation .page_item_has_children:after,
   .main-navigation .menu-item-has-children:after {
     top: 2em;
     right: 1.5em;
@@ -1251,6 +1253,7 @@ input.search-submit {
 }
 
 @media screen and (min-width: 768px) {
+  .main-navigation .page_item_has_children a,
   .main-navigation .menu-item-has-children a {
     padding-right: 1.8em;
   }

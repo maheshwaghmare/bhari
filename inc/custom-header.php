@@ -23,7 +23,7 @@
 function bhari_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'bhari_custom_header_args', array(
 		'default-image'          => '',
-		'default-text-color'     => '000000',
+		'default-text-color'     => '34495e',
 		'width'                  => 1100,
 		'height'                 => 250,
 		'flex-height'            => true,
