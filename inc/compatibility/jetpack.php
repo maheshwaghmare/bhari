@@ -44,7 +44,7 @@ if ( ! function_exists( 'bhari_infinite_scroll_render' ) ) :
 	 */
 	function bhari_infinite_scroll_render() {
 
-		tha_content_while_before();
+		bhari_content_while_before();
 
 		while ( have_posts() ) {
 
@@ -57,7 +57,7 @@ if ( ! function_exists( 'bhari_infinite_scroll_render' ) ) :
 
 		}
 
-		tha_content_while_after();
+		bhari_content_while_after();
 	}
 
 endif;

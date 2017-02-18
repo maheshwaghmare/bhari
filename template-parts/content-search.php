@@ -11,9 +11,9 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php tha_entry_header_before(); ?>
+	<?php bhari_entry_header_before(); ?>
 	<header class="entry-header">
-		<?php tha_entry_header_top(); ?>
+		<?php bhari_entry_header_top(); ?>
 
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
@@ -29,22 +29,22 @@
 
 		endif;
 		?>
-	<?php tha_entry_header_bottom(); ?>
+	<?php bhari_entry_header_bottom(); ?>
 	</header><!-- .entry-header -->
-	<?php tha_entry_header_after(); ?>
+	<?php bhari_entry_header_after(); ?>
 
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 
-	<?php tha_entry_footer_before(); ?>
+	<?php bhari_entry_footer_before(); ?>
 	<footer class="entry-footer">
-		<?php tha_entry_footer_top(); ?>
+		<?php bhari_entry_footer_top(); ?>
 
 		<?php bhari_entry_footer(); ?>
 
-		<?php tha_entry_footer_bottom(); ?>
+		<?php bhari_entry_footer_bottom(); ?>
 	</footer><!-- .entry-footer -->
-	<?php tha_entry_footer_after(); ?>
+	<?php bhari_entry_footer_after(); ?>
 
 </article><!-- #post-## -->

@@ -27,7 +27,7 @@ get_header(); ?>
 			<?php
 			endif;
 
-			tha_content_while_before();
+			bhari_content_while_before();
 
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
@@ -41,12 +41,12 @@ get_header(); ?>
 
 			endwhile;
 
-			tha_content_while_after();
+			bhari_content_while_after();
 
 			/**
 			 * Pagination
 			 */
-			tha_pagination_before();
+			bhari_pagination_before();
 
 			the_posts_pagination( array(
 				'mid_size'  => 4,
@@ -54,7 +54,7 @@ get_header(); ?>
 				'next_text' => bhari_strings( 'pagination-next' ),
 			) );
 
-			tha_pagination_after();
+			bhari_pagination_after();
 
 		else :
 

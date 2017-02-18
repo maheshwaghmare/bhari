@@ -15,16 +15,16 @@ get_header(); ?>
 		<?php
 		if ( have_posts() ) : ?>
 
-			<?php tha_page_header_before(); ?>
+			<?php bhari_page_header_before(); ?>
 			<header class="page-header">
 				<?php
 					bhari_the_archive_title();
 					the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
-			<?php tha_page_header_after(); ?>
+			<?php bhari_page_header_after(); ?>
 
-			<?php tha_content_while_before(); ?>
+			<?php bhari_content_while_before(); ?>
 
 			<?php
 			/* Start the Loop */
@@ -40,14 +40,14 @@ get_header(); ?>
 			endwhile;
 			?>
 
-			<?php tha_content_while_after(); ?>
+			<?php bhari_content_while_after(); ?>
 
 			<?php
 
 			/**
 			 * Pagination
 			 */
-			tha_pagination_before();
+			bhari_pagination_before();
 
 			the_posts_pagination( array(
 				'mid_size'  => 4,
@@ -55,7 +55,7 @@ get_header(); ?>
 				'next_text' => bhari_strings( 'pagination-next' ),
 			) );
 
-			tha_pagination_after();
+			bhari_pagination_after();
 
 		else :
 

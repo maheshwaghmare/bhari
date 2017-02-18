@@ -12,7 +12,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php tha_content_while_before(); ?>
+		<?php bhari_content_while_before(); ?>
 
 		<?php
 		while ( have_posts() ) : the_post();
@@ -22,26 +22,26 @@ get_header(); ?>
 			/**
 			 * Pagination
 			 */
-			tha_pagination_before();
+			bhari_pagination_before();
 
 			the_post_navigation( array(
 	            'prev_text' => bhari_strings( 'single-pagination-prev' ),
 	            'next_text' => bhari_strings( 'single-pagination-next' ),
 	        ) );
 
-	        tha_pagination_after();
+	        bhari_pagination_after();
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
-				tha_comments_template_before();
+				bhari_comments_template_before();
 				comments_template();
-				tha_comments_template_after();
+				bhari_comments_template_after();
 			endif;
 
 		endwhile; // End of the loop.
 		?>
 
-		<?php tha_content_while_after(); ?>
+		<?php bhari_content_while_after(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

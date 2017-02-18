@@ -11,7 +11,7 @@
 
 <section class="no-results not-found">
 
-	<?php tha_page_header_before(); ?>
+	<?php bhari_page_header_before(); ?>
 	<header class="page-header">
 		<h1 class="page-title">
 			<?php if ( BHARI_SUPPORT_FONTAWESOME ) : ?>
@@ -20,7 +20,7 @@
 			<?php esc_html_e( 'Nothing Found', 'bhari' ); ?>
 		</h1>
 	</header><!-- .page-header -->
-	<?php tha_page_header_after(); ?>
+	<?php bhari_page_header_after(); ?>
 
 	<div class="page-content">
 		<?php
