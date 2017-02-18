@@ -129,7 +129,7 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 				 */
 				case 'author':
 					$byline = sprintf( // WPCS: XSS OK.
-						esc_html_x( '%s', 'post author', 'bhari' ),
+						esc_html_x( '%s ', 'post author', 'bhari' ),
 						'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 					);
 					$meta_author  = $meta_args['meta']['author']['before'];
@@ -156,7 +156,7 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 					);
 
 					$posted_on = sprintf( // WPCS: XSS OK.
-						esc_html_x( '%s', 'post date', 'bhari' ),
+						esc_html_x( '%s ', 'post date', 'bhari' ),
 						'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 					);
 
@@ -177,7 +177,7 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 					$categories_list = get_the_category_list( esc_html__( ', ', 'bhari' ) );
 					if ( $categories_list && bhari_categorized_blog() ) {
 						$meta_category         = $meta_args['meta']['category']['before'];
-						$meta_category         .= sprintf( '<span class="cat-links"> ' . esc_html__( '%1$s', 'bhari' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+						$meta_category         .= sprintf( '<span class="cat-links"> ' . esc_html__( '%1$s ', 'bhari' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 						$meta_category         .= $meta_args['meta']['category']['after'];
 						$meta_data['category'] = $meta_category;
 					}
@@ -192,7 +192,7 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 						$tags_list = get_the_tag_list( '', esc_html__( ', ', 'bhari' ) );
 					if ( $tags_list ) {
 						$meta_tags        = $meta_args['meta']['tag']['before'];
-						$meta_tags        .= sprintf( '<span class="tags-links"> ' . esc_html__( '%1$s', 'bhari' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+						$meta_tags        .= sprintf( '<span class="tags-links"> ' . esc_html__( '%1$s ', 'bhari' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 						$meta_tags        .= $meta_args['meta']['tag']['after'];
 						$meta_data['tag'] = $meta_tags;
 					}

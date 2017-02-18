@@ -208,26 +208,22 @@ if ( ! function_exists( 'bhari_asset_url' ) ) :
 				break;
 		}
 
-		/**
-		 * Load unminified assets
-		 */
+		// Load unminified assets.
 		if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
 
-			$asset_url = $unmin_url; // Load unminified assets
+			$asset_url = $unmin_url; // Load unminified assets.
 
 			if ( $has_rtl_support && is_rtl() ) {
-				$asset_url = $unmin_url_rtl; // Load unminified RTL assets
+				$asset_url = $unmin_url_rtl; // Load unminified RTL assets.
 			}
 
-			/**
-		 * Load minified assets
-		 */
+			// Load minified assets.
 		} else {
 
-			$asset_url = $min_url; // Load minified assets
+			$asset_url = $min_url; // Load minified assets.
 
 			if ( $has_rtl_support && is_rtl() ) {
-				$asset_url = $min_url_rtl; // Load minified RTL assets
+				$asset_url = $min_url_rtl; // Load minified RTL assets.
 			}
 		}
 
