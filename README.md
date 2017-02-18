@@ -1,19 +1,21 @@
 # Bhari Theme
-Theme is build for bloggers who love to write articles, share awesome stuff etc.
+
+Bhari is simple theme for bloggers.
 
 ### Description
 
-Hi. I'm a starter theme called Bhari, or underscores, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Bhari is lightweight, responsive theme for bloggers who love to write articles, share awesome stuff etc.
 
 ### Installation
 
-1. In your admin panel, go to Appearance > Themes and click the Add New button.
-2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
-3. Click Activate to use your new theme right away.
+1. In your admin panel, go to 'Appearance > Themes' and click the 'Add New' button.
+2. Click 'Upload' and Choose File, then select the theme's .zip file. Click 'Install Now'.
+3. Click 'Activate' to use your new theme right away.
 
 =======
 
 ### Screenshot
+
 After Install & Activate Bhari Theme looks like:
 <img src="http://i.imgur.com/VSnC36H.jpg" />
 
@@ -26,8 +28,7 @@ Bhari includes support for Infinite Scroll in Jetpack.
 
 ### Changelog
 
-= 1.0 - 8 Feb 2017 =
-* Initial release
+For changelog please check file CHANGELOG.md.
 
 ### Credits
 

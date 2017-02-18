@@ -55,14 +55,14 @@ if ( ! function_exists( 'bhari_get_sidebar_layout' ) ) :
 					break;
 
 			case 'layout-content-sidebar' :
-						get_sidebar( 'right' );
+						get_sidebar(); // Default is right sidebar.
 					break;
 
 			case 'layout-content-sidebar-sidebar' :
 			case 'layout-sidebar-content-sidebar' :
 			case 'layout-sidebar-sidebar-content' :
 						get_sidebar( 'left' );
-						get_sidebar( 'right' );
+						get_sidebar(); // Default is right sidebar.
 				break;
 		}
 	}

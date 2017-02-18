@@ -259,7 +259,7 @@ if ( ! function_exists( 'bhari_scripts' ) ) :
 			wp_enqueue_script( 'bhari-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20151215', true );
 			wp_enqueue_script( 'bhari-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-			// Minified & Combined single files.
+		// Minified & Combined single files.
 		} else {
 
 			// CSS.
@@ -279,11 +279,10 @@ if ( ! function_exists( 'bhari_scripts' ) ) :
 		if ( BHARI_SUPPORT_FONTAWESOME ) {
 			wp_enqueue_style( 'font-awesome', bhari_asset_url( 'font-awesome', 'css', '', 'vender' ) );
 		}
-
 	}
 	add_action( 'wp_enqueue_scripts', 'bhari_scripts' );
-endif;
 
+endif;
 
 /**
  * Theme Hook Alliance hook stub list.

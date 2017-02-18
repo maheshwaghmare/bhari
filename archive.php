@@ -12,16 +12,15 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php
-		if ( have_posts() ) : ?>
+		<?php if ( have_posts() ) : ?>
 
 			<?php bhari_page_header_before(); ?>
+
 			<header class="page-header">
-				<?php
-					bhari_the_archive_title();
-					the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
+				<?php bhari_the_archive_title(); ?>
+				<?php the_archive_description( '<div class="archive-description">', '</div>' ); ?>
 			</header><!-- .page-header -->
+
 			<?php bhari_page_header_after(); ?>
 
 			<?php bhari_content_while_before(); ?>
@@ -42,26 +41,24 @@ get_header(); ?>
 
 			<?php bhari_content_while_after(); ?>
 
+			<?php bhari_pagination_before(); ?>
+
 			<?php
-
-			/**
-			 * Pagination
-			 */
-			bhari_pagination_before();
-
+			/* Pagination */
 			the_posts_pagination( array(
 				'mid_size'  => 4,
 				'prev_text' => bhari_strings( 'pagination-prev' ),
 				'next_text' => bhari_strings( 'pagination-next' ),
 			) );
+			?>
 
-			bhari_pagination_after();
+			<?php bhari_pagination_after(); ?>
 
-		else :
+		<?php else : ?>
 
-			get_template_part( 'template-parts/content', 'none' );
+			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-		endif; ?>
+		<?php endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

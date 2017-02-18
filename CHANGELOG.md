@@ -1,4 +1,4 @@
-=== changelog ===
+=== CHANGELOG ===
 
 = 1.0.3 =
 * Tweak: Missing tag 'accessibility-ready'.

@@ -46,6 +46,7 @@ if ( ! function_exists( 'bhari_infinite_scroll_render' ) ) :
 
 		bhari_content_while_before();
 
+		/* Start the Loop */
 		while ( have_posts() ) {
 
 			the_post();

@@ -20,6 +20,7 @@ get_header(); ?>
 			<?php bhari_content_while_before(); ?>
 
 			<?php
+			/* Start the Loop */
 			while ( have_posts() ) : the_post();
 
 				get_template_part( 'template-parts/content', 'page' );

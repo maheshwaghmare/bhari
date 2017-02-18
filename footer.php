@@ -20,7 +20,7 @@
 
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'bhari' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'bhari' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
+			<span class="sep"> <?php _e( '|', 'bhari' ); ?> </span>
 			<?php printf( esc_html__( 'Theme: %1$s', 'bhari' ), '<a href="http://maheshwaghmare.wordpress.com/" rel="designer">Bhari</a>' ); ?>
 		</div><!-- .site-info -->
 
