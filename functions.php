@@ -363,9 +363,9 @@ require get_template_directory() . '/inc/extras.php';
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/inc/customizer/customizer.php';
 
 /**
- * Load Jetpack compatibility file.
+ * Load compatibility files for 3rd party plugins.
  */
-require get_template_directory() . '/inc/jetpack.php';
+require get_template_directory() . '/inc/compatibility/jetpack.php';
