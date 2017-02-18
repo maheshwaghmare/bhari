@@ -13,6 +13,8 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<section class="error-404 not-found">
+
+				<?php tha_page_header_before(); ?>
 				<header class="page-header">
 					<h1 class="page-title">
 						<?php if ( BHARI_SUPPORT_FONTAWESOME ) : ?>
@@ -21,6 +23,7 @@ get_header(); ?>
 						<?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'bhari' ); ?>
 					</h1>
 				</header><!-- .page-header -->
+				<?php tha_page_header_after(); ?>
 
 				<div class="page-content">
 

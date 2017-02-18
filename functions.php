@@ -339,6 +339,12 @@ if ( ! function_exists( 'bhari_scripts' ) ) :
 	add_action( 'wp_enqueue_scripts', 'bhari_scripts' );
 endif;
 
+
+/**
+ * Theme Hook Alliance hook stub list.
+ */
+require get_template_directory() . '/inc/hooks.php';
+
 /**
  * Implement the Custom Header feature.
  */

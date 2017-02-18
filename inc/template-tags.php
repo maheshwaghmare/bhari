@@ -232,12 +232,12 @@ endif;
 /**
  * Meta information
  */
-if ( ! function_exists( 'bhari_entry_footer' ) ) :
+if ( ! function_exists( 'bhari_entry_footer_contents' ) ) :
 
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 */
-	function bhari_entry_footer() {
+	function bhari_entry_footer_contents() {
 
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link"> <i class="fa fa-comments"></i> ';
@@ -245,7 +245,22 @@ if ( ! function_exists( 'bhari_entry_footer' ) ) :
 			comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'bhari' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
 			echo '</span>';
 		}
+
+		/**
+		 * Edit link
+		 */
+		$edit_icon = ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-edit"></i> ' : '';
+		edit_post_link(
+			sprintf(
+				/* translators: %s: Name of current post */
+				esc_html__( 'Edit %s', 'bhari' ),
+				the_title( '<span class="screen-reader-text">"', '"</span>', false )
+			),
+			'<span class="edit-link">' . $edit_icon,
+			'</span>'
+		);
 	}
+	add_action( 'bhari_entry_footer', 'bhari_entry_footer_contents' );
 endif;
 
 /**
