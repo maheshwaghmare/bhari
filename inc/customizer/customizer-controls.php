@@ -130,10 +130,10 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'Bhari_Customize_
 		 * Control assets
 		 */
 		public function enqueue() {
-			wp_enqueue_script( 'bhari-customizer-control-slider-js', bhari_asset_url( 'customizer-control-slider', 'js', '', true ), array( 'jquery-ui-core', 'jquery-ui-slider', 'customize-controls' ) );
-			wp_enqueue_style( 'bhari-customizer-control-slider-css', bhari_asset_url( 'customizer-control-slider', 'css', '', true ) );
-			wp_enqueue_style( 'jquery-ui-slider', bhari_asset_url( 'jquery-ui-structure', 'css', '', true ) );
-			wp_enqueue_style( 'jquery-ui-slider-theme', bhari_asset_url( 'jquery-ui-theme', 'css', '', true ) );
+			wp_enqueue_script( 'bhari-customizer-control-slider-js', bhari_asset_url( 'customizer-control-slider', 'js', '', 'admin' ), array( 'jquery-ui-core', 'jquery-ui-slider', 'customize-controls' ) );
+			wp_enqueue_style( 'bhari-customizer-control-slider-css', bhari_asset_url( 'customizer-control-slider', 'css', '', 'admin' ) );
+			wp_enqueue_style( 'jquery-ui-slider', bhari_asset_url( 'jquery-ui-structure', 'css', '', 'admin' ) );
+			wp_enqueue_style( 'jquery-ui-slider-theme', bhari_asset_url( 'jquery-ui-theme', 'css', '', 'admin' ) );
 		}
 	}
 endif;

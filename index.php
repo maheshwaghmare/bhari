@@ -27,6 +27,8 @@ get_header(); ?>
 			<?php
 			endif;
 
+			tha_content_while_before();
+
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
 
@@ -39,11 +41,20 @@ get_header(); ?>
 
 			endwhile;
 
+			tha_content_while_after();
+
+			/**
+			 * Pagination
+			 */
+			tha_pagination_before();
+
 			the_posts_pagination( array(
 				'mid_size'  => 4,
 				'prev_text' => bhari_strings( 'pagination-prev' ),
 				'next_text' => bhari_strings( 'pagination-next' ),
 			) );
+
+			tha_pagination_after();
 
 		else :
 

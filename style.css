@@ -4,11 +4,11 @@ Theme URI: https://github.com/maheshwaghmare/bhari
 Author: Mahesh M. Waghmare
 Author URI: https://maheshwaghmare.wordpress.com/
 Description: Simple Theme for Bloggers.
-Version: 1.0.2
+Version: 1.0.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: bhari
-Tags: one-column, two-columns, three-columns, right-sidebar, left-sidebar, blog, custom-header, custom-background, custom-menu, custom-colors, sticky-post, threaded-comments, translation-ready, featured-images, theme-options, post-formats
+Tags: one-column, two-columns, three-columns, right-sidebar, left-sidebar, blog, custom-header, custom-background, custom-menu, custom-colors, sticky-post, threaded-comments, translation-ready, accessibility-ready, featured-images, theme-options, post-formats
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -1225,6 +1225,7 @@ input.search-submit {
     text-align: left;
     font-size: 0.9rem;
   }
+  .main-navigation .page_item_has_children:after,
   .main-navigation .menu-item-has-children:after {
     content: "\f107";
     display: inline-block;
@@ -1244,6 +1245,7 @@ input.search-submit {
 }
 
 @media screen and (min-width: 768px) and (max-width: 768px) {
+  .main-navigation .page_item_has_children:after,
   .main-navigation .menu-item-has-children:after {
     top: 2em;
     right: 1.5em;
@@ -1251,6 +1253,7 @@ input.search-submit {
 }
 
 @media screen and (min-width: 768px) {
+  .main-navigation .page_item_has_children a,
   .main-navigation .menu-item-has-children a {
     padding-right: 1.8em;
   }
@@ -1506,6 +1509,14 @@ input.search-submit {
   padding-bottom: 3px;
   -webkit-transition: all ease-in-out 0.3s;
   transition: all ease-in-out 0.3s;
+}
+
+/**
+ * Read More
+ */
+.more-link {
+  margin-top: 1em;
+  display: inline-block;
 }
 
 /*--------------------------------------------------------------

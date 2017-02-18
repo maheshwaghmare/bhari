@@ -60,6 +60,7 @@
             }
         }
 
+        .page_item_has_children,
         .menu-item-has-children {
             &:after {
                 content: "\f107";
