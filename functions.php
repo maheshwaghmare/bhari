@@ -157,9 +157,9 @@ endif;
 /**
  * Generate asset URL depend on RTL & SCRIPT_DEBUG.
  *
- * E.g. For request bhari_asset_url( 'editor-style', 'css' ); 
+ * E.g. For request bhari_asset_url( 'editor-style', 'css' );
  * Load one of the below file depends on RTL & SCRIPTS_DEBUG check.
- * 
+ *
  * NOTE: RTL support is now just for ONLY theme style.css file.
  *
  *	style.min.css 		Load normally.
@@ -219,7 +219,7 @@ if ( ! function_exists( 'bhari_asset_url' ) ) :
 				$asset_url = $unmin_url_rtl; // Load unminified RTL assets
 			}
 
-		/**
+			/**
 		 * Load minified assets
 		 */
 		} else {
@@ -263,11 +263,11 @@ if ( ! function_exists( 'bhari_scripts' ) ) :
 			wp_enqueue_script( 'bhari-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20151215', true );
 			wp_enqueue_script( 'bhari-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-		// Minified & Combined single files.
+			// Minified & Combined single files.
 		} else {
 
 			// CSS.
-			if( is_rtl() ) {
+			if ( is_rtl() ) {
 				wp_enqueue_style( 'bhari-core-css', get_template_directory_uri() . '/assets/css/min/rtl/style.min-rtl.css' );
 			} else {
 				wp_enqueue_style( 'bhari-core-css', get_template_directory_uri() . '/assets/css/min/style.min.css' );

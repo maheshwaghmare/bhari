@@ -112,7 +112,7 @@ function tha_entry_header_after() {
 	do_action( 'tha_entry_header_after' );
 }
 
-//	Entry Footer
+// Entry Footer
 function bhari_entry_footer() {
 	do_action( 'bhari_entry_footer' );
 }
