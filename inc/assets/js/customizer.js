@@ -8,11 +8,11 @@
 
 ( function( $ ) {
 
-	/** 
+	/**
 	 * Container width for Page
 	 *
 	 * Applied for:
-	 * 
+	 *
 	 * .error404,
 	 * .page
 	 */
@@ -34,11 +34,11 @@
 		} );
 	} );
 
-	/** 
+	/**
 	 * Container width for Archive
-	 * 
+	 *
 	 * Applied for:
-	 * 
+	 *
 	 * .archive
 	 * .blog
 	 * .search
@@ -63,11 +63,11 @@
 		} );
 	} );
 
-	/** 
+	/**
 	 * Container width for Single
-	 * 
+	 *
 	 * Applied for:
-	 * 
+	 *
 	 * .single
 	 */
 	wp.customize( 'bhari[container-width-single]', function( value ) {
@@ -86,7 +86,7 @@
 		} );
 	} );
 
-	/** 
+	/**
 	 * Site Title
 	 */
 	wp.customize( 'blogname', function( value ) {
@@ -94,8 +94,8 @@
 			$( '.main-title a' ).html( newval );
 		} );
 	} );
-	
-	/** 
+
+	/**
 	 * Site Description
 	 */
 	wp.customize( 'blogdescription', function( value ) {
@@ -103,7 +103,6 @@
 			$( '.site-description' ).html( newval );
 		} );
 	} );
-
 
 	// Header text color.
 	wp.customize( 'header_textcolor', function( value ) {
