@@ -140,7 +140,6 @@
     padding: 1em 1.5em;
 
 	p {
-	    margin: 0;
 	    color: $color__page_header-p;
 	}
 }
@@ -169,10 +168,6 @@
  */
 .entry-content {
 	line-height: 2;
-
-	p {
-	    margin: 0 0 1em 0;
-	}
 
 	tt,
     code {

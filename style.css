@@ -311,7 +311,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  margin: 0.5em 0 1em 0;
+  margin: 0;
 }
 
 dfn, cite, em, i {
@@ -321,7 +321,7 @@ dfn, cite, em, i {
 blockquote {
   border-left: 5px solid #eaeaea;
   padding: 0.5em 2em;
-  margin: 0 1.5em 1em 1.5em;
+  margin: 1em;
 }
 
 address {
@@ -337,7 +337,7 @@ pre {
   margin-bottom: 1.6em;
   max-width: 100%;
   overflow: auto;
-  padding: 1.6em;
+  padding: 1em 1.5em;
 }
 
 code, kbd, tt, var {
@@ -387,7 +387,7 @@ html {
 }
 
 body {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.5;
   background: #f1f1f1;
   /* Fallback for when there is no custom background color defined. */
@@ -997,7 +997,6 @@ input.search-submit {
 }
 
 .page-header p {
-  margin: 0;
   color: #999;
 }
 
@@ -1027,10 +1026,6 @@ input.search-submit {
  */
 .entry-content {
   line-height: 2;
-}
-
-.entry-content p {
-  margin: 0 0 1em 0;
 }
 
 .entry-content tt,
