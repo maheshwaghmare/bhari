@@ -972,6 +972,7 @@ input.search-submit {
   }
 }
 
+.page-content,
 .site-main > article {
   background: #fff;
   padding: 1em 1.5em;
@@ -1435,15 +1436,6 @@ input.search-submit {
 }
 
 /**
- * Page Content
- */
-.error404 .page-content,
-.search .page-content {
-  background: #fff;
-  padding: 0.5em 1.5em 1.5em 1.5em;
-}
-
-/**
  * Navigation
  */
 .link-title {
@@ -1482,6 +1474,13 @@ input.search-submit {
 }
 
 /**
+ * => Search
+ */
+.search .page-content .search-form {
+  margin: 1em 0;
+}
+
+/**
  * Page Title
  */
 .page-title i {
@@ -1498,6 +1497,7 @@ input.search-submit {
 /**
  * Entry Content
  */
+.page-content a,
 .comment-content a,
 .entry-content a {
   border-bottom: 1px dotted;

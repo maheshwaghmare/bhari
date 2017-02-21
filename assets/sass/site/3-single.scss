@@ -130,17 +130,6 @@
 }
 
 /**
- * Page Content
- */
-.page-content {
-    .error404 &,
-    .search & {
-        background: $white-color;
-        padding: 0.5em 1.5em 1.5em 1.5em;
-    }
-}
-
-/**
  * Navigation
  */
 .link-title {
@@ -178,4 +167,11 @@
  */
 .post-password-form {
     text-align: center;
+}
+
+/**
+ * => Search
+ */
+.search .page-content .search-form {
+    margin: 1em 0;
 }

@@ -67,13 +67,13 @@ if ( ! function_exists( 'bhari_the_archive_title' ) ) :
 		);
 
 		if ( is_tag() ) {
-			the_archive_title( '<h1 class="page-title"> ' . esc_attr( $icons['tag'] ), '</h1>' );
+			the_archive_title( '<h1 class="page-title"> ' . $icons['tag'], '</h1>' );
 		} elseif ( is_category() ) {
-			the_archive_title( '<h1 class="page-title"> ' . esc_attr( $icons['tag'] ), '</h1>' );
+			the_archive_title( '<h1 class="page-title"> ' . $icons['tag'], '</h1>' );
 		} elseif ( is_date() ) {
-			the_archive_title( '<h1 class="page-title"> ' . esc_attr( $icons['tag'] ), '</h1>' );
+			the_archive_title( '<h1 class="page-title"> ' . $icons['tag'], '</h1>' );
 		} elseif ( is_author() ) {
-			the_archive_title( '<h1 class="page-title"> ' . esc_attr( $icons['author'] ), '</h1>' );
+			the_archive_title( '<h1 class="page-title"> ' . $icons['author'], '</h1>' );
 		} else {
 			the_archive_title( '<h1 class="page-title">', '</h1>' );
 		}
