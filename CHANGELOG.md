@@ -1,5 +1,12 @@
 === CHANGELOG ===
 
+= 1.0.3.1 =
+* Removed: Before & After hooks from jetpack infinite posts loop.
+* Tweak: Added credit note for jQuery UI CSS.
+* Removed: Function bhari_strings() and its instances.
+* Enhancement: Design & font size tweaks.
+* Enhancement: Updated theme hook prefixes.
+
 = 1.0.3 =
 * Tweak: Missing tag 'accessibility-ready'.
 * Enhancement: Added directory 'compatibility' for 3rd party plugins support.
