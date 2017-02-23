@@ -50,8 +50,8 @@ get_header(); ?>
 
 			the_posts_pagination( array(
 				'mid_size'  => 4,
-				'prev_text' => bhari_strings( 'pagination-prev' ),
-				'next_text' => bhari_strings( 'pagination-next' ),
+				'prev_text' => ( ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-angle-left"></i>' : '' ) . __( ' Previous', 'bhari' ),
+				'next_text' => __( 'Next', 'bhari' ) . ( ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-angle-right"></i>' : '' ),
 			) );
 
 			bhari_pagination_after();
