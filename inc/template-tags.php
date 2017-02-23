@@ -99,7 +99,7 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 
 		$meta_data = array();
 		$meta_args = apply_filters( 'bhari_post_meta_args', array(
-			'meta-seperator' => '<span class="sep">/</span>',
+			'meta-separator' => '<span class="sep">/</span>',
 			'meta' => array(
 				'author' => array(
 					'before' => ( BHARI_POSTMETA_SUPPORT_AUTHOR_IMAGE ) ? get_avatar( esc_url( get_the_author_meta( 'ID' ) ), 20 ) : '<span class="label">' . __( 'By ', 'bhari' ) . '</span>',
@@ -128,6 +128,7 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 				 * Date Meta
 				 */
 				case 'author':
+
 					$byline = sprintf( // WPCS: XSS OK.
 						esc_html_x( '%s ', 'post author', 'bhari' ),
 						'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
@@ -137,6 +138,8 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 					$meta_author .= $byline;
 					$meta_author .= '</span>';
 					$meta_author .= $meta_args['meta']['author']['after'];
+
+					// Set author meta.
 					$meta_data['author'] = $meta_author;
 				break;
 
@@ -144,6 +147,7 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 				 * Publish Date Meta
 				 */
 				case 'date':
+
 					$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 					if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 						$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -162,10 +166,13 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 
 					$meta_date  = $meta_args['meta']['date']['before'];
 					$meta_date .= '<span class="posted-on">';
-					$meta_date .= $posted_on;
-					$meta_date .= '</span>'; // WPCS: XSS OK.
+					$meta_date .= $posted_on; // WPCS: XSS OK.
+					$meta_date .= '</span>';
 					$meta_date .= $meta_args['meta']['date']['after'];
+
+					// Set date meta.
 					$meta_data['date'] = $meta_date;
+
 				break;
 
 				/**
@@ -174,13 +181,19 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 				 * Translators: used between list items, there is a space after the comma.
 				 */
 				case 'category':
+
 					$categories_list = get_the_category_list( esc_html__( ', ', 'bhari' ) );
+
 					if ( $categories_list && bhari_categorized_blog() ) {
-						$meta_category         = $meta_args['meta']['category']['before'];
-						$meta_category         .= sprintf( '<span class="cat-links"> ' . esc_html__( '%1$s ', 'bhari' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-						$meta_category         .= $meta_args['meta']['category']['after'];
+
+						$meta_category = $meta_args['meta']['category']['before'];
+						$meta_category .= sprintf( '<span class="cat-links"> ' . esc_html__( '%1$s ', 'bhari' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+						$meta_category .= $meta_args['meta']['category']['after'];
+						
+						// Set category meta.
 						$meta_data['category'] = $meta_category;
 					}
+
 				break;
 
 				/**
@@ -189,27 +202,36 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 				 * Translators: used between list items, there is a space after the comma.
 				 */
 				case 'tags':
-						$tags_list = get_the_tag_list( '', esc_html__( ', ', 'bhari' ) );
+
+					$tags_list = get_the_tag_list( '', esc_html__( ', ', 'bhari' ) );
+
 					if ( $tags_list ) {
-						$meta_tags        = $meta_args['meta']['tag']['before'];
-						$meta_tags        .= sprintf( '<span class="tags-links"> ' . esc_html__( '%1$s ', 'bhari' ) . '</span>', $tags_list ); // WPCS: XSS OK.
-						$meta_tags        .= $meta_args['meta']['tag']['after'];
+						$meta_tags = $meta_args['meta']['tag']['before'];
+						$meta_tags .= sprintf( '<span class="tags-links"> ' . esc_html__( '%1$s ', 'bhari' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+						$meta_tags .= $meta_args['meta']['tag']['after'];
+
+						// Set tag meta.
 						$meta_data['tag'] = $meta_tags;
 					}
+
 				break;
 			}
 		}
 
+		/**
+		 * Echo / Return meta.
+		 */
 		if ( $echo ) {
 
 			echo $before;
-			echo join( $meta_args['meta-seperator'], $meta_data );
+
+			echo join( $meta_args['meta-separator'], $meta_data );
 
 			/**
 			 * Edit link
 			 */
 			$edit_icon = ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-edit"></i> ' : '';
-			$edit_icon = $meta_args['meta-seperator'] . $edit_icon;
+			$edit_icon = $meta_args['meta-separator'] . $edit_icon;
 			edit_post_link(
 				sprintf(
 					/* translators: %s: Name of current post */
@@ -223,10 +245,11 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 			echo $after;
 
 		} else {
+
 			return $meta_data;
 		}
-
 	}
+
 endif;
 
 /**
