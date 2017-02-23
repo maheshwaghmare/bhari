@@ -2,12 +2,14 @@
  * Customizer Control: Bhari Range Slider
  *
  * @since  1.0.0
- * 
+ *
  * => Useful JS trigger:
- * 
+ *
  * jQuery('body').on( 'customize-control-bhari-range-slider-click', function() { console.log( 'clicked: ' ); } );
  * jQuery('body').on( 'customize-control-bhari-range-slider-slide', function() { console.log( 'slideed: ' ); } );
  * jQuery('body').on( 'customize-control-bhari-range-slider-change', function() { console.log( 'changeed: ' ); } );
+ *
+ * @package Bhari
  */
 
 /**
@@ -30,20 +32,20 @@
 /**
  * Window load
  */
-jQuery(window).load(function(){
+jQuery( window ).load(function(){
 
 	/**
 	 * Range Slider
 	 */
-	jQuery('.customize-control-bhari-range-slider').each(function(index, el) {
+	jQuery( '.customize-control-bhari-range-slider' ).each(function(index, el) {
 
 		var range_Control = jQuery( el ),
-			range_Input   = range_Control.find('.bhari-control-slider-input'),
-			range_Slider  = range_Control.find('.slider'),
+			range_Input   = range_Control.find( '.bhari-control-slider-input' ),
+			range_Slider  = range_Control.find( '.slider' ),
 			range_Default = range_Control.find( '.bhari-control-slider-default-val' ),
-			range_Min     = parseFloat( range_Slider.attr('data-min') ) || 0,
-			range_Max     = parseFloat( range_Slider.attr('data-max') ) || 9999,
-			range_Step    = parseFloat( range_Slider.attr('data-step') ) || 1;
+			range_Min     = parseFloat( range_Slider.attr( 'data-min' ) ) || 0,
+			range_Max     = parseFloat( range_Slider.attr( 'data-max' ) ) || 9999,
+			range_Step    = parseFloat( range_Slider.attr( 'data-step' ) ) || 1;
 
 		/**
 		 * Slider initialize
@@ -57,11 +59,11 @@ jQuery(window).load(function(){
 				range_Input.val( ui.value ).change();
 				range_Input.val( ui.value );
 
-				//	Added trigger on 'slide'
-				jQuery('body').trigger('customize-control-bhari-range-slider-slide');
+				// Added trigger on 'slide'.
+				jQuery( 'body' ).trigger( 'customize-control-bhari-range-slider-slide' );
 			}
 		} );
-	
+
 		/**
 		 * Slider input change
 		 */
@@ -69,8 +71,8 @@ jQuery(window).load(function(){
 			var current_value = this.value || '';
 			range_Slider.slider( 'value', parseFloat( current_value ) );
 
-			//	Added trigger on 'change'.
-			jQuery('body').trigger('customize-control-bhari-range-slider-change');
+			// Added trigger on 'change'.
+			jQuery( 'body' ).trigger( 'customize-control-bhari-range-slider-change' );
 		});
 
 		/**
@@ -81,8 +83,8 @@ jQuery(window).load(function(){
 			var default_value = jQuery( this ).data( 'default-value' ) || '';
 			range_Input.attr( 'value', parseFloat( default_value ) ).trigger( 'change' );
 
-			//	Added trigger on 'click'.
-			jQuery('body').trigger('customize-control-bhari-range-slider-click');
+			// Added trigger on 'click'.
+			jQuery( 'body' ).trigger( 'customize-control-bhari-range-slider-click' );
 
 			return false;
 		});
