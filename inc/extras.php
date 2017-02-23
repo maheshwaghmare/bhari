@@ -14,7 +14,7 @@ if ( ! function_exists( 'bhari_get_sidebar_layout' ) ) :
 	/**
 	 * Get Sidebar Layout
 	 *
-	 * @param  string $layout Sidebar layout.
+	 * @param string $layout Sidebar layout.
 	 */
 	function bhari_get_sidebar_layout( $layout ) {
 

@@ -1,3 +1,10 @@
+/**
+ * File customizer-control-slider.css.
+ *
+ * Slider control for customizer .
+ *
+ */
+
 .customize-control-bhari-range-slider label > p {
     position: relative;
 }

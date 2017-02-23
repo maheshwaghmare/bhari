@@ -14,6 +14,9 @@ if ( ! function_exists( 'bhari_get_sidebar_page' ) ) :
 
 	/**
 	 * Get sidebar for single page, custom post type etc.
+	 *
+	 * @see bhari_get_sidebar_layout()
+	 * @see bhari_get_option()
 	 */
 	function bhari_get_sidebar_page() {
 		bhari_get_sidebar_layout( bhari_get_option( 'sidebar-page' ) );
@@ -28,6 +31,9 @@ if ( ! function_exists( 'bhari_get_sidebar_single' ) ) :
 
 	/**
 	 * Get sidebar for single post only.
+	 * 
+	 * @see bhari_get_sidebar_layout()
+	 * @see bhari_get_option()
 	 */
 	function bhari_get_sidebar_single() {
 		bhari_get_sidebar_layout( bhari_get_option( 'sidebar-single' ) );
@@ -42,6 +48,9 @@ if ( ! function_exists( 'bhari_get_sidebar_archive' ) ) :
 
 	/**
 	 * Get sidebar for archive pages ( tag, category, date ) and search page.
+	 * 
+	 * @see bhari_get_sidebar_layout()
+	 * @see bhari_get_option()
 	 */
 	function bhari_get_sidebar_archive() {
 		bhari_get_sidebar_layout( bhari_get_option( 'sidebar-archive' ) );
@@ -263,7 +272,9 @@ if ( ! function_exists( 'bhari_entry_footer_contents' ) ) :
 	function bhari_entry_footer_contents() {
 
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link"> <i class="fa fa-comments"></i> ';
+			$edit_icon = ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-comments"></i> ' : '';
+			echo '<span class="comments-link"> ';
+			echo $edit_icon;
 			/* translators: %s: post title */
 			comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'bhari' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
 			echo '</span>';
@@ -284,6 +295,7 @@ if ( ! function_exists( 'bhari_entry_footer_contents' ) ) :
 		);
 	}
 	add_action( 'bhari_entry_footer', 'bhari_entry_footer_contents' );
+
 endif;
 
 /**
@@ -318,6 +330,7 @@ if ( ! function_exists( 'bhari_categorized_blog' ) ) :
 		if ( $all_the_cool_cats > 1 ) {
 			// This blog has more than 1 category so bhari_categorized_blog should return true.
 			return true;
+
 		} else {
 			// This blog has only 1 category so bhari_categorized_blog should return false.
 			return false;

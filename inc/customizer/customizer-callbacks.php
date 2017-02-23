@@ -6,15 +6,12 @@
  */
 
 /**
- * Bhari Customizer Callback
- *
- * @package Bhari
- * @since 1.0.0
+ * Customizer Callback
  */
 if ( ! class_exists( 'Bhari_Customize_Callback' ) ) :
 
 	/**
-	 * Bhari Customizer Callback
+	 * Customizer Callback
 	 */
 	class Bhari_Customize_Callback {
 

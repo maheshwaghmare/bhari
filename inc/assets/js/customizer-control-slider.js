@@ -1,4 +1,3 @@
-
 /**
  * Customizer Control: Bhari Range Slider
  *
@@ -70,7 +69,7 @@ jQuery(window).load(function(){
 			var current_value = this.value || '';
 			range_Slider.slider( 'value', parseFloat( current_value ) );
 
-			//	Added trigger on 'change'
+			//	Added trigger on 'change'.
 			jQuery('body').trigger('customize-control-bhari-range-slider-change');
 		});
 
@@ -82,7 +81,7 @@ jQuery(window).load(function(){
 			var default_value = jQuery( this ).data( 'default-value' ) || '';
 			range_Input.attr( 'value', parseFloat( default_value ) ).trigger( 'change' );
 
-			//	Added trigger on 'click'
+			//	Added trigger on 'click'.
 			jQuery('body').trigger('customize-control-bhari-range-slider-click');
 
 			return false;

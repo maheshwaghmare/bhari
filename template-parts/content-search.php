@@ -23,13 +23,14 @@
 			/**
 			 * Print post meta
 			 *
-			 * @see  bhari_post_meta($meta_list, $before, $after)
+			 * @see bhari_post_meta($meta_list, $before, $after)
 			 */
 			bhari_post_meta( array( 'author', 'date', 'category', 'tags' ), '<div class="entry-meta">', '</div><!-- .entry-meta -->' );
 
 		endif;
 		?>
-	<?php bhari_entry_header_bottom(); ?>
+
+		<?php bhari_entry_header_bottom(); ?>
 	</header><!-- .entry-header -->
 	<?php bhari_entry_header_after(); ?>
 

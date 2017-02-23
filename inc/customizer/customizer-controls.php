@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'Bhari_Customize_Width_Slider_Control' ) ) :
 
 	/**
-	 * Slider Control
+	 * Customizer Slider Control
 	 */
 	class Bhari_Customize_Width_Slider_Control extends WP_Customize_Control {
 
