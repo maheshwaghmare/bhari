@@ -14,7 +14,7 @@
 	<?php bhari_page_header_before(); ?>
 	<header class="page-header">
 		<h1 class="page-title">
-			<?php if( BHARI_SUPPORT_FONTAWESOME ) : ?>
+			<?php if ( BHARI_SUPPORT_FONTAWESOME ) : ?>
 				<i class="fa fa-warning"></i>
 			<?php endif; ?>
 			<?php esc_html_e( 'Nothing Found', 'bhari' ); ?>

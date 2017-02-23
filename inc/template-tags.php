@@ -31,7 +31,7 @@ if ( ! function_exists( 'bhari_get_sidebar_single' ) ) :
 
 	/**
 	 * Get sidebar for single post only.
-	 * 
+	 *
 	 * @see bhari_get_sidebar_layout()
 	 * @see bhari_get_option()
 	 */
@@ -48,7 +48,7 @@ if ( ! function_exists( 'bhari_get_sidebar_archive' ) ) :
 
 	/**
 	 * Get sidebar for archive pages ( tag, category, date ) and search page.
-	 * 
+	 *
 	 * @see bhari_get_sidebar_layout()
 	 * @see bhari_get_option()
 	 */
@@ -198,7 +198,7 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 						$meta_category = $meta_args['meta']['category']['before'];
 						$meta_category .= sprintf( '<span class="cat-links"> ' . esc_html__( '%1$s ', 'bhari' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 						$meta_category .= $meta_args['meta']['category']['after'];
-						
+
 						// Set category meta.
 						$meta_data['category'] = $meta_category;
 					}
