@@ -123,7 +123,7 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 					'after'  => '',
 				),
 				'tag' => array(
-					'before' => '<span class="label">' . __( 'Tagged in ', 'bhari' ) . '</span>',
+					'before' => ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-tags"></i> ' : '<span class="label">' . __( 'Tags ', 'bhari' ) . '</span>',
 					'after'  => '',
 				),
 			),
@@ -207,7 +207,7 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 				 */
 				case 'tags':
 
-					$tags_list = get_the_tag_list();
+					$tags_list = get_the_tag_list( '', esc_html__( ', ', 'bhari' ) );
 
 					if ( $tags_list ) {
 						$meta_tags = $meta_args['meta']['tag']['before'];

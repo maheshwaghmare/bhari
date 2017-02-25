@@ -103,6 +103,26 @@
 }
 
 /**
+ * Site header
+ */
+.site-header .search-form {
+    font-size: 1rem;
+
+    @media all and ( max-width: 768px ) {
+        margin: 0em 1em 1em 1em;
+    }
+
+    @media all and ( min-width: 768px ) {
+        margin-top: -1.2em;
+        position: absolute;
+        right: 0;
+        width: 300px;
+    }
+}
+
+
+
+/**
  * Site Content
  */
 
@@ -186,8 +206,8 @@
  * Entry Footer
  */
 .entry-footer {
-    font-size: 0.9rem;
-    margin-top: 1em;
+    font-size: 1rem;
+    margin-top: 1.5em;
 
     > span {
         margin-right: 1em;
@@ -200,6 +220,10 @@
 
     .fa-comments {
         margin-right: 0.2em;
+    }
+
+    .meta-tag > i {
+        margin-right: 0.5em;
     }
 
 }

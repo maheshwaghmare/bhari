@@ -16,14 +16,30 @@
 
     // Tags.
     .tags-links > a {
-        background: #34495e;
+        background-color: $color__link;
         color: white;
         padding: 0.5em 1em;
         margin-right: 0.5em;
 
+        &:hover {
+            background-color: $color__link-hover;
+        }
+
         &:last-child {
             margin-right: 0;
         }
+    }
+
+    // Entry content.
+    .entry-content {
+        margin-bottom: 1em;
+    }
+
+    .entry-footer {
+        font-size: 1rem;
+        margin-top: 2em;
+        border-top: 1px solid #f1f1f1;
+        padding-top: 2em;
     }
 }
 
