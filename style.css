@@ -1049,6 +1049,10 @@ input.search-submit {
   margin-top: 1em;
 }
 
+.entry-footer > span {
+  margin-right: 1em;
+}
+
 .entry-footer i,
 .entry-footer a {
   color: #838383;
@@ -1313,6 +1317,17 @@ input.search-submit {
 .single .site-main > article {
   padding: 2em;
   margin-bottom: 2em;
+}
+
+.single .tags-links > a {
+  background: #34495e;
+  color: white;
+  padding: 0.5em 1em;
+  margin-right: 0.5em;
+}
+
+.single .tags-links > a:last-child {
+  margin-right: 0;
 }
 
 /**

@@ -189,6 +189,10 @@
     font-size: 0.9rem;
     margin-top: 1em;
 
+    > span {
+        margin-right: 1em;
+    }
+
     i,
     a {
         color: $comment-meta-color;
@@ -197,6 +201,7 @@
     .fa-comments {
         margin-right: 0.2em;
     }
+
 }
 
 /**

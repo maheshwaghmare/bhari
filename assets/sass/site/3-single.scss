@@ -13,6 +13,18 @@
         padding: 2em;
         margin-bottom: 2em;
     }
+
+    // Tags.
+    .tags-links > a {
+        background: #34495e;
+        color: white;
+        padding: 0.5em 1em;
+        margin-right: 0.5em;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
 }
 
 /**
