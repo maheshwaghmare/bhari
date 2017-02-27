@@ -778,7 +778,7 @@ a:hover, a:active {
 .widget {
   background: #fff;
   padding: 1.5em;
-  margin: 0 0 1.5em;
+  margin: 0 0 2em;
   /* Make sure select elements fit in widgets. */
 }
 
@@ -998,7 +998,7 @@ input.search-submit {
 .site-main > article {
   background: #fff;
   padding: 1em 1.5em;
-  margin-bottom: 1em;
+  margin-bottom: 3em;
 }
 
 /**
@@ -1347,9 +1347,11 @@ input.search-submit {
 
 .single .tags-links > a {
   background-color: #34495e;
+  display: inline-block;
   color: white;
   padding: 0.5em 1em;
   margin-left: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .single .tags-links > a:hover {
@@ -1534,6 +1536,12 @@ input.search-submit {
  */
 .search .page-content .search-form {
   margin: 1em 0;
+}
+
+.no-comments {
+  background: white;
+  padding: 1.5em;
+  border-right: 4px solid #34495e;
 }
 
 /**

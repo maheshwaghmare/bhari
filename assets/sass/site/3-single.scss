@@ -17,9 +17,11 @@
     // Tags.
     .tags-links > a {
         background-color: $color__link;
+        display: inline-block;
         color: white;
         padding: 0.5em 1em;
         margin-right: 0.5em;
+        margin-bottom: 0.5em;
 
         &:hover {
             background-color: $color__link-hover;
@@ -202,4 +204,10 @@
  */
 .search .page-content .search-form {
     margin: 1em 0;
+}
+
+.no-comments {
+    background: white;
+    padding: 1.5em;
+    border-left: 4px solid $color__link;
 }
