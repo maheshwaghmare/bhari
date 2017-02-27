@@ -1410,6 +1410,10 @@ input.search-submit {
   padding-top: 1em;
 }
 
+.pingback + .comment {
+  margin-top: 1em;
+}
+
 .comment {
   list-style: none;
   margin-bottom: 1em;
