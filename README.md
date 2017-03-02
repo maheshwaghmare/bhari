@@ -28,7 +28,7 @@ Bhari includes support for Infinite Scroll in Jetpack.
 
 ### Changelog
 
-For changelog please check file CHANGELOG.md.
+For changelog please check file [CHANGELOG.md] (https://github.com/maheshwaghmare/bhari/blob/master/CHANGELOG.md).
 
 ### Credits
 
