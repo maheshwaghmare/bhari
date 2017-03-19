@@ -313,8 +313,3 @@ require get_template_directory() . '/inc/customizer/customizer.php';
  * Load compatibility files for 3rd party plugins.
  */
 require get_template_directory() . '/inc/compatibility/jetpack.php';
-
-/**
- * Add Theme Features
- */
-require get_template_directory() . '/inc/features/site-header-top-bar.php';

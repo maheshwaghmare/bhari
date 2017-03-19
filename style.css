@@ -958,28 +958,6 @@ input.search-submit {
 }
 
 /**
- * Site header
- */
-.site-header .search-form {
-  font-size: 1rem;
-}
-
-@media all and (max-width: 768px) {
-  .site-header .search-form {
-    margin: 0em 1em 1em 1em;
-  }
-}
-
-@media all and (min-width: 768px) {
-  .site-header .search-form {
-    margin-top: -1.2em;
-    position: absolute;
-    right: 0;
-    width: 300px;
-  }
-}
-
-/**
  * Site Content
  */
 .site-content {
