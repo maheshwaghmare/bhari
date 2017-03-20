@@ -1,13 +1,10 @@
 === Bhari ===
-
 Contributors: Mahesh901122
-Tags: one-column, two-columns, three-columns, right-sidebar, left-sidebar, blog, custom-header, custom-background, custom-menu, custom-colors, sticky-post, threaded-comments, translation-ready, accessibility-ready, featured-images, theme-options, post-formats
-
-Requires at least: 4.0
+Requires at least: 4.5
 Tested up to: 4.7.2
-Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: one-column, two-columns, three-columns, right-sidebar, left-sidebar, blog, custom-header, custom-background, custom-menu, custom-colors, sticky-post, threaded-comments, translation-ready, accessibility-ready, featured-images, theme-options, post-formats
 
 Bhari is simple theme for bloggers.
 
@@ -21,6 +18,21 @@ Bhari is lightweight, responsive theme for bloggers who love to write articles, 
 2. Click 'Upload' and Choose File, then select the theme's .zip file. Click 'Install Now'.
 3. Click 'Activate' to use your new theme right away.
 
+== Copyright ==
+
+Bhari WordPress Theme, Copyright 2017 WordPress.org
+Bhari is distributed under the terms of the GNU GPL
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
 == Frequently Asked Questions ==
 
 = Does this theme support any plugins? =
@@ -33,7 +45,20 @@ For changelog please check file CHANGELOG.md.
 
 == Credits ==
 
-* Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-* normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
-* Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
-* jQuery UI CSS Framework 1.11.4 http://jqueryui.com
+Bhari Theme bundles the following third-party resources:
+
+normalize.css, Copyright 2012-2016 Nicolas Gallagher and Jonathan Neal
+License: MIT
+Source: https://necolas.github.io/normalize.css/
+
+Font Awesome icons, Copyright Dave Gandy
+License: SIL Open Font License, version 4.7.0.
+Source: http://fontawesome.io/
+
+jQuery UI CSS Framework
+License: MIT, version 1.11.4
+Source: http://jqueryui.com/
+
+Underscores, (C) 2012-2016 Automattic, Inc.
+License: GPLv2 or later
+Source: http://underscores.me/
