@@ -219,6 +219,29 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 					}
 
 				break;
+
+				/**
+				 * Edit Link
+				 *
+				 * Translators: used between list items, there is a space after the comma.
+				 */
+				case 'edit_link':
+
+					/**
+					 * Edit link
+					 */
+					$edit_icon = ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-edit"></i> ' : '';
+
+					$meta_edits  = $meta_args['meta']['edit']['before'];
+					$meta_edits .= '<span class="edit-link"><a href="' . esc_url( get_edit_post_link() ) . '" />';
+					$meta_edits .= $edit_icon;
+					$meta_edits .= __( 'Edit', 'bhari' ).'</span></a>';
+					$meta_edits .= $meta_args['meta']['edit']['after'];
+
+					// Set edit meta.
+					$meta_data['edit_link'] = '<span class="meta-edit">' .$meta_edits. '</span>';
+
+				break;
 			}
 		}
 
@@ -230,21 +253,6 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 			echo $before;
 
 			echo join( $meta_args['meta-separator'], $meta_data );
-
-			/**
-			 * Edit link
-			 */
-			$edit_icon = ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-edit"></i> ' : '';
-			$edit_icon = $meta_args['meta-separator'] . $edit_icon;
-			edit_post_link(
-				sprintf(
-					/* translators: %s: Name of current post */
-					esc_html__( 'Edit %s', 'bhari' ),
-					the_title( '<span class="screen-reader-text">"', '"</span>', false )
-				),
-				'<span class="edit-link">' . $edit_icon,
-				'</span>'
-			);
 
 			echo $after;
 
@@ -278,14 +286,27 @@ if ( ! function_exists( 'bhari_entry_footer_contents' ) ) :
 
 			// Separator.
 			echo '<span class="sep">/</span>';
+
 		}
 
-		/**
-		 * Print post meta
-		 *
-		 * @see bhari_post_meta($meta_list, $before, $after)
-		 */
-		bhari_post_meta( array( 'tags' ) );
+		if( 'post' === get_post_type() ) {
+
+			/**
+			 * Print post meta
+			 *
+			 * @see bhari_post_meta($meta_list, $before, $after)
+			 */
+			bhari_post_meta( array( 'tags', 'edit_link' ) );
+
+		} else {
+
+			/**
+			 * Print post meta
+			 *
+			 * @see bhari_post_meta($meta_list, $before, $after)
+			 */
+			bhari_post_meta( array( 'edit_link' ) );
+		}
 
 
 	}
