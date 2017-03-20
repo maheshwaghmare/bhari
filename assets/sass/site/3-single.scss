@@ -23,6 +23,7 @@
         margin-right: 0.5em;
         margin-bottom: 0.5em;
 
+        &:focus,
         &:hover {
             background-color: $color__link-hover;
         }

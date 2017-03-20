@@ -265,16 +265,20 @@
             width: 100%;
         }
 
+        &:focus .link-icon,
         &:hover .link-icon {
             color: $white-color;
         }
 
+        &:focus,
         &:hover,
         &.current {
             color: $white-color;
             background: $color__link;
         }
     }
+    
+    a:focus .link-caption,
     a:hover .link-caption {
         color: $white-color;
     }
