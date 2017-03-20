@@ -21,12 +21,12 @@
 * Removed: vl developer debugging function.
 
 = 1.0.2 =
-* Fixed: Vender file asset URLs issue.
+* Fixed: Vendor file asset URLs issue.
 * Removed: wpcom.php file which was not used yet. If required then we'll add this in future.
 * Updated: editor-style CSS file location.
 
 = 1.0.1 =
-* Tweak: Moved font awesome assets in /assets/vender/ directory.
+* Tweak: Moved font awesome assets in /assets/vendor/ directory.
 * Tweak: Added missing Font awesome credit note.
 * Tweak: Fixed font awesome font location issue.
 * Added: RTL support for bhari.min.css

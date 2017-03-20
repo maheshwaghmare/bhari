@@ -188,11 +188,11 @@ if ( ! function_exists( 'bhari_asset_url' ) ) :
 		 * Load admin assets
 		 */
 		switch ( $dir_path ) {
-			case 'vender':
-					$unmin_url     = '/assets/vender/' . $type . '/' . $file_name . '.' . $type;
-					$min_url       = '/assets/vender/' . $type . '/' . $file_name . '.min.' . $type;
-					$unmin_url_rtl = '/assets/vender/' . $type . '/rtl/' . $file_name . '-rtl.' . $type;
-					$min_url_rtl   = '/assets/vender/' . $type . '/rtl/' . $file_name . '-rtl.min.' . $type;
+			case 'vendor':
+					$unmin_url     = '/assets/vendor/' . $type . '/' . $file_name . '.' . $type;
+					$min_url       = '/assets/vendor/' . $type . '/' . $file_name . '.min.' . $type;
+					$unmin_url_rtl = '/assets/vendor/' . $type . '/rtl/' . $file_name . '-rtl.' . $type;
+					$min_url_rtl   = '/assets/vendor/' . $type . '/rtl/' . $file_name . '-rtl.min.' . $type;
 				break;
 			case 'admin':
 					$unmin_url     = '/inc/assets/' . $type . '/' . $file_name . '.' . $type;
@@ -277,7 +277,7 @@ if ( ! function_exists( 'bhari_scripts' ) ) :
 		 * External assets.
 		 */
 		if ( BHARI_SUPPORT_FONTAWESOME ) {
-			wp_enqueue_style( 'font-awesome', bhari_asset_url( 'font-awesome', 'css', '', 'vender' ) );
+			wp_enqueue_style( 'font-awesome', bhari_asset_url( 'font-awesome', 'css', '', 'vendor' ) );
 		}
 	}
 	add_action( 'wp_enqueue_scripts', 'bhari_scripts' );
