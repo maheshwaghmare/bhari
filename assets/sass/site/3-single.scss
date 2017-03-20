@@ -13,6 +13,37 @@
         padding: 2em;
         margin-bottom: 2em;
     }
+
+    // Tags.
+    .tags-links > a {
+        background-color: $color__link;
+        display: inline-block;
+        color: white;
+        padding: 0.5em 1em;
+        margin-right: 0.5em;
+        margin-bottom: 0.5em;
+
+        &:focus,
+        &:hover {
+            background-color: $color__link-hover;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    // Entry content.
+    .entry-content {
+        margin-bottom: 1em;
+    }
+
+    .entry-footer {
+        font-size: 1rem;
+        margin-top: 2em;
+        border-top: 1px solid #f1f1f1;
+        padding-top: 2em;
+    }
 }
 
 /**
@@ -47,6 +78,10 @@
     font-size: 1rem;
     &:first-child {
         padding-top: 1em;
+    }
+
+    + .comment {
+        margin-top: 1em;
     }
 }
 
@@ -174,4 +209,10 @@
  */
 .search .page-content .search-form {
     margin: 1em 0;
+}
+
+.no-comments {
+    background: white;
+    padding: 1.5em;
+    border-left: 4px solid $color__link;
 }

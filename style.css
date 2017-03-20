@@ -4,7 +4,7 @@ Theme URI: https://github.com/maheshwaghmare/bhari
 Author: Mahesh M. Waghmare
 Author URI: https://maheshwaghmare.wordpress.com/
 Description: Bhari is lightweight, responsive theme for bloggers who love to write articles, share awesome stuff etc.
-Version: 1.0.3.1
+Version: 1.0.3.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: bhari
@@ -311,7 +311,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  margin: 0;
+  margin: 0 0 1em 0;
 }
 
 dfn, cite, em, i {
@@ -778,7 +778,7 @@ a:hover, a:active {
 .widget {
   background: #fff;
   padding: 1.5em;
-  margin: 0 0 1.5em;
+  margin: 0 0 2em;
   /* Make sure select elements fit in widgets. */
 }
 
@@ -976,7 +976,7 @@ input.search-submit {
 .site-main > article {
   background: #fff;
   padding: 1em 1.5em;
-  margin-bottom: 1em;
+  margin-bottom: 3em;
 }
 
 /**
@@ -1045,8 +1045,12 @@ input.search-submit {
  * Entry Footer
  */
 .entry-footer {
-  font-size: 0.9rem;
-  margin-top: 1em;
+  font-size: 1rem;
+  margin-top: 1.5em;
+}
+
+.entry-footer > span {
+  margin-right: 1em;
 }
 
 .entry-footer i,
@@ -1056,6 +1060,10 @@ input.search-submit {
 
 .entry-footer .fa-comments {
   margin-right: 0.2em;
+}
+
+.entry-footer .meta-tag > i {
+  margin-right: 0.5em;
 }
 
 /**
@@ -1123,18 +1131,22 @@ input.search-submit {
   }
 }
 
+.nav-links a:focus .link-icon,
 .nav-links a:hover .link-icon,
+.nav-links > span:focus .link-icon,
 .nav-links > span:hover .link-icon {
   color: #fff;
 }
 
-.nav-links a:hover, .nav-links a.current,
+.nav-links a:focus, .nav-links a:hover, .nav-links a.current,
+.nav-links > span:focus,
 .nav-links > span:hover,
 .nav-links > span.current {
   color: #fff;
   background: #34495e;
 }
 
+.nav-links a:focus .link-caption,
 .nav-links a:hover .link-caption {
   color: #fff;
 }
@@ -1262,7 +1274,7 @@ input.search-submit {
   color: #fff;
 }
 
-.main-navigation a:hover {
+.main-navigation a:focus, .main-navigation a:hover {
   background-color: #293b4c;
 }
 
@@ -1315,6 +1327,34 @@ input.search-submit {
   margin-bottom: 2em;
 }
 
+.single .tags-links > a {
+  background-color: #34495e;
+  display: inline-block;
+  color: white;
+  padding: 0.5em 1em;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.single .tags-links > a:focus, .single .tags-links > a:hover {
+  background-color: #293b4c;
+}
+
+.single .tags-links > a:last-child {
+  margin-right: 0;
+}
+
+.single .entry-content {
+  margin-bottom: 1em;
+}
+
+.single .entry-footer {
+  font-size: 1rem;
+  margin-top: 2em;
+  border-top: 1px solid #f1f1f1;
+  padding-top: 2em;
+}
+
 /**
  * Comments
  */
@@ -1350,6 +1390,10 @@ input.search-submit {
 
 .pingback:first-child {
   padding-top: 1em;
+}
+
+.pingback + .comment {
+  margin-top: 1em;
 }
 
 .comment {
@@ -1478,6 +1522,12 @@ input.search-submit {
  */
 .search .page-content .search-form {
   margin: 1em 0;
+}
+
+.no-comments {
+  background: white;
+  padding: 1.5em;
+  border-left: 4px solid #34495e;
 }
 
 /**

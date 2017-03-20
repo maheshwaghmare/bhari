@@ -47,7 +47,7 @@
 			 *
 			 * @see bhari_post_meta($meta_list, $before, $after)
 			 */
-			bhari_post_meta( array( 'author', 'date', 'category', 'tags' ), '<div class="entry-meta">', '</div><!-- .entry-meta -->' );
+			bhari_post_meta( array( 'author', 'date', 'category' ), '<div class="entry-meta">', '</div><!-- .entry-meta -->' );
 
 		endif;
 		?>

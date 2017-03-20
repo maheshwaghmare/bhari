@@ -120,7 +120,7 @@
 .site-main > article {
     background: $white-color;
     padding: 1em 1.5em;
-    margin-bottom: 1em;
+    margin-bottom: 3em;
 }
 
 /**
@@ -186,8 +186,12 @@
  * Entry Footer
  */
 .entry-footer {
-    font-size: 0.9rem;
-    margin-top: 1em;
+    font-size: 1rem;
+    margin-top: 1.5em;
+
+    > span {
+        margin-right: 1em;
+    }
 
     i,
     a {
@@ -197,6 +201,11 @@
     .fa-comments {
         margin-right: 0.2em;
     }
+
+    .meta-tag > i {
+        margin-right: 0.5em;
+    }
+
 }
 
 /**
@@ -256,16 +265,20 @@
             width: 100%;
         }
 
+        &:focus .link-icon,
         &:hover .link-icon {
             color: $white-color;
         }
 
+        &:focus,
         &:hover,
         &.current {
             color: $white-color;
             background: $color__link;
         }
     }
+    
+    a:focus .link-caption,
     a:hover .link-caption {
         color: $white-color;
     }

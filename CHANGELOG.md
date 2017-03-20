@@ -1,5 +1,10 @@
 === CHANGELOG ===
 
+= 1.0.3.2 =
+* Added: focus styling for <a> tag.
+* Tweak: Comments & Pingback spacing.
+* Tweak: Design changes for single post tags.
+
 = 1.0.3.1 =
 * Removed: Before & After hooks from jetpack infinite posts loop.
 * Tweak: Added credit note for jQuery UI CSS.
