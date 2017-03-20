@@ -126,6 +126,10 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 					'before' => ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-tags"></i> ' : '<span class="label">' . __( 'Tags ', 'bhari' ) . '</span>',
 					'after'  => '',
 				),
+				'edit_link' => array(
+					'before' => ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-edit"></i> ' : '',
+					'after'  => '',
+				),
 			),
 		) );
 
@@ -227,16 +231,10 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 				 */
 				case 'edit_link':
 
-					/**
-					 * Edit link
-					 */
-					$edit_icon = ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-edit"></i> ' : '';
-
-					$meta_edits  = $meta_args['meta']['edit']['before'];
+					$meta_edits  = $meta_args['meta']['edit_link']['before'];
 					$meta_edits .= '<span class="edit-link"><a href="' . esc_url( get_edit_post_link() ) . '" />';
-					$meta_edits .= $edit_icon;
 					$meta_edits .= __( 'Edit', 'bhari' ).'</span></a>';
-					$meta_edits .= $meta_args['meta']['edit']['after'];
+					$meta_edits .= $meta_args['meta']['edit_link']['after'];
 
 					// Set edit meta.
 					$meta_data['edit_link'] = '<span class="meta-edit">' .$meta_edits. '</span>';
