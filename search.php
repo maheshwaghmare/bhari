@@ -14,16 +14,7 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<?php bhari_page_header_before(); ?>
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php if ( BHARI_SUPPORT_FONTAWESOME ) : ?>
-						<i class="fa fa-search"></i>
-					<?php endif; ?>
-					<?php printf( __( 'Search Results for: %s', 'bhari' ), '<span>' . get_search_query() . '</span>' ); ?>
-				</h1>
-			</header><!-- .page-header -->
-			<?php bhari_page_header_after(); ?>
+			<?php bhari_hook_page_header(); ?>
 
 			<?php bhari_content_while_before(); ?>
 

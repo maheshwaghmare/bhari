@@ -287,6 +287,7 @@ endif;
 /**
  * Theme Hook Alliance hook stub list.
  */
+require get_template_directory() . '/inc/hooks-define.php';
 require get_template_directory() . '/inc/hooks.php';
 
 /**

@@ -14,14 +14,12 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<?php bhari_page_header_before(); ?>
+			<?php bhari_hook_page_header(); ?>
 
 			<header class="page-header">
 				<?php bhari_the_archive_title(); ?>
 				<?php the_archive_description( '<div class="archive-description">', '</div>' ); ?>
 			</header><!-- .page-header -->
-
-			<?php bhari_page_header_after(); ?>
 
 			<?php bhari_content_while_before(); ?>
 
