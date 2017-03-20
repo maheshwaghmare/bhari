@@ -15,6 +15,12 @@
 	<header class="entry-header">
 		<?php bhari_entry_header_top(); ?>
 
+		<?php if ( has_post_thumbnail( get_the_ID() ) ) : ?>
+			<div class="entry-thumbnail">
+				<?php the_post_thumbnail(); ?>
+			</div><!-- .entry-thumbnail -->	
+		<?php endif; ?>
+
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 		<?php bhari_entry_header_bottom(); ?>

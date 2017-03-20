@@ -1312,6 +1312,16 @@ input.search-submit {
   text-align: center;
 }
 
+/**
+ * Single Page
+ */
+.page .entry-thumbnail {
+  margin-top: 0.5em;
+}
+
+/**
+ * Single Post
+ */
 .single .entry-header {
   border-bottom: 1px solid #eaeaea;
   padding: 0 0 2em 0;
