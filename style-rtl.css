@@ -1283,12 +1283,15 @@ input.search-submit {
 }
 
 @media screen and (max-width: 768px) {
+  .main-navigation .children a,
   .main-navigation .sub-menu a {
     padding-right: 2em;
   }
+  .main-navigation .children ul a,
   .main-navigation .sub-menu ul a {
     padding-right: 3em;
   }
+  .main-navigation .children ul ul a,
   .main-navigation .sub-menu ul ul a {
     padding-right: 4em;
   }

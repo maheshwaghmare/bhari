@@ -104,12 +104,15 @@
     }
 
     @media screen and (max-width: 768px) {
+        .children a,
         .sub-menu a {
             padding-left: 2em;
         }
+        .children ul a,
         .sub-menu ul a {
             padding-left: 3em;
         }
+        .children ul ul a,
         .sub-menu ul ul a {
             padding-left: 4em;
         }
