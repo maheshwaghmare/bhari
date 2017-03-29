@@ -357,7 +357,7 @@ if ( ! function_exists( 'bhari_dynamic_css' ) ) :
 
 		$output = str_replace( array( "\r", "\n", "\t" ), '', $output );
 
-		wp_add_inline_style( 'bhari-core-css', $output );
+		wp_add_inline_style( 'bhari-core-css', esc_html( $output ) );
 	}
 	add_action( 'wp_enqueue_scripts', 'bhari_dynamic_css' );
 
