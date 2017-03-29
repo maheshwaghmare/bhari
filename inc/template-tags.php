@@ -151,7 +151,7 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 					$meta_author .= $meta_args['meta']['author']['after'];
 
 					// Set author meta.
-					$meta_data['author'] = '<span class="meta-author">' .$meta_author. '</span>';
+					$meta_data['author'] = '<span class="meta-author">' . $meta_author . '</span>';
 				break;
 
 				/**
@@ -180,7 +180,7 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 					$meta_date .= $meta_args['meta']['date']['after'];
 
 					// Set date meta.
-					$meta_data['date'] = '<span class="meta-date">' .$meta_date. '</span>';
+					$meta_data['date'] = '<span class="meta-date">' . $meta_date . '</span>';
 				break;
 
 				/**
@@ -199,7 +199,7 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 						$meta_category .= $meta_args['meta']['category']['after'];
 
 						// Set category meta.
-						$meta_data['category'] = '<span class="meta-category">' .$meta_category. '</span>';
+						$meta_data['category'] = '<span class="meta-category">' . $meta_category . '</span>';
 					}
 
 				break;
@@ -219,7 +219,7 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 						$meta_tags .= $meta_args['meta']['tag']['after'];
 
 						// Set tag meta.
-						$meta_data['tag'] = '<span class="meta-tag">' .$meta_tags. '</span>';
+						$meta_data['tag'] = '<span class="meta-tag">' . $meta_tags . '</span>';
 					}
 
 				break;
@@ -233,11 +233,11 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 
 					$meta_edits  = $meta_args['meta']['edit_link']['before'];
 					$meta_edits .= '<span class="edit-link"><a href="' . esc_url( get_edit_post_link() ) . '" />';
-					$meta_edits .= __( 'Edit', 'bhari' ).'</span></a>';
+					$meta_edits .= __( 'Edit', 'bhari' ) . '</span></a>';
 					$meta_edits .= $meta_args['meta']['edit_link']['after'];
 
 					// Set edit meta.
-					$meta_data['edit_link'] = '<span class="meta-edit">' .$meta_edits. '</span>';
+					$meta_data['edit_link'] = '<span class="meta-edit">' . $meta_edits . '</span>';
 
 				break;
 			}
@@ -287,7 +287,7 @@ if ( ! function_exists( 'bhari_entry_footer_contents' ) ) :
 
 		}
 
-		if( 'post' === get_post_type() ) {
+		if ( 'post' === get_post_type() ) {
 
 			/**
 			 * Print post meta
@@ -305,7 +305,6 @@ if ( ! function_exists( 'bhari_entry_footer_contents' ) ) :
 			 */
 			bhari_post_meta( array( 'edit_link' ) );
 		}
-
 
 	}
 	add_action( 'bhari_entry_footer', 'bhari_entry_footer_contents' );
