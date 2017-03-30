@@ -1,5 +1,8 @@
 === CHANGELOG ===
 
+= 1.0.4 =
+* Could not able to upload the package so updated the version no.
+
 = 1.0.3.4 =
 * Fixed: Escaping the CSS from bhari_dynamic_css().
 * Added: Font Awesome double license.
