@@ -1,5 +1,9 @@
 === CHANGELOG ===
 
+= 1.0.4.1 =
+* Removed: 'accessibility-ready' tag.
+* Added: Font Awesome double license.
+
 = 1.0.4 =
 * Could not able to upload the package so updated the version no.
 
