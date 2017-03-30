@@ -1,5 +1,8 @@
 === CHANGELOG ===
 
+= 1.0.4.2 =
+* Added: 'accessibility-ready' tag.
+
 = 1.0.4.1 =
 * Removed: 'accessibility-ready' tag.
 * Added: Font Awesome double license.
