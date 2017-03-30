@@ -4,7 +4,7 @@ Requires at least: 4.5
 Tested up to: 4.7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: one-column, two-columns, three-columns, right-sidebar, left-sidebar, blog, custom-header, custom-background, custom-menu, custom-colors, sticky-post, threaded-comments, translation-ready, accessibility-ready, featured-images, theme-options, post-formats
+Tags: one-column, two-columns, three-columns, right-sidebar, left-sidebar, blog, custom-header, custom-background, custom-menu, custom-colors, sticky-post, threaded-comments, translation-ready, featured-images, theme-options, post-formats
 
 Bhari is simple theme for bloggers.
 
@@ -52,7 +52,7 @@ License: MIT
 Source: https://necolas.github.io/normalize.css/
 
 Font Awesome icons, Copyright Dave Gandy
-License: SIL Open Font License, version 4.7.0.
+License: SIL OFL 1.1 · Code licensed under MIT License, version 4.7.0.
 Source: http://fontawesome.io/
 
 jQuery UI CSS Framework
