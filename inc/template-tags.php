@@ -231,13 +231,15 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 				 */
 				case 'edit_link':
 
-					$meta_edits  = $meta_args['meta']['edit_link']['before'];
-					$meta_edits .= '<span class="edit-link"><a href="' . esc_url( get_edit_post_link() ) . '" />';
-					$meta_edits .= __( 'Edit', 'bhari' ) . '</span></a>';
-					$meta_edits .= $meta_args['meta']['edit_link']['after'];
+					if( is_user_logged_in() ) {
+						$meta_edits  = $meta_args['meta']['edit_link']['before'];
+						$meta_edits .= '<span class="edit-link"><a href="' . esc_url( get_edit_post_link() ) . '" />';
+						$meta_edits .= __( 'Edit', 'bhari' ) . '</span></a>';
+						$meta_edits .= $meta_args['meta']['edit_link']['after'];
 
-					// Set edit meta.
-					$meta_data['edit_link'] = '<span class="meta-edit">' . $meta_edits . '</span>';
+						// Set edit meta.
+						$meta_data['edit_link'] = '<span class="meta-edit">' . $meta_edits . '</span>';
+					}
 
 				break;
 			}
