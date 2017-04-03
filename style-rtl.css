@@ -1375,6 +1375,11 @@ input.search-submit {
   font-size: 0.8rem;
   padding: 0.5em 1em;
   font-weight: normal;
+  margin-right: 1em;
+}
+
+#reply-title {
+  margin-bottom: 0.5em;
 }
 
 .comments-area {
