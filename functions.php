@@ -10,7 +10,7 @@
 /**
  * Define constants
  */
-define( 'BHARI_VERSION', '1.0.4.2' );
+define( 'BHARI_VERSION', '1.0.4.3' );
 define( 'BHARI_URI', get_template_directory_uri() );
 define( 'BHARI_DIR', get_template_directory() );
 

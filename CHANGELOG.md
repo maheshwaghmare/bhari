@@ -1,5 +1,11 @@
 === CHANGELOG ===
 
+= 1.0.4.3 =
+* Enhancement: CSS Tweak for comment reply title.
+* Enhancement: :focus state on keyboard navigation for .nav-links .next & .nav-links .prev.
+* Enhancement: Updated color #555 for links in .entry-footer & .entry-meta to meet the color contrast requirements.
+* Enhancement: attribute aria-hidden="true" for font awesome icons.
+
 = 1.0.4.2 =
 * Added: 'accessibility-ready' tag.
 
