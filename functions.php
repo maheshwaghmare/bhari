@@ -10,6 +10,10 @@
 /**
  * Define constants
  */
+define( 'BHARI_VERSION', '1.0.4.2' );
+define( 'BHARI_URI', get_template_directory_uri() );
+define( 'BHARI_DIR', get_template_directory() );
+
 define( 'BHARI_SUPPORT_FONTAWESOME', true );
 define( 'BHARI_POSTMETA_SUPPORT_AUTHOR_IMAGE', true );
 
@@ -227,7 +231,7 @@ if ( ! function_exists( 'bhari_asset_url' ) ) :
 			}
 		}
 
-		return get_template_directory_uri() . $asset_url;
+		return BHARI_URI . $asset_url;
 	}
 endif;
 
@@ -256,21 +260,21 @@ if ( ! function_exists( 'bhari_scripts' ) ) :
 			wp_style_add_data( 'bhari-core-css', 'rtl', 'replace' );
 
 			// JS.
-			wp_enqueue_script( 'bhari-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20151215', true );
-			wp_enqueue_script( 'bhari-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
+			wp_enqueue_script( 'bhari-navigation', BHARI_URI . '/assets/js/navigation.js', array(), '20151215', true );
+			wp_enqueue_script( 'bhari-skip-link-focus-fix', BHARI_URI . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 			// Minified & Combined single files.
 		} else {
 
 			// CSS.
 			if ( is_rtl() ) {
-				wp_enqueue_style( 'bhari-core-css', get_template_directory_uri() . '/assets/css/min/rtl/style.min-rtl.css' );
+				wp_enqueue_style( 'bhari-core-css', BHARI_URI . '/assets/css/min/rtl/style.min-rtl.css' );
 			} else {
-				wp_enqueue_style( 'bhari-core-css', get_template_directory_uri() . '/assets/css/min/style.min.css' );
+				wp_enqueue_style( 'bhari-core-css', BHARI_URI . '/assets/css/min/style.min.css' );
 			}
 
 			// JS.
-			wp_enqueue_script( 'bhari-core-js', get_template_directory_uri() . '/assets/js/min/style.min.js', array(), '20151215', true );
+			wp_enqueue_script( 'bhari-core-js', BHARI_URI . '/assets/js/min/style.min.js', array(), '20151215', true );
 		}
 
 		/**
@@ -287,29 +291,29 @@ endif;
 /**
  * Theme Hook Alliance hook stub list.
  */
-require get_template_directory() . '/inc/hooks.php';
+require BHARI_DIR . '/inc/hooks.php';
 
 /**
  * Implement the Custom Header feature.
  */
-require get_template_directory() . '/inc/custom-header.php';
+require BHARI_DIR . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
  */
-require get_template_directory() . '/inc/template-tags.php';
+require BHARI_DIR . '/inc/template-tags.php';
 
 /**
  * Custom functions that act independently of the theme templates.
  */
-require get_template_directory() . '/inc/extras.php';
+require BHARI_DIR . '/inc/extras.php';
 
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer/customizer.php';
+require BHARI_DIR . '/inc/customizer/customizer.php';
 
 /**
  * Load compatibility files for 3rd party plugins.
  */
-require get_template_directory() . '/inc/compatibility/jetpack.php';
+require BHARI_DIR . '/inc/compatibility/jetpack.php';

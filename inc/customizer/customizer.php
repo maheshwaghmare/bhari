@@ -66,9 +66,9 @@ if ( ! function_exists( 'bhari_customize_register' ) ) :
 		/**
 		 * Load customizer helper files
 		 */
-		require_once get_template_directory() . '/inc/customizer/customizer-callbacks.php';
-		require_once get_template_directory() . '/inc/customizer/customizer-sanitize.php';
-		require_once get_template_directory() . '/inc/customizer/customizer-controls.php';
+		require_once BHARI_DIR . '/inc/customizer/customizer-callbacks.php';
+		require_once BHARI_DIR . '/inc/customizer/customizer-sanitize.php';
+		require_once BHARI_DIR . '/inc/customizer/customizer-controls.php';
 
 		/**
 		 * Added custom customizer controls
