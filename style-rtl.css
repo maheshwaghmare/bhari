@@ -1055,7 +1055,7 @@ input.search-submit {
 
 .entry-footer i,
 .entry-footer a {
-  color: #838383;
+  color: #555555;
 }
 
 .entry-footer .fa-comments {
@@ -1071,12 +1071,12 @@ input.search-submit {
  */
 .entry-meta {
   font-size: 1rem;
-  color: #838383;
+  color: #555555;
 }
 
 .entry-meta i,
 .entry-meta a {
-  color: #838383;
+  color: #555555;
 }
 
 .entry-meta > span {
