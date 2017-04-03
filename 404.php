@@ -18,7 +18,7 @@ get_header(); ?>
 				<header class="page-header">
 					<h1 class="page-title">
 						<?php if ( BHARI_SUPPORT_FONTAWESOME ) : ?>
-							<i class="fa fa-window-close-o"></i>
+							<i class="fa fa-window-close-o" aria-hidden="true"></i>
 						<?php endif; ?>
 						<?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'bhari' ); ?>
 					</h1>

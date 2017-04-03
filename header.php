@@ -48,7 +48,7 @@
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
 				<?php if ( BHARI_SUPPORT_FONTAWESOME ) : ?>
-					<i class="fa fa-reorder"></i>
+					<i class="fa fa-reorder" aria-hidden="true"></i>
 				<?php endif; ?>
 				<?php esc_html_e( 'Primary Menu', 'bhari' ); ?>
 			</button>

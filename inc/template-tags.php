@@ -69,9 +69,9 @@ if ( ! function_exists( 'bhari_the_archive_title' ) ) :
 	function bhari_the_archive_title() {
 
 		$icons = array(
-			'tag'      => ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-tag"></i>' : '',
-			'category' => ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-folder"></i>' : '',
-			'date'     => ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-calendar"></i>' : '',
+			'tag'      => ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-tag" aria-hidden="true"></i>' : '',
+			'category' => ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-folder" aria-hidden="true"></i>' : '',
+			'date'     => ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-calendar" aria-hidden="true"></i>' : '',
 			'author'   => ( BHARI_POSTMETA_SUPPORT_AUTHOR_IMAGE ) ? get_avatar( esc_url( get_the_author_meta( 'ID' ) ), 50 ) : '',
 		);
 
@@ -115,19 +115,19 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 					'after'  => '',
 				),
 				'date' => array(
-					'before' => ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-calendar"></i> ' : '<span class="label">' . __( 'On ', 'bhari' ) . '</span>',
+					'before' => ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-calendar" aria-hidden="true"></i> ' : '<span class="label">' . __( 'On ', 'bhari' ) . '</span>',
 					'after'  => '',
 				),
 				'category' => array(
-					'before' => ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-folder"></i> ' : '<span class="label">' . __( 'Categories ', 'bhari' ) . '</span>',
+					'before' => ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-folder" aria-hidden="true"></i> ' : '<span class="label">' . __( 'Categories ', 'bhari' ) . '</span>',
 					'after'  => '',
 				),
 				'tag' => array(
-					'before' => ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-tags"></i> ' : '<span class="label">' . __( 'Tags ', 'bhari' ) . '</span>',
+					'before' => ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-tags" aria-hidden="true"></i> ' : '<span class="label">' . __( 'Tags ', 'bhari' ) . '</span>',
 					'after'  => '',
 				),
 				'edit_link' => array(
-					'before' => ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-edit"></i> ' : '',
+					'before' => ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-edit" aria-hidden="true"></i> ' : '',
 					'after'  => '',
 				),
 			),
@@ -276,7 +276,7 @@ if ( ! function_exists( 'bhari_entry_footer_contents' ) ) :
 
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 
-			$edit_icon = ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-comments"></i> ' : '';
+			$edit_icon = ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-comments" aria-hidden="true"></i> ' : '';
 			echo '<span class="comments-link"> ';
 			echo $edit_icon;
 

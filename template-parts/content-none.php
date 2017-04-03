@@ -15,7 +15,7 @@
 	<header class="page-header">
 		<h1 class="page-title">
 			<?php if ( BHARI_SUPPORT_FONTAWESOME ) : ?>
-				<i class="fa fa-warning"></i>
+				<i class="fa fa-warning" aria-hidden="true"></i>
 			<?php endif; ?>
 			<?php esc_html_e( 'Nothing Found', 'bhari' ); ?>
 		</h1>

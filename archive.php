@@ -47,8 +47,8 @@ get_header(); ?>
 			/* Pagination */
 			the_posts_pagination( array(
 				'mid_size'  => 4,
-				'prev_text' => ( ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-angle-left"></i>' : '' ) . __( ' Previous', 'bhari' ),
-				'next_text' => __( 'Next', 'bhari' ) . ( ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-angle-right"></i>' : '' ),
+				'prev_text' => ( ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-angle-left" aria-hidden="true"></i>' : '' ) . __( ' Previous', 'bhari' ),
+				'next_text' => __( 'Next', 'bhari' ) . ( ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-angle-right" aria-hidden="true"></i>' : '' ),
 			) );
 			?>
 

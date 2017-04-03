@@ -26,8 +26,8 @@ get_header(); ?>
 			bhari_pagination_before();
 
 			the_post_navigation( array(
-	            'prev_text' => ( ( BHARI_SUPPORT_FONTAWESOME ) ? '<span class="link-icon"><i class="fa fa-angle-left"></i></span>' : '' ) . __( '<span class="link-wrap"><span class="link-caption">Previous Article</span><span class="link-title">%title</span></span>', 'bhari' ),
-	            'next_text' => __( '<span class="link-wrap"><span class="link-caption">Next Article</span><span class="link-title">%title</span></span>', 'bhari' ) . ( ( BHARI_SUPPORT_FONTAWESOME ) ? '<span class="link-icon"><i class="fa fa-angle-right"></i></span>' : '' ),
+	            'prev_text' => ( ( BHARI_SUPPORT_FONTAWESOME ) ? '<span class="link-icon"><i class="fa fa-angle-left" aria-hidden="true"></i></span>' : '' ) . __( '<span class="link-wrap"><span class="link-caption">Previous Article</span><span class="link-title">%title</span></span>', 'bhari' ),
+	            'next_text' => __( '<span class="link-wrap"><span class="link-caption">Next Article</span><span class="link-title">%title</span></span>', 'bhari' ) . ( ( BHARI_SUPPORT_FONTAWESOME ) ? '<span class="link-icon"><i class="fa fa-angle-right" aria-hidden="true"></i></span>' : '' ),
 	        ) );
 
 	        bhari_pagination_after();

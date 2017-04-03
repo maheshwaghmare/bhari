@@ -105,7 +105,7 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'Bhari_Customize_
 				<span class="description customize-control-description">{{ data.description }} </span>
 				<# if ( '' !== data.tooltip ) { #>
 				<span class="customize-control-tooltip">
-					<i class="dashicons dashicons-info" style="color: #b2b6ba;">
+					<i class="dashicons dashicons-info" style="color: #b2b6ba;" aria-hidden="true">
 						<span class="tooltip">{{ data.tooltip }}</span>
 					</i>
 				</span>

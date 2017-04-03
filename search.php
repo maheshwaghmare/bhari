@@ -18,7 +18,7 @@ get_header(); ?>
 			<header class="page-header">
 				<h1 class="page-title">
 					<?php if ( BHARI_SUPPORT_FONTAWESOME ) : ?>
-						<i class="fa fa-search"></i>
+						<i class="fa fa-search" aria-hidden="true"></i>
 					<?php endif; ?>
 					<?php printf( __( 'Search Results for: %s', 'bhari' ), '<span>' . get_search_query() . '</span>' ); ?>
 				</h1>
@@ -52,8 +52,8 @@ get_header(); ?>
 
 			the_posts_pagination( array(
 				'mid_size'  => 4,
-				'prev_text' => ( ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-angle-left"></i>' : '' ) . __( ' Previous', 'bhari' ),
-				'next_text' => __( 'Next', 'bhari' ) . ( ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-angle-right"></i>' : '' ),
+				'prev_text' => ( ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-angle-left" aria-hidden="true"></i>' : '' ) . __( ' Previous', 'bhari' ),
+				'next_text' => __( 'Next', 'bhari' ) . ( ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-angle-right" aria-hidden="true"></i>' : '' ),
 			) );
 
 			bhari_pagination_after();

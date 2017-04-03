@@ -54,14 +54,14 @@ if ( post_password_required() ) {
 				<div class="nav-links">
 					<div class="nav-previous">
 						<?php if ( BHARI_SUPPORT_FONTAWESOME ) : ?>
-							<i class="fa fa-angle-double-left"></i>
+							<i class="fa fa-angle-double-left" aria-hidden="true"></i>
 						<?php endif; ?>
 						<?php previous_comments_link( esc_html__( 'Older Comments', 'bhari' ) ); ?>
 					</div>
 					<div class="nav-next">
 						<?php next_comments_link( esc_html__( 'Newer Comments', 'bhari' ) ); ?>
 						<?php if ( BHARI_SUPPORT_FONTAWESOME ) : ?>
-							<i class="fa fa-angle-double-right"></i>
+							<i class="fa fa-angle-double-right" aria-hidden="true"></i>
 						<?php endif; ?>
 					</div>
 				</div><!-- .nav-links -->
@@ -83,14 +83,14 @@ if ( post_password_required() ) {
 				<div class="nav-links">
 					<div class="nav-previous">
 						<?php if ( BHARI_SUPPORT_FONTAWESOME ) : ?>
-							<i class="fa fa-angle-double-left"></i>
+							<i class="fa fa-angle-double-left" aria-hidden="true"></i>
 						<?php endif; ?>
 						<?php previous_comments_link( esc_html__( 'Older Comments', 'bhari' ) ); ?>
 					</div>
 					<div class="nav-next">
 						<?php next_comments_link( esc_html__( 'Newer Comments', 'bhari' ) ); ?>
 						<?php if ( BHARI_SUPPORT_FONTAWESOME ) : ?>
-							<i class="fa fa-angle-double-right"></i>
+							<i class="fa fa-angle-double-right" aria-hidden="true"></i>
 						<?php endif; ?>
 					</div>
 				</div><!-- .nav-links -->
