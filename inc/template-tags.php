@@ -111,11 +111,11 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 			'meta-separator' => '<span class="sep">/</span>',
 			'meta' => array(
 				'author' => array(
-					'before' => ( BHARI_POSTMETA_SUPPORT_AUTHOR_IMAGE ) ? get_avatar( esc_url( get_the_author_meta( 'ID' ) ), 20 ) : '<span class="label">' . __( 'By ', 'bhari' ) . '</span>',
+					'before' => ( BHARI_POSTMETA_SUPPORT_AUTHOR_IMAGE ) ? get_avatar( esc_url( get_the_author_meta( 'ID' ) ), 20 ) : '<span class="label">' . _x( 'By ', 'Article written by', 'bhari' ) . '</span>',
 					'after'  => '',
 				),
 				'date' => array(
-					'before' => ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-calendar" aria-hidden="true"></i> ' : '<span class="label">' . __( 'On ', 'bhari' ) . '</span>',
+					'before' => ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-calendar" aria-hidden="true"></i> ' : '<span class="label">' . _x( 'On ', 'Article written on', 'bhari' ) . '</span>',
 					'after'  => '',
 				),
 				'category' => array(
@@ -211,11 +211,11 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 				 */
 				case 'tags':
 
-					$tags_list = get_the_tag_list( '', esc_html__( ', ', 'bhari' ) );
+					$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'Comma separator for tags.' 'bhari' ) );
 
 					if ( $tags_list ) {
 						$meta_tags = $meta_args['meta']['tag']['before'];
-						$meta_tags .= sprintf( '<span class="tags-links"> ' . esc_html__( '%1$s ', 'bhari' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+						$meta_tags .= sprintf( '<span class="tags-links"> ' . esc_html_x( '%1$s ', 'Tag title.', 'bhari' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 						$meta_tags .= $meta_args['meta']['tag']['after'];
 
 						// Set tag meta.
