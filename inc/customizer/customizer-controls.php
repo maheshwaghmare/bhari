@@ -91,7 +91,7 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'Bhari_Customize_
 			$this->json['value']       = $this->value();
 			$this->json['default']     = $this->default;
 			$this->json['tooltip']     = $this->tooltip;
-			$this->json['reset_title'] = esc_attr_x( 'Reset', 'Reset the slider customizer control value.' 'bhari' );
+			$this->json['reset_title'] = esc_attr_x( 'Reset', 'Reset the slider customizer control value.', 'bhari' );
 		}
 
 		/**

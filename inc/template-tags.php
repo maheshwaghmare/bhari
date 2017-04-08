@@ -211,7 +211,7 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 				 */
 				case 'tags':
 
-					$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'Comma separator for tags.' 'bhari' ) );
+					$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'Comma separator for tags.', 'bhari' ) );
 
 					if ( $tags_list ) {
 						$meta_tags = $meta_args['meta']['tag']['before'];

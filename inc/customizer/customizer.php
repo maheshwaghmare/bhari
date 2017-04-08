@@ -84,14 +84,14 @@ if ( ! function_exists( 'bhari_customize_register' ) ) :
 			if ( ! $wp_customize->get_panel( 'bhari_panel_layout' ) ) {
 				$wp_customize->add_panel( 'bhari_panel_layout', array(
 					'capability' => 'edit_theme_options',
-					'title'      => _x( 'Layout', 'Website Layout' 'bhari' ),
+					'title'      => _x( 'Layout', 'Website Layout', 'bhari' ),
 					'priority'   => 40,
 				) );
 			}
 		endif;
 
 		$wp_customize->add_section( 'bhari_section_container', array(
-			'title'      => _x( 'Container', 'Website Container' 'bhari' ),
+			'title'      => _x( 'Container', 'Website Container', 'bhari' ),
 			'capability' => 'edit_theme_options',
 			'panel'      => 'bhari_panel_layout',
 		) );
