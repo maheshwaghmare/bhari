@@ -14,9 +14,10 @@ if ( ! class_exists( 'Bhari_Customize_Sanitize' ) ) :
 	 * Customizer Sanitize
 	 *
 	 * @package Bhari
-	 * @since 1.0.0
+	 * @since   1.0.0
 	 */
 	final class Bhari_Customize_Sanitize {
+
 
 		/**
 		 * Sanitize Integer
@@ -57,16 +58,16 @@ if ( ! class_exists( 'Bhari_Customize_Sanitize' ) ) :
 		 */
 		public static function _sanitize_hex_color( $color ) {
 
-		    if ( '' === $color ) {
-		        return '';
+			if ( '' === $color ) {
+				return '';
 			}
 
-		    // 3 or 6 hex digits, or the empty string.
-		    if ( preg_match( '|^#([A-Fa-f0-9]{3}){1,2}$|', $color ) ) {
-		        return $color;
+			// 3 or 6 hex digits, or the empty string.
+			if ( preg_match( '|^#([A-Fa-f0-9]{3}){1,2}$|', $color ) ) {
+				return $color;
 			}
 
-		    return '';
+			return '';
 		}
 	}
 

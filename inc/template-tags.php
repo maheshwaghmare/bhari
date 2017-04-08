@@ -231,7 +231,7 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 				 */
 				case 'edit_link':
 
-					if( is_user_logged_in() ) {
+					if ( is_user_logged_in() ) {
 						$meta_edits  = $meta_args['meta']['edit_link']['before'];
 						$meta_edits .= '<span class="edit-link"><a href="' . esc_url( get_edit_post_link() ) . '" />';
 						$meta_edits .= __( 'Edit', 'bhari' ) . '</span></a>';

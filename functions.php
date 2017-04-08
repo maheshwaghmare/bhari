@@ -56,34 +56,42 @@ if ( ! function_exists( 'bhari_setup' ) ) :
 		add_theme_support( 'title-tag' );
 
 		/*
-		 * Enable support for Post Thumbnails on posts and pages.
-		 *
-		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-		 */
+         * Enable support for Post Thumbnails on posts and pages.
+         *
+         * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+         */
 		add_theme_support( 'post-thumbnails' );
 
 		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus( array(
+		register_nav_menus(
+			array(
 			'primary' => esc_html__( 'Primary', 'bhari' ),
-		) );
+			)
+		);
 
 		/*
-		 * Switch default core markup for search form, comment form, and comments
-		 * to output valid HTML5.
-		 */
-		add_theme_support( 'html5', array(
+         * Switch default core markup for search form, comment form, and comments
+         * to output valid HTML5.
+         */
+		add_theme_support(
+			'html5', array(
 			'search-form',
 			'comment-form',
 			'comment-list',
 			'gallery',
 			'caption',
-		) );
+			)
+		);
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'bhari_custom_background_args', array(
-			'default-color' => 'f1f1f1',
-			'default-image' => '',
-		) ) );
+		add_theme_support(
+			'custom-background', apply_filters(
+				'bhari_custom_background_args', array(
+				'default-color' => 'f1f1f1',
+				'default-image' => '',
+				)
+			)
+		);
 
 		// Added editor style support.
 		add_editor_style( 'assets/css/editor-style.css' );
@@ -100,25 +108,27 @@ if ( ! function_exists( 'bhari_setup' ) ) :
 		/**
 		 * Added starter content
 		 */
-		add_theme_support( 'starter-content', array(
+		add_theme_support(
+			'starter-content', array(
 
 			'widgets' => array(
-				'sidebar-1' => array(
-					'search',
-					'recent-posts',
-					'recent-comments',
-					'archives',
-					'categories',
-					'meta',
-				),
-				'sidebar-2' => array(
-					'text_about',
-					'calendar',
-					'text_business_info',
-				),
+			'sidebar-1' => array(
+			'search',
+			'recent-posts',
+			'recent-comments',
+			'archives',
+			'categories',
+			'meta',
+			),
+			'sidebar-2' => array(
+			'text_about',
+			'calendar',
+			'text_business_info',
+			),
 			),
 
-		) );
+			)
+		);
 	}
 
 	add_action( 'after_setup_theme', 'bhari_setup' );
@@ -136,7 +146,8 @@ if ( ! function_exists( 'bhari_widgets_init' ) ) :
 	 * Bhari Widgets
 	 */
 	function bhari_widgets_init() {
-		register_sidebar( array(
+		register_sidebar(
+			array(
 			'name'          => esc_html__( 'Right Sidebar', 'bhari' ),
 			'id'            => 'sidebar-1',
 			'description'   => esc_html__( 'Add widgets here.', 'bhari' ),
@@ -144,8 +155,10 @@ if ( ! function_exists( 'bhari_widgets_init' ) ) :
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
 			'after_title'   => '</h2>',
-		) );
-		register_sidebar( array(
+			)
+		);
+		register_sidebar(
+			array(
 			'name'          => esc_html__( 'Left Sidebar', 'bhari' ),
 			'id'            => 'sidebar-2',
 			'description'   => esc_html__( 'Add widgets here.', 'bhari' ),
@@ -153,7 +166,8 @@ if ( ! function_exists( 'bhari_widgets_init' ) ) :
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
 			'after_title'   => '</h2>',
-		) );
+			)
+		);
 	}
 	add_action( 'widgets_init', 'bhari_widgets_init' );
 endif;
@@ -166,11 +180,11 @@ endif;
  *
  * NOTE: RTL support is now just for ONLY theme style.css file.
  *
- *	style.min.css 		Load normally.
- *	style.min-rtl.css 	Load if RTL is on.
+ *    style.min.css         Load normally.
+ *    style.min-rtl.css     Load if RTL is on.
  *
- *	style.css 			Load if SCRIPT_DEBUG is true.
- *	style-rtl.css 		Load if SCRIPT_DEBUG & RTL are true.
+ *    style.css             Load if SCRIPT_DEBUG is true.
+ *    style-rtl.css         Load if SCRIPT_DEBUG & RTL are true.
  */
 
 if ( ! function_exists( 'bhari_asset_url' ) ) :
@@ -180,10 +194,10 @@ if ( ! function_exists( 'bhari_asset_url' ) ) :
 	 *
 	 * How to use?
 	 *
-	 * @param  string  $file_name   Asset ( CSS / JS ) file name.
-	 * @param  string  $type     Asset type either CSS or JS.
+	 * @param  string  $file_name       Asset ( CSS / JS ) file name.
+	 * @param  string  $type            Asset type either CSS or JS.
 	 * @param  boolean $has_rtl_support Use argument for RTL support.
-	 * @param  boolean $dir_path Use argument for loading admin assets.
+	 * @param  boolean $dir_path        Use argument for loading admin assets.
 	 * @return string            URL of asset depend on RTL & SCRIPT_DEBUG.
 	 */
 	function bhari_asset_url( $file_name = '', $type = '', $has_rtl_support = false, $dir_path = '' ) {
@@ -193,23 +207,23 @@ if ( ! function_exists( 'bhari_asset_url' ) ) :
 		 */
 		switch ( $dir_path ) {
 			case 'vendor':
-					$unmin_url     = '/assets/vendor/' . $type . '/' . $file_name . '.' . $type;
-					$min_url       = '/assets/vendor/' . $type . '/' . $file_name . '.min.' . $type;
-					$unmin_url_rtl = '/assets/vendor/' . $type . '/rtl/' . $file_name . '-rtl.' . $type;
-					$min_url_rtl   = '/assets/vendor/' . $type . '/rtl/' . $file_name . '-rtl.min.' . $type;
-				break;
+				$unmin_url     = '/assets/vendor/' . $type . '/' . $file_name . '.' . $type;
+				$min_url       = '/assets/vendor/' . $type . '/' . $file_name . '.min.' . $type;
+				$unmin_url_rtl = '/assets/vendor/' . $type . '/rtl/' . $file_name . '-rtl.' . $type;
+				$min_url_rtl   = '/assets/vendor/' . $type . '/rtl/' . $file_name . '-rtl.min.' . $type;
+			break;
 			case 'admin':
-					$unmin_url     = '/inc/assets/' . $type . '/' . $file_name . '.' . $type;
-					$min_url       = '/inc/assets/' . $type . '/min/' . $file_name . '.min.' . $type;
-					$unmin_url_rtl = '/inc/assets/' . $type . '/rtl/' . $file_name . '-rtl.' . $type;
-					$min_url_rtl   = '/inc/assets/' . $type . '/min/rtl/' . $file_name . '-rtl.min.' . $type;
-				break;
+				$unmin_url     = '/inc/assets/' . $type . '/' . $file_name . '.' . $type;
+				$min_url       = '/inc/assets/' . $type . '/min/' . $file_name . '.min.' . $type;
+				$unmin_url_rtl = '/inc/assets/' . $type . '/rtl/' . $file_name . '-rtl.' . $type;
+				$min_url_rtl   = '/inc/assets/' . $type . '/min/rtl/' . $file_name . '-rtl.min.' . $type;
+			break;
 			default:
-					$unmin_url     = '/assets/' . $type . '/' . $file_name . '.' . $type;
-					$min_url       = '/assets/' . $type . '/min/' . $file_name . '.min.' . $type;
-					$unmin_url_rtl = '/assets/' . $type . '/rtl/' . $file_name . '-rtl.' . $type;
-					$min_url_rtl   = '/assets/' . $type . '/min/rtl/' . $file_name . '-rtl.min.' . $type;
-				break;
+				$unmin_url     = '/assets/' . $type . '/' . $file_name . '.' . $type;
+				$min_url       = '/assets/' . $type . '/min/' . $file_name . '.min.' . $type;
+				$unmin_url_rtl = '/assets/' . $type . '/rtl/' . $file_name . '-rtl.' . $type;
+				$min_url_rtl   = '/assets/' . $type . '/min/rtl/' . $file_name . '-rtl.min.' . $type;
+			break;
 		}
 
 		// Load unminified assets.

@@ -15,6 +15,7 @@ if ( ! class_exists( 'Bhari_Customize_Callback' ) ) :
 	 */
 	class Bhari_Customize_Callback {
 
+
 		/**
 		 * Sidebar Archive
 		 *
