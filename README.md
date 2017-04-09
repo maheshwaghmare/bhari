@@ -22,6 +22,22 @@ Bhari is lightweight, responsive theme for bloggers who love to write articles, 
 
 =======
 
+
+### Translation Ready ( Internationalization / I18N )
+
+Bhari Theme is coded in international English as the primary language and uses WordPress standard gettext to enable
+quick and easy translation of text elements via plugins or .po file editors.
+You may translate Bhari yourself using any of the following solutions:
+
+- <a href="https://make.wordpress.org/polyglots/handbook/tools/gettext/">GNU Gettext</a>
+- <a href="https://make.wordpress.org/polyglots/handbook/tools/poedit/">Poedit</a>
+- <a href="https://localise.biz/free/poeditor">Loco</a>
+- etc.
+
+For more visit https://make.wordpress.org/polyglots/handbook/tools/other-translation-tools/
+
+=======
+
 ### Screenshot
 
 After Install & Activate Bhari Theme looks like:
