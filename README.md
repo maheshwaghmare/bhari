@@ -2,6 +2,8 @@
 
 Bhari is simple theme for bloggers.
 
+<img src="http://i.imgur.com/VSnC36H.jpg" />
+
 ### Description
 
 Bhari is lightweight, responsive theme for bloggers who love to write articles, share awesome stuff etc.
@@ -47,11 +49,6 @@ For more visit https://make.wordpress.org/polyglots/handbook/tools/other-transla
 - <a href="https://github.com/maheshwaghmare/bhari/wiki/Video-Tutorials/#user-content--how-to-change-sidebar-from-customizer">How To change `Sidebar` from customizer?</a>
 - <a href="https://github.com/maheshwaghmare/bhari/wiki/Video-Tutorials/#user-content--how-to-change-background-color-from-customizer">How To change `Background Color` from customizer?</a>
 - <a href="https://github.com/maheshwaghmare/bhari/wiki/Video-Tutorials/#user-content--how-to-change-background-image-from-customizer">How To change `Background Image` from customizer?</a>
-
-### Screenshot
-
-After Install & Activate Bhari Theme looks like:
-<img src="http://i.imgur.com/VSnC36H.jpg" />
 
 =======
 
