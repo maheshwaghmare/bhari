@@ -1,12 +1,8 @@
 # Bhari Theme
 
-Bhari is simple theme for bloggers.
+Bhari is lightweight, responsive theme for bloggers who love to write articles, share awesome stuff etc.
 
 <img src="http://i.imgur.com/VSnC36H.jpg" />
-
-### Description
-
-Bhari is lightweight, responsive theme for bloggers who love to write articles, share awesome stuff etc.
 
 ### Installation
 
