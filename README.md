@@ -19,6 +19,8 @@ Bhari is lightweight, responsive theme for bloggers who love to write articles, 
 - <a href="https://github.com//maheshwaghmare/bhari/wiki/Features">Features</a>
 - <a href="https://github.com//maheshwaghmare/bhari/wiki/Hooks-(-Actions-&amp;-Filters-)">Hooks ( Actions &amp; Filters )</a>
 - <a href="https://github.com//maheshwaghmare/bhari/wiki/Screenshots">Screenshots</a>
+- <a href="https://github.com/maheshwaghmare/bhari/wiki/Translation-Ready">Translation Ready ( Internationalization / I18N )</a>
+- <a href="https://github.com/maheshwaghmare/bhari/wiki/Video-Tutorials">Videos Tutorials</a>
 
 =======
 
@@ -37,6 +39,14 @@ You may translate Bhari yourself using any of the following solutions:
 For more visit https://make.wordpress.org/polyglots/handbook/tools/other-translation-tools/
 
 =======
+
+### Videos Tutorials:
+
+- <a href="https://github.com/maheshwaghmare/bhari/wiki/Video-Tutorials/#user-content--how-to-change-container-from-customizer">How To change `Container` from customizer?</a>
+- <a href="https://github.com/maheshwaghmare/bhari/wiki/Video-Tutorials/#user-content--how-to-change-header-background-image-from-customizer">How To change `Header Background Image` from customizer?</a>
+- <a href="https://github.com/maheshwaghmare/bhari/wiki/Video-Tutorials/#user-content--how-to-change-sidebar-from-customizer">How To change `Sidebar` from customizer?</a>
+- <a href="https://github.com/maheshwaghmare/bhari/wiki/Video-Tutorials/#user-content--how-to-change-background-color-from-customizer">How To change `Background Color` from customizer?</a>
+- <a href="https://github.com/maheshwaghmare/bhari/wiki/Video-Tutorials/#user-content--how-to-change-background-image-from-customizer">How To change `Background Image` from customizer?</a>
 
 ### Screenshot
 
