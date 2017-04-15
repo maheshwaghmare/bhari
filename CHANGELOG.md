@@ -1,5 +1,22 @@
 === CHANGELOG ===
 
+= 1.0.4.5 =
+* Enhancement : Focus for inputs: E.g. https://qsnapnet.com/snaps/1djrdsqywuerk9
+* Enhancement : Focus for buttons: E.g. https://qsnapnet.com/snaps/pscegszcmamgf1o
+* Updated 	  : Updated: Skip to content JS: https://github.com/Automattic/_s/blob/master/js/skip-link-focus-fix.js
+* Enhancement : Added missing screen-reader-text for edit post link.
+* Enhancement : Updated contrasts colors for next & previous links.
+* Enhancement : Updated CSS transitions from ease-in-out with ease.
+* Enhancement : Updated contrasts colors for next & previous links.
+* Enhancement : Updated contrasts colors for logout link & cancel reply button.
+* Enhancement : Updated screen-reader-text CSS @see https://qsnapnet.com/snaps/bsonh00nsysnhfr
+* Added       : POT file for localization.
+* Added       : Translation strings missing contexts.
+* Fixed       : Site Title wrong selector from customizer.
+
+= 1.0.4.4 =
+* This is similar to the version 1.0.4.3. Updated due to version upload fail on wp.org
+
 = 1.0.4.3 =
 * Enhancement: CSS Tweak for comment reply title.
 * Enhancement: :focus state on keyboard navigation for .nav-links .next & .nav-links .prev.

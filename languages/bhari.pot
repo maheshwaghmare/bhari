@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Bhari 1.0.4.3\n"
+"Project-Id-Version: Bhari 1.0.4.5\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2017-04-08 19:34:09+00:00\n"
+"POT-Creation-Date: 2017-04-15 07:09:11+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -32,27 +32,27 @@ msgstr ""
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 
-#: archive.php:50 index.php:53 search.php:55
+#: archive.php:51 index.php:54 search.php:56
 msgid " Previous"
 msgstr ""
 
-#: archive.php:51 index.php:54 search.php:56
+#: archive.php:52 index.php:55 search.php:57
 msgid "Next"
 msgstr ""
 
-#: comments.php:53 comments.php:82
+#: comments.php:53 comments.php:84
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:59 comments.php:88
+#: comments.php:59 comments.php:90
 msgid "Older Comments"
 msgstr ""
 
-#: comments.php:62 comments.php:91
+#: comments.php:62 comments.php:93
 msgid "Newer Comments"
 msgstr ""
 
-#: comments.php:105
+#: comments.php:107
 msgid "Comments are closed."
 msgstr ""
 
@@ -72,19 +72,19 @@ msgstr ""
 msgid "Theme: %1$s"
 msgstr ""
 
-#: functions.php:67
+#: functions.php:68
 msgid "Primary"
 msgstr ""
 
-#: functions.php:140
+#: functions.php:148
 msgid "Right Sidebar"
 msgstr ""
 
-#: functions.php:142 functions.php:151
+#: functions.php:150 functions.php:161
 msgid "Add widgets here."
 msgstr ""
 
-#: functions.php:149
+#: functions.php:159
 msgid "Left Sidebar"
 msgstr ""
 
@@ -104,87 +104,87 @@ msgstr ""
 msgid "Body Background Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:100
+#: inc/customizer/customizer.php:105
 msgid "Sidebars"
 msgstr ""
 
-#: inc/customizer/customizer.php:119 inc/customizer/customizer.php:194
+#: inc/customizer/customizer.php:129 inc/customizer/customizer.php:221
 msgid "Archive"
 msgstr ""
 
-#: inc/customizer/customizer.php:120
+#: inc/customizer/customizer.php:130
 msgid "Container width for archive pages."
 msgstr ""
 
-#: inc/customizer/customizer.php:121
+#: inc/customizer/customizer.php:131
 msgid ""
 "Container width is applied for the blog, category, tag and custom post type "
 "archive pages."
 msgstr ""
 
-#: inc/customizer/customizer.php:144 inc/customizer/customizer.php:218
+#: inc/customizer/customizer.php:160 inc/customizer/customizer.php:249
 msgid "Single Post"
 msgstr ""
 
-#: inc/customizer/customizer.php:145
+#: inc/customizer/customizer.php:161
 msgid "Container width for the single post."
 msgstr ""
 
-#: inc/customizer/customizer.php:146
+#: inc/customizer/customizer.php:162
 msgid "Container width is applied for the single post."
 msgstr ""
 
-#: inc/customizer/customizer.php:169 inc/customizer/customizer.php:242
+#: inc/customizer/customizer.php:191 inc/customizer/customizer.php:277
 msgid "Page"
 msgstr ""
 
-#: inc/customizer/customizer.php:170
+#: inc/customizer/customizer.php:192
 msgid "Container width for the page."
 msgstr ""
 
-#: inc/customizer/customizer.php:171
+#: inc/customizer/customizer.php:193
 msgid "Container width is applied for the pages."
 msgstr ""
 
-#: inc/customizer/customizer.php:195
+#: inc/customizer/customizer.php:222
 msgid "Add sidebar layout for blog, archive, category tag pages."
 msgstr ""
 
-#: inc/customizer/customizer.php:199 inc/customizer/customizer.php:223
-#: inc/customizer/customizer.php:247
+#: inc/customizer/customizer.php:226 inc/customizer/customizer.php:254
+#: inc/customizer/customizer.php:282
 msgid "Full Width ( No Sidebar )"
 msgstr ""
 
-#: inc/customizer/customizer.php:200 inc/customizer/customizer.php:224
-#: inc/customizer/customizer.php:248
+#: inc/customizer/customizer.php:227 inc/customizer/customizer.php:255
+#: inc/customizer/customizer.php:283
 msgid "Left Sidebar / Content"
 msgstr ""
 
-#: inc/customizer/customizer.php:201 inc/customizer/customizer.php:225
-#: inc/customizer/customizer.php:249
+#: inc/customizer/customizer.php:228 inc/customizer/customizer.php:256
+#: inc/customizer/customizer.php:284
 msgid "Content / Right Sidebar"
 msgstr ""
 
-#: inc/customizer/customizer.php:202 inc/customizer/customizer.php:226
-#: inc/customizer/customizer.php:250
+#: inc/customizer/customizer.php:229 inc/customizer/customizer.php:257
+#: inc/customizer/customizer.php:285
 msgid "Content / Left Sidebar / Right Sidebar"
 msgstr ""
 
-#: inc/customizer/customizer.php:203 inc/customizer/customizer.php:227
-#: inc/customizer/customizer.php:251
+#: inc/customizer/customizer.php:230 inc/customizer/customizer.php:258
+#: inc/customizer/customizer.php:286
 msgid "Left Sidebar / Content / Right Sidebar"
 msgstr ""
 
-#: inc/customizer/customizer.php:204 inc/customizer/customizer.php:228
-#: inc/customizer/customizer.php:252
+#: inc/customizer/customizer.php:231 inc/customizer/customizer.php:259
+#: inc/customizer/customizer.php:287
 msgid "Left Sidebar / Right Sidebar / Content"
 msgstr ""
 
-#: inc/customizer/customizer.php:219
+#: inc/customizer/customizer.php:250
 msgid "Add sidebar layout for single post only."
 msgstr ""
 
-#: inc/customizer/customizer.php:243
+#: inc/customizer/customizer.php:278
 msgid "Add sidebar layout for pages only."
 msgstr ""
 
@@ -204,11 +204,11 @@ msgstr ""
 msgid "%1$s "
 msgstr ""
 
-#: inc/template-tags.php:237
-msgid "Edit"
+#: inc/template-tags.php:240
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
-#: inc/template-tags.php:284
+#: inc/template-tags.php:288
 #. translators: %s: post title
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
@@ -217,13 +217,13 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: single.php:29
+#: single.php:30
 msgid ""
 "<span class=\"link-wrap\"><span class=\"link-caption\">Previous "
 "Article</span><span class=\"link-title\">%title</span></span>"
 msgstr ""
 
-#: single.php:30
+#: single.php:31
 msgid ""
 "<span class=\"link-wrap\"><span class=\"link-caption\">Next "
 "Article</span><span class=\"link-title\">%title</span></span>"
@@ -249,12 +249,12 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: template-parts/content-page.php:37 template-parts/content.php:66
+#: template-parts/content-page.php:38 template-parts/content.php:67
 #. translators: %s: Name of current post
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: template-parts/content-page.php:42 template-parts/content.php:71
+#: template-parts/content-page.php:45 template-parts/content.php:74
 msgid "Pages:"
 msgstr ""
 
@@ -294,17 +294,17 @@ msgid_plural "%1$s Replies to &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/customizer/customizer-controls.php:94
+#: inc/customizer/customizer-controls.php:95
 msgctxt "Reset the slider customizer control value."
 msgid "Reset"
 msgstr ""
 
-#: inc/customizer/customizer.php:87
+#: inc/customizer/customizer.php:88
 msgctxt "Website Layout"
 msgid "Layout"
 msgstr ""
 
-#: inc/customizer/customizer.php:94
+#: inc/customizer/customizer.php:97
 msgctxt "Website Container"
 msgid "Container"
 msgstr ""
