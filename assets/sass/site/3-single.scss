@@ -63,10 +63,10 @@
  * Comments
  */
 .logged-in-as > a:last-child {
-    color: #f44336;
+    color: $color__background-danger;
 }
 #cancel-comment-reply-link {
-    background: $color__background-danger;
+    background: $color__background-button;
     color: $white-color;
     font-size: 0.8rem;
     padding: 0.5em 1em;
