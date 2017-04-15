@@ -15,6 +15,7 @@ input[type="submit"] {
 
 	&:active,
 	&:focus {
+		outline: thin dotted black;
 		background: $color__border-button-focus;
 		border-color: $color__border-button-focus;
 	}

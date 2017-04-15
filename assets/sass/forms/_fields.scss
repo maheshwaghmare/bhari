@@ -17,9 +17,16 @@ textarea {
 	color: $color__text-input;
 	border: 1px solid $color__border-input;
 
+	&:hover,
 	&:focus {
 		color: $color__text-input-focus;
 	}
+
+	&:focus {
+		background: $color__background-body;
+		outline: thin dotted;
+	}
+
 }
 
 select {
