@@ -80,8 +80,7 @@ if ( ! function_exists( 'bhari_setup' ) ) :
 			'comment-list',
 			'gallery',
 			'caption',
-			)
-		);
+		) );
 
 		// Set up the WordPress core custom background feature.
 		add_theme_support(
@@ -110,23 +109,21 @@ if ( ! function_exists( 'bhari_setup' ) ) :
 		 */
 		add_theme_support(
 			'starter-content', array(
-
-			'widgets' => array(
-			'sidebar-1' => array(
-			'search',
-			'recent-posts',
-			'recent-comments',
-			'archives',
-			'categories',
-			'meta',
-			),
-			'sidebar-2' => array(
-			'text_about',
-			'calendar',
-			'text_business_info',
-			),
-			),
-
+				'widgets' => array(
+					'sidebar-1' => array(
+						'search',
+						'recent-posts',
+						'recent-comments',
+						'archives',
+						'categories',
+						'meta',
+					),
+					'sidebar-2' => array(
+						'text_about',
+						'calendar',
+						'text_business_info',
+					),
+				),
 			)
 		);
 	}
@@ -148,24 +145,24 @@ if ( ! function_exists( 'bhari_widgets_init' ) ) :
 	function bhari_widgets_init() {
 		register_sidebar(
 			array(
-			'name'          => esc_html__( 'Right Sidebar', 'bhari' ),
-			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'bhari' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+				'name'          => esc_html__( 'Right Sidebar', 'bhari' ),
+				'id'            => 'sidebar-1',
+				'description'   => esc_html__( 'Add widgets here.', 'bhari' ),
+				'before_widget' => '<section id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</section>',
+				'before_title'  => '<h2 class="widget-title">',
+				'after_title'   => '</h2>',
 			)
 		);
 		register_sidebar(
 			array(
-			'name'          => esc_html__( 'Left Sidebar', 'bhari' ),
-			'id'            => 'sidebar-2',
-			'description'   => esc_html__( 'Add widgets here.', 'bhari' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+				'name'          => esc_html__( 'Left Sidebar', 'bhari' ),
+				'id'            => 'sidebar-2',
+				'description'   => esc_html__( 'Add widgets here.', 'bhari' ),
+				'before_widget' => '<section id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</section>',
+				'before_title'  => '<h2 class="widget-title">',
+				'after_title'   => '</h2>',
 			)
 		);
 	}
@@ -274,8 +271,8 @@ if ( ! function_exists( 'bhari_scripts' ) ) :
 			wp_style_add_data( 'bhari-core-css', 'rtl', 'replace' );
 
 			// JS.
-			wp_enqueue_script( 'bhari-navigation', BHARI_URI . '/assets/js/navigation.js', array(), '20151215', true );
-			wp_enqueue_script( 'bhari-skip-link-focus-fix', BHARI_URI . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
+			wp_enqueue_script( 'bhari-navigation', BHARI_URI . '/assets/js/navigation.js', array( 'jquery' ), BHARI_VERSION, true );
+			wp_enqueue_script( 'bhari-skip-link-focus-fix', BHARI_URI . '/assets/js/skip-link-focus-fix.js', array( 'jquery' ), BHARI_VERSION, true );
 
 			// Minified & Combined single files.
 		} else {
@@ -288,7 +285,7 @@ if ( ! function_exists( 'bhari_scripts' ) ) :
 			}
 
 			// JS.
-			wp_enqueue_script( 'bhari-core-js', BHARI_URI . '/assets/js/min/style.min.js', array(), '20151215', true );
+			wp_enqueue_script( 'bhari-core-js', BHARI_URI . '/assets/js/min/style.min.js', array( 'jquery' ), array( 'jquery' ), BHARI_VERSION, true );
 		}
 
 		/**
