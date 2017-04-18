@@ -38,6 +38,7 @@
 
         &:focus,
         &:hover {
+            outline-offset: -2px;
             background-color: $color__link-hover;
         }
 
