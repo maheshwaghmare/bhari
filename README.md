@@ -1,4 +1,4 @@
-# Bhari Theme
+# Bhari Theme [![Build Status](https://travis-ci.org/maheshwaghmare/bhari.svg?branch=master)](https://travis-ci.org/maheshwaghmare/bhari)
 
 Bhari is simple theme for bloggers.
 
