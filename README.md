@@ -1,10 +1,8 @@
-# Bhari Theme
-
-Bhari is simple theme for bloggers.
-
-### Description
+# Bhari Theme [![Build Status](https://travis-ci.org/maheshwaghmare/bhari.svg?branch=master)](https://travis-ci.org/maheshwaghmare/bhari)
 
 Bhari is lightweight, responsive theme for bloggers who love to write articles, share awesome stuff etc.
+
+<img src="http://i.imgur.com/VSnC36H.jpg" />
 
 ### Installation
 
@@ -19,13 +17,34 @@ Bhari is lightweight, responsive theme for bloggers who love to write articles, 
 - <a href="https://github.com//maheshwaghmare/bhari/wiki/Features">Features</a>
 - <a href="https://github.com//maheshwaghmare/bhari/wiki/Hooks-(-Actions-&amp;-Filters-)">Hooks ( Actions &amp; Filters )</a>
 - <a href="https://github.com//maheshwaghmare/bhari/wiki/Screenshots">Screenshots</a>
+- <a href="https://github.com/maheshwaghmare/bhari/wiki/Translation-Ready">Translation Ready ( Internationalization / I18N )</a>
+- <a href="https://github.com/maheshwaghmare/bhari/wiki/Video-Tutorials">Videos Tutorials</a>
 
 =======
 
-### Screenshot
 
-After Install & Activate Bhari Theme looks like:
-<img src="http://i.imgur.com/VSnC36H.jpg" />
+### Translation Ready ( Internationalization / I18N )
+
+Bhari Theme is coded in international English as the primary language and uses WordPress standard gettext to enable
+quick and easy translation of text elements via plugins or .po file editors.
+You may translate Bhari yourself using any of the following solutions:
+
+- <a href="https://make.wordpress.org/polyglots/handbook/tools/gettext/">GNU Gettext</a>
+- <a href="https://make.wordpress.org/polyglots/handbook/tools/poedit/">Poedit</a>
+- <a href="https://localise.biz/free/poeditor">Loco</a>
+- etc.
+
+For more visit https://make.wordpress.org/polyglots/handbook/tools/other-translation-tools/
+
+=======
+
+### Videos Tutorials:
+
+- <a href="https://github.com/maheshwaghmare/bhari/wiki/Video-Tutorials/#user-content--how-to-change-container-from-customizer">How To change `Container` from customizer?</a>
+- <a href="https://github.com/maheshwaghmare/bhari/wiki/Video-Tutorials/#user-content--how-to-change-header-background-image-from-customizer">How To change `Header Background Image` from customizer?</a>
+- <a href="https://github.com/maheshwaghmare/bhari/wiki/Video-Tutorials/#user-content--how-to-change-sidebar-from-customizer">How To change `Sidebar` from customizer?</a>
+- <a href="https://github.com/maheshwaghmare/bhari/wiki/Video-Tutorials/#user-content--how-to-change-background-color-from-customizer">How To change `Background Color` from customizer?</a>
+- <a href="https://github.com/maheshwaghmare/bhari/wiki/Video-Tutorials/#user-content--how-to-change-background-image-from-customizer">How To change `Background Image` from customizer?</a>
 
 =======
 
