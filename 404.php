@@ -17,17 +17,17 @@ get_header(); ?>
 				<?php bhari_page_header_before(); ?>
 				<header class="page-header">
 					<h1 class="page-title">
-						<?php if ( BHARI_SUPPORT_FONTAWESOME ) : ?>
+		<?php if ( BHARI_SUPPORT_FONTAWESOME ) : ?>
 							<i class="fa fa-window-close-o" aria-hidden="true"></i>
-						<?php endif; ?>
-						<?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'bhari' ); ?>
+		<?php endif; ?>
+		<?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'bhari' ); ?>
 					</h1>
 				</header><!-- .page-header -->
 				<?php bhari_page_header_after(); ?>
 
 				<div class="page-content">
 					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'bhari' ); ?></p>
-					<?php get_search_form(); ?>
+		<?php get_search_form(); ?>
 				</div><!-- .page-content -->
 
 			</section><!-- .error-404 -->

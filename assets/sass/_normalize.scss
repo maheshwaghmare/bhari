@@ -42,7 +42,7 @@ template {
 }
 
 a {
-    transition: all ease-in-out 0.2s;
+    transition: all ease 0.3s;
     text-decoration: none;
 	background-color: transparent;
 }
@@ -153,6 +153,7 @@ input[type="submit"] {
     border-radius: 0;
 }
 
+select,
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -171,7 +172,7 @@ input[type="color"],
 textarea {
     border-radius: 0;
     line-height: normal;
-    padding: 1em;
+    padding: 0.5em 1em;
 }
 
 button[disabled],

@@ -53,16 +53,16 @@ if ( post_password_required() ) {
 				<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'bhari' ); ?></h2>
 				<div class="nav-links">
 					<div class="nav-previous">
-						<?php if ( BHARI_SUPPORT_FONTAWESOME ) : ?>
+		<?php if ( BHARI_SUPPORT_FONTAWESOME ) : ?>
 							<i class="fa fa-angle-double-left" aria-hidden="true"></i>
-						<?php endif; ?>
-						<?php previous_comments_link( esc_html__( 'Older Comments', 'bhari' ) ); ?>
+		<?php endif; ?>
+		<?php previous_comments_link( esc_html__( 'Older Comments', 'bhari' ) ); ?>
 					</div>
 					<div class="nav-next">
-						<?php next_comments_link( esc_html__( 'Newer Comments', 'bhari' ) ); ?>
-						<?php if ( BHARI_SUPPORT_FONTAWESOME ) : ?>
+		<?php next_comments_link( esc_html__( 'Newer Comments', 'bhari' ) ); ?>
+		<?php if ( BHARI_SUPPORT_FONTAWESOME ) : ?>
 							<i class="fa fa-angle-double-right" aria-hidden="true"></i>
-						<?php endif; ?>
+		<?php endif; ?>
 					</div>
 				</div><!-- .nav-links -->
 			</nav><!-- #comment-nav-above -->
@@ -70,10 +70,12 @@ if ( post_password_required() ) {
 
 		<ol class="comment-list">
 			<?php
-			wp_list_comments( array(
+			wp_list_comments(
+				array(
 				'style'      => 'ol',
 				'short_ping' => true,
-			) );
+				)
+			);
 			?>
 		</ol><!-- .comment-list -->
 
@@ -82,16 +84,16 @@ if ( post_password_required() ) {
 				<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'bhari' ); ?></h2>
 				<div class="nav-links">
 					<div class="nav-previous">
-						<?php if ( BHARI_SUPPORT_FONTAWESOME ) : ?>
+		<?php if ( BHARI_SUPPORT_FONTAWESOME ) : ?>
 							<i class="fa fa-angle-double-left" aria-hidden="true"></i>
-						<?php endif; ?>
-						<?php previous_comments_link( esc_html__( 'Older Comments', 'bhari' ) ); ?>
+		<?php endif; ?>
+		<?php previous_comments_link( esc_html__( 'Older Comments', 'bhari' ) ); ?>
 					</div>
 					<div class="nav-next">
-						<?php next_comments_link( esc_html__( 'Newer Comments', 'bhari' ) ); ?>
-						<?php if ( BHARI_SUPPORT_FONTAWESOME ) : ?>
+		<?php next_comments_link( esc_html__( 'Newer Comments', 'bhari' ) ); ?>
+		<?php if ( BHARI_SUPPORT_FONTAWESOME ) : ?>
 							<i class="fa fa-angle-double-right" aria-hidden="true"></i>
-						<?php endif; ?>
+		<?php endif; ?>
 					</div>
 				</div><!-- .nav-links -->
 			</nav><!-- #comment-nav-below -->

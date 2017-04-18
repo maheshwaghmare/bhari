@@ -273,6 +273,7 @@
         &:focus,
         &:hover,
         &.current {
+            outline-offset: -2px;
             color: $white-color;
             background: $color__link;
         }

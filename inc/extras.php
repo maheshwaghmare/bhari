@@ -21,19 +21,19 @@ if ( ! function_exists( 'bhari_get_sidebar_layout' ) ) :
 		switch ( $layout ) {
 
 			case 'layout-sidebar-content' :
-						get_sidebar( 'left' );
-					break;
+				get_sidebar( 'left' );
+			break;
 
 			case 'layout-content-sidebar' :
-						get_sidebar(); // Default is right sidebar.
-					break;
+				get_sidebar(); // Default is right sidebar.
+			break;
 
 			case 'layout-content-sidebar-sidebar' :
 			case 'layout-sidebar-content-sidebar' :
 			case 'layout-sidebar-sidebar-content' :
-						get_sidebar( 'left' );
-						get_sidebar(); // Default is right sidebar.
-				break;
+				get_sidebar( 'left' );
+				get_sidebar(); // Default is right sidebar.
+			break;
 		}
 	}
 
@@ -52,15 +52,17 @@ if ( ! function_exists( 'bhari_get_option' ) ) :
 	 * @return mixed           Return the customizer setting stored value.
 	 */
 	function bhari_get_option( $key = '', $defaults = '' ) {
-		$options = apply_filters( 'bhari_theme_defaults_after_parse_args', wp_parse_args(
-			get_option( 'bhari', true ),
-			bhari_get_defaults()
-		) );
+		$options = apply_filters(
+			'bhari_theme_defaults_after_parse_args', wp_parse_args(
+				get_option( 'bhari', true ),
+				bhari_get_defaults()
+			)
+		);
 
 		if ( isset( $options[ $key ] ) ) {
-			return $options[ $key ];
+			   return $options[ $key ];
 		} else {
-			return $defaults;
+			 return $defaults;
 		}
 	}
 
@@ -74,7 +76,7 @@ if ( ! function_exists( 'bhari_body_class' ) ) :
 	/**
 	 * Add body classes
 	 *
-	 * @param  array $classes  List of classes.
+	 * @param  array $classes List of classes.
 	 * @return array          List of classes.
 	 */
 	function bhari_body_class( $classes ) {
@@ -89,15 +91,20 @@ if ( ! function_exists( 'bhari_body_class' ) ) :
 
 		switch ( $layout ) {
 
-			case 'layout-sidebar-content' : 		$classes[] = 'layout-sidebar-content'; break;
-			case 'layout-content-sidebar' : 		$classes[] = 'layout-content-sidebar'; break;
-			case 'layout-content-sidebar-sidebar' :	$classes[] = 'layout-content-sidebar-sidebar'; break;
-			case 'layout-sidebar-content-sidebar' :	$classes[] = 'layout-sidebar-content-sidebar'; break;
-			case 'layout-sidebar-sidebar-content' : $classes[] = 'layout-sidebar-sidebar-content'; break;
+			case 'layout-sidebar-content' :         $classes[] = 'layout-sidebar-content';
+			break;
+			case 'layout-content-sidebar' :         $classes[] = 'layout-content-sidebar';
+			break;
+			case 'layout-content-sidebar-sidebar' :    $classes[] = 'layout-content-sidebar-sidebar';
+			break;
+			case 'layout-sidebar-content-sidebar' :    $classes[] = 'layout-sidebar-content-sidebar';
+			break;
+			case 'layout-sidebar-sidebar-content' : $classes[] = 'layout-sidebar-sidebar-content';
+			break;
 			case 'layout-no-sidebar' :
 			default:
-					$classes[] = 'layout-no-sidebar';
-				break;
+				$classes[] = 'layout-no-sidebar';
+			break;
 		}
 
 		return $classes;
@@ -114,7 +121,7 @@ if ( ! function_exists( 'bhari_body_classes' ) ) :
 	/**
 	 * Adds custom classes to the array of body classes.
 	 *
-	 * @param array $classes Classes for the body element.
+	 * @param  array $classes Classes for the body element.
 	 * @return array
 	 */
 	function bhari_body_classes( $classes ) {

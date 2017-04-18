@@ -4,11 +4,11 @@ Theme URI: https://github.com/maheshwaghmare/bhari
 Author: Mahesh M. Waghmare
 Author URI: https://maheshwaghmare.wordpress.com/
 Description: Bhari is lightweight, responsive theme for bloggers who love to write articles, share awesome stuff etc.
-Version: 1.0.4.3
+Version: 1.0.4.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: bhari
-Tags: one-column, two-columns, three-columns, right-sidebar, left-sidebar, blog, custom-header, custom-background, custom-menu, custom-colors, threaded-comments, translation-ready, accessibility-ready, featured-images, theme-options, post-formats
+Tags: one-column, two-columns, three-columns, right-sidebar, left-sidebar, blog, custom-header, custom-background, custom-menu, custom-colors, threaded-comments, translation-ready, accessibility-ready, featured-images, theme-options, post-formats, flexible-header, editor-style, rtl-language-support
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -94,8 +94,8 @@ template {
 }
 
 a {
-  -webkit-transition: all ease-in-out 0.2s;
-  transition: all ease-in-out 0.2s;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
   text-decoration: none;
   background-color: transparent;
 }
@@ -209,6 +209,7 @@ input[type="submit"] {
   border-radius: 0;
 }
 
+select,
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -228,7 +229,7 @@ textarea {
   -webkit-border-radius: 0;
   border-radius: 0;
   line-height: normal;
-  padding: 1em;
+  padding: 0.5em 1em;
 }
 
 button[disabled],
@@ -511,6 +512,7 @@ input[type="reset"]:active,
 input[type="reset"]:focus,
 input[type="submit"]:active,
 input[type="submit"]:focus {
+  outline: thin dotted black;
   background: #293b4c;
   border-color: #293b4c;
 }
@@ -535,6 +537,40 @@ textarea {
   border: 1px solid #eaeaea;
 }
 
+input[type="text"]:hover, input[type="text"]:focus,
+input[type="email"]:hover,
+input[type="email"]:focus,
+input[type="url"]:hover,
+input[type="url"]:focus,
+input[type="password"]:hover,
+input[type="password"]:focus,
+input[type="search"]:hover,
+input[type="search"]:focus,
+input[type="number"]:hover,
+input[type="number"]:focus,
+input[type="tel"]:hover,
+input[type="tel"]:focus,
+input[type="range"]:hover,
+input[type="range"]:focus,
+input[type="date"]:hover,
+input[type="date"]:focus,
+input[type="month"]:hover,
+input[type="month"]:focus,
+input[type="week"]:hover,
+input[type="week"]:focus,
+input[type="time"]:hover,
+input[type="time"]:focus,
+input[type="datetime"]:hover,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:hover,
+input[type="datetime-local"]:focus,
+input[type="color"]:hover,
+input[type="color"]:focus,
+textarea:hover,
+textarea:focus {
+  color: #111;
+}
+
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="url"]:focus,
@@ -551,7 +587,8 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-  color: #111;
+  background: #f1f1f1;
+  outline: thin dotted;
 }
 
 select {
@@ -683,6 +720,56 @@ a:hover, a:active {
   }
 }
 
+/**
+ * Accessibility Menu
+ */
+.main-navigation ul.children.toggled-on,
+.main-navigation ul.sub-menu.toggled-on {
+  display: block;
+}
+
+.main-navigation .sub-menu a,
+.main-navigation .children a {
+  line-height: 3.5;
+}
+
+.main-navigation .sub-menu .page_item_has_children:after,
+.main-navigation .children .page_item_has_children:after,
+.main-navigation .menu-item-has-children:after {
+  left: 1em;
+}
+
+@media all and (max-width: 768px) {
+  .main-navigation ul.children,
+  .main-navigation ul.sub-menu {
+    display: none;
+  }
+}
+
+.dropdown-toggle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: transparent;
+}
+
+@media all and (min-width: 768px) {
+  .dropdown-toggle {
+    display: none;
+  }
+}
+
+.dropdown-toggle i {
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.dropdown-toggle.toggled-on i {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -693,6 +780,8 @@ a:hover, a:active {
   height: 1px;
   width: 1px;
   overflow: hidden;
+  word-wrap: normal !important;
+  /* May screen reader and browser combinations announce broken words as they would appear visually. */
 }
 
 .screen-reader-text:focus {
@@ -820,6 +909,7 @@ input.search-submit {
 }
 
 .search-form .search-field {
+  padding: 1em;
   width: 100%;
 }
 
@@ -1142,6 +1232,7 @@ input.search-submit {
 .nav-links > span:focus,
 .nav-links > span:hover,
 .nav-links > span.current {
+  outline-offset: -2px;
   color: #fff;
   background: #34495e;
 }
@@ -1344,6 +1435,7 @@ input.search-submit {
 }
 
 .single .tags-links > a:focus, .single .tags-links > a:hover {
+  outline-offset: -2px;
   background-color: #293b4c;
 }
 
@@ -1366,11 +1458,11 @@ input.search-submit {
  * Comments
  */
 .logged-in-as > a:last-child {
-  color: #f44336;
+  color: #b70000;
 }
 
 #cancel-comment-reply-link {
-  background: #F44336;
+  background: #34495e;
   color: #fff;
   font-size: 0.8rem;
   padding: 0.5em 1em;
@@ -1501,7 +1593,6 @@ input.search-submit {
 .link-caption {
   display: block;
   font-size: 0.9rem;
-  color: #8c8c8c;
 }
 
 .link-wrap {
@@ -1564,8 +1655,8 @@ input.search-submit {
 .entry-content a {
   border-bottom: 1px dotted;
   padding-bottom: 3px;
-  -webkit-transition: all ease-in-out 0.3s;
-  transition: all ease-in-out 0.3s;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
 }
 
 /**

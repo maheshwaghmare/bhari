@@ -93,7 +93,7 @@
 	 */
 	wp.customize( 'blogname', function( value ) {
 		value.bind( function( newval ) {
-			$( '.main-title a' ).html( newval );
+			$( '.site-title a' ).html( newval );
 		} );
 	} );
 
