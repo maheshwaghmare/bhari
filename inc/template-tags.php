@@ -234,8 +234,6 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 					if ( is_user_logged_in() ) {
 						$meta_edits  = $meta_args['meta']['edit_link']['before'];
 
-
-
 						$meta_edits .= '<span class="edit-link"><a href="' . esc_url( get_edit_post_link() ) . '" />';
 						$meta_edits .= sprintf( wp_kses( __( 'Edit <span class="screen-reader-text">%s</span>', 'bhari' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() );
 						$meta_edits .= '</span></a>';
