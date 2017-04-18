@@ -1121,7 +1121,7 @@ input.search-submit {
 
 .entry-content tt,
 .entry-content code {
-  background: #fffffc;
+  background: #f1f1f1;
   border: 1px solid #EEE;
   -webkit-border-radius: 3px;
   border-radius: 3px;
