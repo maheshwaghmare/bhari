@@ -16,3 +16,5 @@ bhari.zip
 # Avoid PHPCS report files
 phpcs-summary.log
 phpcs-full.log
+
+.editorconfig
