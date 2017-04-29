@@ -279,6 +279,12 @@
         }
     }
     
+    a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     a:focus .link-caption,
     a:hover .link-caption {
         color: $white-color;
