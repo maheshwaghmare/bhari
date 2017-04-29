@@ -1,4 +1,4 @@
-# Bhari Theme [![Build Status](https://travis-ci.org/maheshwaghmare/bhari.svg?branch=master)](https://travis-ci.org/maheshwaghmare/bhari)
+# Bhari Theme [![Build Status](https://travis-ci.org/maheshwaghmare/bhari.svg?branch=dev)](https://travis-ci.org/maheshwaghmare/bhari)
 
 Bhari is lightweight, responsive theme for bloggers who love to write articles, share awesome stuff etc.
 
