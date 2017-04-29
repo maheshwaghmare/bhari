@@ -742,6 +742,12 @@ a:hover, a:active {
   background: transparent;
 }
 
+@media all and (max-width: 768px) {
+  .dropdown-toggle {
+    padding: 0.6em 2em;
+  }
+}
+
 @media all and (min-width: 768px) {
   .dropdown-toggle {
     display: none;

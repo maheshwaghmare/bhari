@@ -753,6 +753,12 @@ a:hover, a:active {
   background: transparent;
 }
 
+@media all and (max-width: 768px) {
+  .dropdown-toggle {
+    padding: 0.6em 2em;
+  }
+}
+
 @media all and (min-width: 768px) {
   .dropdown-toggle {
     display: none;
@@ -1359,6 +1365,12 @@ input.search-submit {
   color: #fff;
 }
 
+@media screen and (max-width: 768px) {
+  .main-navigation a {
+    line-height: 3;
+  }
+}
+
 .main-navigation a:focus, .main-navigation a:hover {
   background-color: #293b4c;
 }
@@ -1618,6 +1630,17 @@ input.search-submit {
  */
 .post-password-form {
   text-align: center;
+}
+
+.post-password-form input[type="submit"] {
+  padding: 0.5em 3em;
+}
+
+@media screen and (max-width: 768px) {
+  .post-password-form input[type="submit"] {
+    margin-top: 1em;
+    width: 100%;
+  }
 }
 
 /**

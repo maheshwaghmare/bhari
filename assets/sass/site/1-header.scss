@@ -93,6 +93,9 @@
         line-height: 4;
         font-size: 1rem;
         color: $color__link-menu;
+        @media screen and (max-width: 768px) {
+            line-height: 3;
+        }
 
         &:focus,
         &:hover {

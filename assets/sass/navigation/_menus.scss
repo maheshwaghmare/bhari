@@ -131,6 +131,9 @@
     right: 0;
     top: 0;
     background: transparent;
+	@media all and ( max-width: 768px ) {
+		padding: 0.6em 2em;
+	}
 
 	@media all and ( min-width: 768px ) {
 		display: none;

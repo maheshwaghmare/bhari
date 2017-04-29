@@ -220,7 +220,16 @@
  */
 .post-password-form {
     text-align: center;
+    
+    input[type="submit"] {
+        padding: 0.5em 3em;
+        @media screen and (max-width: 768px) {
+            margin-top: 1em;
+            width: 100%;
+        }
+    }
 }
+
 
 /**
  * => Search
