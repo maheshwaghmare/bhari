@@ -10,7 +10,7 @@
 /**
  * Define constants
  */
-define('BHARI_VERSION', '1.0.4.5');
+define('BHARI_VERSION', '1.0.4.6');
 define('BHARI_URI', get_template_directory_uri());
 define('BHARI_DIR', get_template_directory());
 define('BHARI_SUPPORT_FONTAWESOME', true);

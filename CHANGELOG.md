@@ -1,5 +1,15 @@
 === CHANGELOG ===
 
+= 1.0.4.6 =
+* Enhancement : Updated site content line height from 2 with 1.8 which is nice for reading contents.
+* Enhancement : Decreased mobile menu line height from 4 with 3.
+* Enhancement : Updated <code> tag background color as per the body background color.
+* Enhancement : Added mobile toggle submenu support.
+* Enhancement : Highlighted outline for the pagination & meta tag links for better accessibility.
+* Fixed       : Next and previous link icon position issue.
+* Fixed       : Added padding for password protected post button.
+* Fixed       : All HTML & HTML5 input fields spacing spacing issues.
+
 = 1.0.4.5 =
 * Enhancement : Focus for inputs: E.g. https://qsnapnet.com/snaps/1djrdsqywuerk9
 * Enhancement : Focus for buttons: E.g. https://qsnapnet.com/snaps/pscegszcmamgf1o
