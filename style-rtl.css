@@ -1122,7 +1122,7 @@ input.search-submit {
  * Entry Content
  */
 .entry-content {
-  line-height: 2;
+  line-height: 1.8;
 }
 
 .entry-content tt,
