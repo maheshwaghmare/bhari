@@ -12,13 +12,14 @@ Bhari is lightweight, responsive theme for bloggers who love to write articles, 
 
 ### Documentation
 
-- <a href="https://github.com//maheshwaghmare/bhari/wiki">Home</a>
-- <a href="https://github.com//maheshwaghmare/bhari/wiki/Customization">Customization</a>
-- <a href="https://github.com//maheshwaghmare/bhari/wiki/Features">Features</a>
-- <a href="https://github.com//maheshwaghmare/bhari/wiki/Hooks-(-Actions-&amp;-Filters-)">Hooks ( Actions &amp; Filters )</a>
-- <a href="https://github.com//maheshwaghmare/bhari/wiki/Screenshots">Screenshots</a>
-- <a href="https://github.com/maheshwaghmare/bhari/wiki/Translation-Ready">Translation Ready ( Internationalization / I18N )</a>
-- <a href="https://github.com/maheshwaghmare/bhari/wiki/Video-Tutorials">Videos Tutorials</a>
+- <a href="https://github.com/maheshwaghmare/bhari/wiki" class="wiki-page-link">Home</a>
+- <a href="https://github.com/maheshwaghmare/bhari/wiki/Debugging" class="wiki-page-link">Debugging</a>
+- <a href="https://github.com/maheshwaghmare/bhari/wiki/Features" class="wiki-page-link">Features</a>
+- <a href="https://github.com/maheshwaghmare/bhari/wiki/Hooks-(-Actions-&amp;-Filters-)" class="wiki-page-link">Hooks ( Actions &amp; Filters )</a>
+- <a href="https://github.com/maheshwaghmare/bhari/wiki/Screenshots" class="wiki-page-link">Screenshots</a>
+- <a href="https://github.com/maheshwaghmare/bhari/wiki/Theme-Customizer" class="wiki-page-link">Theme Customizer</a>
+- <a href="https://github.com/maheshwaghmare/bhari/wiki/Translation-Ready" class="wiki-page-link">Translation Ready</a>
+- <a href="https://github.com/maheshwaghmare/bhari/wiki/Video-Tutorials" class="wiki-page-link">Video Tutorials</a>
 
 =======
 

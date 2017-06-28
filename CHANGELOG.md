@@ -3,7 +3,7 @@
 = 1.0.4.6 =
 * Enhancement : Updated site content line height from 2 with 1.8 which is nice for reading contents.
 * Enhancement : Decreased mobile menu line height from 4 with 3.
-* Enhancement : Updated <code> tag background color as per the body background color.
+* Enhancement : Updated &lt;code&gt; tag background color as per the body background color.
 * Enhancement : Added mobile toggle submenu support.
 * Enhancement : Highlighted outline for the pagination & meta tag links for better accessibility.
 * Fixed       : Next and previous link icon position issue.
