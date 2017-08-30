@@ -332,3 +332,8 @@ require BHARI_DIR . '/inc/customizer/customizer.php';
  * Load compatibility files for 3rd party plugins.
  */
 require BHARI_DIR . '/inc/compatibility/jetpack.php';
+
+/**
+ * Load compatibility files for 3rd party plugins.
+ */
+require BHARI_DIR . '/inc/features.php';
