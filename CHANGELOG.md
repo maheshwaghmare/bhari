@@ -1,5 +1,8 @@
 === CHANGELOG ===
 
+= 1.0.4.7 =
+* New : Added social shares for single post. To disable add filter `add_filter( 'bhari_social_shares', '__return_false' );` in child theme.
+
 = 1.0.4.6 =
 * Enhancement : Updated site content line height from 2 with 1.8 which is nice for reading contents.
 * Enhancement : Decreased mobile menu line height from 4 with 3.
