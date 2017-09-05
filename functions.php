@@ -10,7 +10,7 @@
 /**
  * Define constants
  */
-define('BHARI_VERSION', '1.0.4.6');
+define('BHARI_VERSION', '1.0.4.7');
 define('BHARI_URI', get_template_directory_uri());
 define('BHARI_DIR', get_template_directory());
 define('BHARI_SUPPORT_FONTAWESOME', true);
@@ -332,3 +332,8 @@ require BHARI_DIR . '/inc/customizer/customizer.php';
  * Load compatibility files for 3rd party plugins.
  */
 require BHARI_DIR . '/inc/compatibility/jetpack.php';
+
+/**
+ * Load compatibility files for 3rd party plugins.
+ */
+require BHARI_DIR . '/inc/features.php';
