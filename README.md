@@ -49,6 +49,70 @@ For more visit https://make.wordpress.org/polyglots/handbook/tools/other-transla
 
 =======
 
+> Below are some screenshots after **Bhari Theme** install & active for reference to see how post & pages are looking after theme install & activate.
+
+### Screenshots: 
+
+- <a href="https://github.com/maheshwaghmare/bhari/wiki/Screenshots/#single---page--post"> Single Post / Pages </a>
+- <a href="https://github.com/maheshwaghmare/bhari/wiki/Screenshots/#archive---category-month--author"> Archive Pages </a>
+- <a href="https://github.com/maheshwaghmare/bhari/wiki/Screenshots/#rtl"> RTL Support </a>
+
+-----
+
+#### Single - Page & Post
+
+-----
+
+<table>
+	<tr>
+		<td> <span style="text-align:center;"> Single Post </span> </td>
+		<td> <span style="text-align:center;"> Single Page </span> </td>
+	</tr>
+	<tr>
+		<td> <a target="_blank" href="http://i.imgur.com/eroIWCT.jpg" ><img src="http://i.imgur.com/eroIWCT.jpg" /> </a> </td>
+		<td> <a target="_blank" href="http://i.imgur.com/VSnC36H.jpg" ><img src="http://i.imgur.com/VSnC36H.jpg" /> </a> </td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<td> <span style="text-align:center;"> Page - 404 </span> </td>
+		<td> <span style="text-align:center;"> Page - Search </span> </td>
+	</tr>
+	<tr>
+		<td> <a target="_blank" href="http://i.imgur.com/qsgePPF.jpg" ><img src="http://i.imgur.com/qsgePPF.jpg" /> </a> </td>
+		<td> <a target="_blank" href="http://i.imgur.com/ebmXEXY.jpg" ><img src="http://i.imgur.com/ebmXEXY.jpg" /> </a> </td>
+	</tr>
+</table>
+
+-----
+
+#### Archive - Category, Month & Author
+
+-----
+
+<table>
+	<tr>
+		<td> <span style="text-align:center;"> Archive - Category </span> </td>
+		<td> <span style="text-align:center;"> Archive - Month </span> </td>
+		<td> <span style="text-align:center;"> Archive - Author </span> </td>
+	</tr>
+	<tr>
+		<td> <a target="_blank" href="http://i.imgur.com/qUPgIut.jpg" ><img src="http://i.imgur.com/qUPgIut.jpg" /> </a> </td>
+		<td> <a target="_blank" href="http://i.imgur.com/scKxnQ1.jpg" ><img src="http://i.imgur.com/scKxnQ1.jpg" /> </a> </td>
+		<td> <a target="_blank" href="http://i.imgur.com/XCOhM5l.jpg" ><img src="http://i.imgur.com/XCOhM5l.jpg" /> </a> </td>
+	</tr>
+</table>
+
+-----
+
+##### RTL
+
+@see [https://codex.wordpress.org/Right-to-Left_Language_Support](https://codex.wordpress.org/Right-to-Left_Language_Support)
+
+![http://i.imgur.com/VfB8BaU.jpg](http://i.imgur.com/VfB8BaU.jpg)
+
+
+
 ### Frequently Asked Questions
 
 - Does this theme support any plugins?
