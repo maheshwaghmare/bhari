@@ -60,7 +60,7 @@ if( ! class_exists('Bhari_Social_Shares') ) :
 		 * @since 1.0.4.7
 		 */
 		function scripts() {
-			wp_enqueue_style( 'bhari-social-shares-css', BHARI_URI . 'assets/css/social-shares.css' );
+			wp_enqueue_style( 'bhari-social-shares-css', BHARI_URI . '/assets/css/social-shares.css' );
 		}
 
 		/**
