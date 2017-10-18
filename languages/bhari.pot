@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Bhari 1.0.4.7\n"
+"Project-Id-Version: Bhari 1.0.4.8\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2017-09-04 18:35:52+00:00\n"
+"POT-Creation-Date: 2017-09-18 17:01:07+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -76,15 +76,15 @@ msgstr ""
 msgid "Primary"
 msgstr ""
 
-#: functions.php:152
+#: functions.php:161
 msgid "Right Sidebar"
 msgstr ""
 
-#: functions.php:154 functions.php:165
+#: functions.php:163 functions.php:174
 msgid "Add widgets here."
 msgstr ""
 
-#: functions.php:163
+#: functions.php:172
 msgid "Left Sidebar"
 msgstr ""
 
@@ -92,7 +92,7 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:53
+#: header.php:54
 msgid "Primary Menu"
 msgstr ""
 

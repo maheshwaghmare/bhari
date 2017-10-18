@@ -10,7 +10,7 @@
 /**
  * Define constants
  */
-define('BHARI_VERSION', '1.0.4.7');
+define('BHARI_VERSION', '1.0.4.8');
 define('BHARI_URI', get_template_directory_uri());
 define('BHARI_DIR', get_template_directory());
 define('BHARI_SUPPORT_FONTAWESOME', true);
@@ -110,23 +110,34 @@ if (! function_exists('bhari_setup') ) :
          */
         add_theme_support(
             'starter-content', array(
-            'widgets' => array(
-            'sidebar-1' => array(
-            'search',
-            'recent-posts',
-            'recent-comments',
-            'archives',
-            'categories',
-            'meta',
-            ),
-            'sidebar-2' => array(
-            'text_about',
-            'calendar',
-            'text_business_info',
-            ),
-            ),
+                'widgets' => array(
+                    'sidebar-1' => array(
+                        'search',
+                        'recent-posts',
+                        'recent-comments',
+                        'archives',
+                        'categories',
+                        'meta',
+                    ),
+                    'sidebar-2' => array(
+                        'text_about',
+                        'calendar',
+                        'text_business_info',
+                    ),
+                ),
             )
         );
+
+        /**
+         * Enable support for custom logo.
+         *
+         * @since 1.0.4.8
+         */
+        add_theme_support( 'custom-logo', array(
+            'height'      => 250,
+            'width'       => 250,
+            'flex-height' => true,
+        ) );
     }
 
     add_action('after_setup_theme', 'bhari_setup');

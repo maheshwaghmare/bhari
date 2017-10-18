@@ -1,5 +1,8 @@
 === CHANGELOG ===
 
+= 1.0.4.8 =
+* New : Added `add_theme_support( 'custom-logo' )` for custom site logo.
+
 = 1.0.4.7 =
 * New : Added social shares for single post. To disable add filter `add_filter( 'bhari_social_shares', '__return_false' );` in child theme.
 
