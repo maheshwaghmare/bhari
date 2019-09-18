@@ -1,5 +1,8 @@
 === CHANGELOG ===
 
+= 1.0.4.9 =
+* Remove : Removed social shares for single post which is plugin territory.
+
 = 1.0.4.8 =
 * New : Added `add_theme_support( 'custom-logo' )` for custom site logo.
 
