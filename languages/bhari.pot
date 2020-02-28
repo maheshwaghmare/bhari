@@ -2,7 +2,7 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Bhari 1.0.4.9\n"
+"Project-Id-Version: Bhari 1.0.5\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
 "POT-Creation-Date: 2017-10-18 09:27:46+00:00\n"
 "MIME-Version: 1.0\n"
@@ -277,7 +277,7 @@ msgid "Mahesh M. Waghmare"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https://maheshwaghmare.wordpress.com/"
+msgid "https://maheshwaghmare.com/"
 msgstr ""
 
 #: comments.php:33

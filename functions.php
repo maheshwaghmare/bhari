@@ -10,7 +10,7 @@
 /**
  * Define constants
  */
-define( 'BHARI_VERSION', '1.0.4.9' );
+define( 'BHARI_VERSION', '1.0.5' );
 define( 'BHARI_URI', get_template_directory_uri() );
 define( 'BHARI_DIR', get_template_directory() );
 define( 'BHARI_SUPPORT_FONTAWESOME', true );
@@ -55,39 +55,42 @@ if ( ! function_exists( 'bhari_setup' ) ) :
 		add_theme_support( 'title-tag' );
 
 		/*
-         * Enable support for Post Thumbnails on posts and pages.
-         *
-         * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-         */
+		 * Enable support for Post Thumbnails on posts and pages.
+		 *
+		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+		 */
 		add_theme_support( 'post-thumbnails' );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-			'primary' => esc_html__( 'Primary', 'bhari' ),
+				'primary' => esc_html__( 'Primary', 'bhari' ),
 			)
 		);
 
 		/*
-            * Switch default core markup for search form, comment form, and comments
-            * to output valid HTML5.
-            */
+			* Switch default core markup for search form, comment form, and comments
+			* to output valid HTML5.
+			*/
 		add_theme_support(
-			'html5', array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
+			'html5',
+			array(
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
 			)
 		);
 
 		// Set up the WordPress core custom background feature.
 		add_theme_support(
-			'custom-background', apply_filters(
-				'bhari_custom_background_args', array(
-				'default-color' => 'f1f1f1',
-				'default-image' => '',
+			'custom-background',
+			apply_filters(
+				'bhari_custom_background_args',
+				array(
+					'default-color' => 'f1f1f1',
+					'default-image' => '',
 				)
 			)
 		);
@@ -108,7 +111,8 @@ if ( ! function_exists( 'bhari_setup' ) ) :
 		 * Added starter content
 		 */
 		add_theme_support(
-			'starter-content', array(
+			'starter-content',
+			array(
 				'widgets' => array(
 					'sidebar-1' => array(
 						'search',
@@ -132,11 +136,14 @@ if ( ! function_exists( 'bhari_setup' ) ) :
 		 *
 		 * @since 1.0.4.8
 		 */
-		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
-			'flex-height' => true,
-		) );
+		add_theme_support(
+			'custom-logo',
+			array(
+				'height'      => 250,
+				'width'       => 250,
+				'flex-height' => true,
+			)
+		);
 	}
 
 	add_action( 'after_setup_theme', 'bhari_setup' );
@@ -156,24 +163,24 @@ if ( ! function_exists( 'bhari_widgets_init' ) ) :
 	function bhari_widgets_init() {
 		register_sidebar(
 			array(
-			'name'          => esc_html__( 'Right Sidebar', 'bhari' ),
-			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'bhari' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+				'name'          => esc_html__( 'Right Sidebar', 'bhari' ),
+				'id'            => 'sidebar-1',
+				'description'   => esc_html__( 'Add widgets here.', 'bhari' ),
+				'before_widget' => '<section id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</section>',
+				'before_title'  => '<h2 class="widget-title">',
+				'after_title'   => '</h2>',
 			)
 		);
 		register_sidebar(
 			array(
-			'name'          => esc_html__( 'Left Sidebar', 'bhari' ),
-			'id'            => 'sidebar-2',
-			'description'   => esc_html__( 'Add widgets here.', 'bhari' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+				'name'          => esc_html__( 'Left Sidebar', 'bhari' ),
+				'id'            => 'sidebar-2',
+				'description'   => esc_html__( 'Add widgets here.', 'bhari' ),
+				'before_widget' => '<section id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</section>',
+				'before_title'  => '<h2 class="widget-title">',
+				'after_title'   => '</h2>',
 			)
 		);
 	}
@@ -219,19 +226,19 @@ if ( ! function_exists( 'bhari_asset_url' ) ) :
 				$min_url       = '/assets/vendor/' . $type . '/' . $file_name . '.min.' . $type;
 				$unmin_url_rtl = '/assets/vendor/' . $type . '/rtl/' . $file_name . '-rtl.' . $type;
 				$min_url_rtl   = '/assets/vendor/' . $type . '/rtl/' . $file_name . '-rtl.min.' . $type;
-			break;
+				break;
 			case 'admin':
 				$unmin_url     = '/inc/assets/' . $type . '/' . $file_name . '.' . $type;
 				$min_url       = '/inc/assets/' . $type . '/min/' . $file_name . '.min.' . $type;
 				$unmin_url_rtl = '/inc/assets/' . $type . '/rtl/' . $file_name . '-rtl.' . $type;
 				$min_url_rtl   = '/inc/assets/' . $type . '/min/rtl/' . $file_name . '-rtl.min.' . $type;
-			break;
+				break;
 			default:
 				$unmin_url     = '/assets/' . $type . '/' . $file_name . '.' . $type;
 				$min_url       = '/assets/' . $type . '/min/' . $file_name . '.min.' . $type;
 				$unmin_url_rtl = '/assets/' . $type . '/rtl/' . $file_name . '-rtl.' . $type;
 				$min_url_rtl   = '/assets/' . $type . '/min/rtl/' . $file_name . '-rtl.min.' . $type;
-			break;
+				break;
 		}
 
 		// Load unminified assets.

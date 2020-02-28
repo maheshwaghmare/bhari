@@ -1,5 +1,8 @@
 === CHANGELOG ===
 
+= 1.0.5 =
+* Improvement: Updated WordPress 5.3 compatibility.
+
 = 1.0.4.9 =
 * Remove : Removed social shares for single post which is plugin territory.
 

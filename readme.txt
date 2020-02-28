@@ -1,7 +1,7 @@
 === Bhari ===
 Contributors: Mahesh901122
 Requires at least: 4.5
-Tested up to: 4.8.1
+Tested up to: 5.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, three-columns, right-sidebar, left-sidebar, blog, custom-header, custom-background, custom-menu, custom-colors, threaded-comments, translation-ready, accessibility-ready, featured-images, theme-options, post-formats
