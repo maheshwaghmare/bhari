@@ -18,20 +18,25 @@ if ( ! class_exists( 'Bhari_Social_Shares' ) ) :
 	 */
 	class Bhari_Social_Shares {
 
+		/**
+		 * Instance
+		 *
+		 * @var $instance
+		 */
 		private static $instance;
 
 		/**
-		 *  Initiator
+		 * Initiator
 		 */
 		public static function get_instance() {
 			if ( ! isset( self::$instance ) ) {
-				self::$instance = new self;
+				self::$instance = new self();
 			}
 			return self::$instance;
 		}
 
 		/**
-		 *  Constructor
+		 * Constructor
 		 */
 		public function __construct() {
 
@@ -44,7 +49,7 @@ if ( ! class_exists( 'Bhari_Social_Shares' ) ) :
 		 *
 		 * @since 1.0.4.7
 		 */
-		function social_shares() {
+		public function social_shares() {
 
 			if ( apply_filters( 'bhari_social_shares', true ) ) {
 				add_action( 'wp_enqueue_scripts', array( $this, 'scripts' ) );
@@ -59,8 +64,8 @@ if ( ! class_exists( 'Bhari_Social_Shares' ) ) :
 		 *
 		 * @since 1.0.4.7
 		 */
-		function scripts() {
-			wp_enqueue_style( 'bhari-social-shares-css', BHARI_URI . '/assets/css/social-shares.css' );
+		public function scripts() {
+			wp_enqueue_style( 'bhari-social-shares-css', BHARI_URI . '/assets/css/social-shares.css', 'bhari-core-css', BHARI_VERSION, 'all' );
 		}
 
 		/**
@@ -68,12 +73,12 @@ if ( ! class_exists( 'Bhari_Social_Shares' ) ) :
 		 *
 		 * @since 1.0.4.7
 		 */
-		function social_share_markup() {
+		public function social_share_markup() {
 
 			if ( is_single() ) {
 				?>
 				<div class="social-shares">
-					<h3> <?php _e( 'Share', 'bhari' ); ?> </h3>
+					<h3> <?php esc_html_e( 'Share', 'bhari' ); ?> </h3>
 					<ul>
 						<li><a target="_blank" href="<?php echo esc_url( 'https://www.facebook.com/sharer/sharer.php?u=' . get_the_permalink() ); ?>" class="facebook"><i class="fa fa-facebook"></i></a></li>
 						<li><a target="_blank" href="<?php echo esc_url( 'https://twitter.com/intent/tweet?url=' . get_the_permalink() . '&text=' . get_the_title() . '&via=' . site_url() ); ?>" class="twitter"><i class="fa fa-twitter"></i></a></li>

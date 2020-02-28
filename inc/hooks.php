@@ -24,7 +24,7 @@ function bhari_html_before() {
  * <head> top
  */
 function bhari_head_top() {
-	 do_action( 'bhari_head_top' );
+	do_action( 'bhari_head_top' );
 }
 
 /**
@@ -70,7 +70,7 @@ function bhari_header_before() {
  * Header after
  */
 function bhari_header_after() {
-	 do_action( 'bhari_header_after' );
+	do_action( 'bhari_header_after' );
 }
 
 /**
@@ -132,7 +132,7 @@ function bhari_entry_content_after() {
  * Entry content before
  */
 function bhari_entry_content_before() {
-	 do_action( 'bhari_entry_content_before' );
+	do_action( 'bhari_entry_content_before' );
 }
 
 /**
@@ -146,7 +146,7 @@ function bhari_entry_content_top() {
  * Entry content bottom
  */
 function bhari_entry_content_bottom() {
-	 do_action( 'bhari_entry_content_bottom' );
+	do_action( 'bhari_entry_content_bottom' );
 }
 
 /**
@@ -160,7 +160,7 @@ function bhari_entry_header_before() {
  * Entry header top
  */
 function bhari_entry_header_top() {
-	 do_action( 'bhari_entry_header_top' );
+	do_action( 'bhari_entry_header_top' );
 }
 
 /**
@@ -181,7 +181,7 @@ function bhari_entry_header_after() {
  * Bhari_entry_footer
  */
 function bhari_entry_footer() {
-	 do_action( 'bhari_entry_footer' );
+	do_action( 'bhari_entry_footer' );
 }
 
 /**
@@ -195,7 +195,7 @@ function bhari_entry_footer_before() {
  * Entry footer top
  */
 function bhari_entry_footer_top() {
-	 do_action( 'bhari_entry_footer_top' );
+	do_action( 'bhari_entry_footer_top' );
 }
 
 /**
@@ -216,7 +216,7 @@ function bhari_entry_footer_after() {
  * Content while before
  */
 function bhari_content_while_before() {
-	 do_action( 'bhari_content_while_before' );
+	do_action( 'bhari_content_while_before' );
 }
 
 /**
@@ -243,7 +243,7 @@ function bhari_footer_before() {
  * Footer after
  */
 function bhari_footer_after() {
-	 do_action( 'bhari_footer_after' );
+	do_action( 'bhari_footer_after' );
 }
 
 /**
@@ -297,7 +297,7 @@ function bhari_pagination_before() {
  * Pagination after
  */
 function bhari_pagination_after() {
-	 do_action( 'bhari_pagination_after' );
+	do_action( 'bhari_pagination_after' );
 }
 
 /**
@@ -310,7 +310,7 @@ function bhari_pagination_after() {
  * Comments template before
  */
 function bhari_comments_template_before() {
-	 do_action( 'bhari_comments_template_before' );
+	do_action( 'bhari_comments_template_before' );
 }
 
 /**

@@ -144,10 +144,7 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 				 * Date Meta
 				 */
 				case 'author':
-					$byline       = sprintf( // WPCS: XSS OK.
-						esc_html_x( '%s ', 'post author', 'bhari' ),
-						'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-					);
+					$byline       = '<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>';
 					$meta_author  = $meta_args['meta']['author']['before'];
 					$meta_author .= '<span class="byline">' . $byline . '</span>';
 					$meta_author .= $meta_args['meta']['author']['after'];
@@ -172,10 +169,7 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 						esc_html( get_the_modified_date() )
 					);
 
-					$posted_on = sprintf( // WPCS: XSS OK.
-						esc_html_x( '%s ', 'post date', 'bhari' ),
-						'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-					);
+					$posted_on = '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
 
 					$meta_date  = $meta_args['meta']['date']['before'];
 					$meta_date .= '<span class="posted-on">' . $posted_on . '</span>';
@@ -196,7 +190,7 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 					if ( $categories_list && bhari_categorized_blog() ) {
 
 						$meta_category  = $meta_args['meta']['category']['before'];
-						$meta_category .= sprintf( '<span class="cat-links"> ' . esc_html__( '%1$s ', 'bhari' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+						$meta_category .= '<span class="cat-links"> ' . wp_kses_post( $categories_list ) . '</span>';
 						$meta_category .= $meta_args['meta']['category']['after'];
 
 						// Set category meta.
@@ -214,8 +208,9 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 					$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'Comma separator for tags.', 'bhari' ) );
 
 					if ( $tags_list ) {
-						$meta_tags  = $meta_args['meta']['tag']['before'];
-						$meta_tags .= sprintf( '<span class="tags-links"> ' . esc_html_x( '%1$s ', 'Tag title.', 'bhari' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+						$meta_tags = $meta_args['meta']['tag']['before'];
+						/* translators: %1$s is edit tag links. */
+						$meta_tags .= '<span class="tags-links"> ' . wp_kses_post( $tags_list ) . '</span>';
 						$meta_tags .= $meta_args['meta']['tag']['after'];
 
 						// Set tag meta.
@@ -234,6 +229,7 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 						$meta_edits = $meta_args['meta']['edit_link']['before'];
 
 						$meta_edits .= '<span class="edit-link"><a href="' . esc_url( get_edit_post_link() ) . '" />';
+						/* translators: %s is edit post title. */
 						$meta_edits .= sprintf( wp_kses( __( 'Edit <span class="screen-reader-text">%s</span>', 'bhari' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() );
 						$meta_edits .= '</span></a>';
 						$meta_edits .= $meta_args['meta']['edit_link']['after'];
@@ -251,11 +247,11 @@ if ( ! function_exists( 'bhari_post_meta' ) ) :
 		 */
 		if ( $echo ) {
 
-			echo $before;
+			echo wp_kses_post( $before );
 
-			echo join( $meta_args['meta-separator'], $meta_data );
+			echo wp_kses_post( join( $meta_args['meta-separator'], $meta_data ) );
 
-			echo $after;
+			echo wp_kses_post( $after );
 
 		} else {
 
@@ -279,7 +275,7 @@ if ( ! function_exists( 'bhari_entry_footer_contents' ) ) :
 
 			$edit_icon = ( BHARI_SUPPORT_FONTAWESOME ) ? '<i class="fa fa-comments" aria-hidden="true"></i> ' : '';
 			echo '<span class="comments-link"> ';
-			echo $edit_icon;
+			echo wp_kses_post( $edit_icon );
 
 			/* translators: %s: post title */
 			comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'bhari' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
@@ -326,7 +322,9 @@ if ( ! function_exists( 'bhari_categorized_blog' ) ) :
 	 */
 	function bhari_categorized_blog() {
 
-		if ( false === ( $all_the_cool_cats = get_transient( 'bhari_categories' ) ) ) {
+		$all_the_cool_cats = get_transient( 'bhari_categories' );
+
+		if ( false === $all_the_cool_cats ) {
 
 			// Create an array of all the categories that are attached to posts.
 			$all_the_cool_cats = get_categories(
