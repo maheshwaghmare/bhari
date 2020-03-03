@@ -60,9 +60,9 @@ if ( ! function_exists( 'bhari_get_option' ) ) :
 		);
 
 		if ( isset( $options[ $key ] ) ) {
-			   return $options[ $key ];
+			return $options[ $key ];
 		} else {
-			  return $defaults;
+			return $defaults;
 		}
 	}
 

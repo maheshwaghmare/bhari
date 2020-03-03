@@ -8,7 +8,7 @@
 /**
  * Set default options
  */
-if (! function_exists('bhari_get_defaults') ) :
+if ( ! function_exists('bhari_get_defaults') ) :
 
     /**
      * Set default options
