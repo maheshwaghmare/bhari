@@ -21,42 +21,42 @@ Bhari is distributed under the terms of the GNU GPL
 ```
 > Done. Added the above copyrights into the readme.txt and style.css file.
 
-Errors and warnings not related to file checks.
+# Errors and warnings not related to file checks.
 
+```
 ERROR: Themes are required to add wp_body_open() immediately after the tag. See https://make.wordpress.org/themes/2019/03/29/addition-of-new-wp_body_open-hook/
-I suspect you have un-minimized and minimized versions of your js and css files, but they appear in different directorie? Please go through the WARNING's below and let me know.
+```
+> Added missing `wp_body_open()` hook immediately after the `<body>` tag.
+
+```
+I suspect you have un-minimized and minimized versions of your js and css files, but they appear in different directories? Please go through the WARNING's below and let me know.
 
 FILE: bhari\assets\css\min\rtl\style.min-rtl.css
-line 1, WARNING, File appears to be minified and cannot be processed. The non-minified file must be included too, preferably in the same folder as the minified one. If you are supplying accepted development files such as less files, you can ignore this warning. Also ignore if you have supplied the unminified version in a separate file.
-
 FILE: bhari\assets\css\min\style.min.css
-line 1, WARNING, File appears to be minified and cannot be processed. The non-minified file must be included too, preferably in the same folder as the minified one. If you are supplying accepted development files such as less files, you can ignore this warning. Also ignore if you have supplied the unminified version in a separate file.
-
 FILE: bhari\assets\js\min\style.min.js
-line 1, WARNING, File appears to be minified and cannot be processed. The non-minified file must be included too, preferably in the same folder as the minified one. If you are supplying accepted development files such as less files, you can ignore this warning. Also ignore if you have supplied the unminified version in a separate file.
-
-FILE: bhari\functions.php
-line 135, ERROR, add_theme_support() for custom-logo used but not found in tags list in style.css
-
 FILE: bhari\inc\assets\css\min\customizer-control-slider.min.css
-line 1, WARNING, File appears to be minified and cannot be processed. The non-minified file must be included too, preferably in the same folder as the minified one. If you are supplying accepted development files such as less files, you can ignore this warning. Also ignore if you have supplied the unminified version in a separate file.
-
 FILE: bhari\inc\assets\css\min\jquery-ui-structure.min.css
-line 1, WARNING, File appears to be minified and cannot be processed. The non-minified file must be included too, preferably in the same folder as the minified one. If you are supplying accepted development files such as less files, you can ignore this warning. Also ignore if you have supplied the unminified version in a separate file.
-
 FILE: bhari\inc\assets\css\min\jquery-ui-theme.min.css
-line 1, WARNING, File appears to be minified and cannot be processed. The non-minified file must be included too, preferably in the same folder as the minified one. If you are supplying accepted development files such as less files, you can ignore this warning. Also ignore if you have supplied the unminified version in a separate file.
-
 FILE: bhari\inc\assets\js\min\customizer-control-slider.min.js
-line 1, WARNING, File appears to be minified and cannot be processed. The non-minified file must be included too, preferably in the same folder as the minified one. If you are supplying accepted development files such as less files, you can ignore this warning. Also ignore if you have supplied the unminified version in a separate file.
-
 FILE: bhari\inc\assets\js\min\customizer.min.js
-line 1, WARNING, File appears to be minified and cannot be processed. The non-minified file must be included too, preferably in the same folder as the minified one. If you are supplying accepted development files such as less files, you can ignore this warning. Also ignore if you have supplied the unminified version in a separate file.
-line 146, ERROR, Strings should have translatable content
-line 174, ERROR, Strings should have translatable content
-line 198, ERROR, Strings should have translatable content
-line 218, ERROR, Strings should have translatable content
+```
+> Yes. We have created the separate directories for RTL and minified files to keep the clean development `css` and `js` directories.
 
+If this is required then We'll do it.
+
+If this is recommended then We'll do it in next release.
+
+```
 FILE: bhari\style.css
 line 11, WARNING, Found accessibility-ready tag in style.css file. Please make sure your theme is accessible ready or remove the tag. A second review will be required. @poena not sure if this required here but thought I would ping you just in case.
 line 11, ERROR, post-formats exists in the style.css tags list but it appears this feature is not supported.
+```
+
+> Removed tag `post-formats` from style.css file.
+
+```
+FILE: bhari\functions.php
+line 135, ERROR, add_theme_support() for custom-logo used but not found in tags list in style.css
+```
+
+> Added missing `custom-logo` tag.
