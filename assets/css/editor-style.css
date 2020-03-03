@@ -83,6 +83,7 @@ template {
 }
 
 a {
+  -webkit-transition: all ease 0.3s;
   transition: all ease 0.3s;
   text-decoration: none;
   background-color: transparent;
@@ -149,6 +150,8 @@ figure {
 }
 
 hr {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -191,6 +194,7 @@ input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
   border: none;
+  -webkit-border-radius: 0;
   border-radius: 0;
 }
 
@@ -211,6 +215,7 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
+  -webkit-border-radius: 0;
   border-radius: 0;
   line-height: normal;
   padding: 0.5em 1em;
@@ -233,6 +238,8 @@ input {
 
 input[type="checkbox"],
 input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
 }
@@ -349,6 +356,8 @@ big {
 # Elements
 --------------------------------------------------------------*/
 html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -362,6 +371,8 @@ html {
 *:before,
 *:after {
   /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
   box-sizing: inherit;
 }
 
@@ -744,10 +755,13 @@ a:hover, a:active {
 }
 
 .dropdown-toggle i {
+  -webkit-transition: all ease 0.3s;
   transition: all ease 0.3s;
 }
 
 .dropdown-toggle.toggled-on i {
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
   transform: rotate(-180deg);
 }
 
@@ -767,6 +781,7 @@ a:hover, a:active {
 
 .screen-reader-text:focus {
   background-color: #f1f1f1;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
   clip: auto !important;
   color: #21759b;
@@ -942,5 +957,6 @@ body {
 a {
   border-bottom: 1px dotted;
   padding-bottom: 3px;
+  -webkit-transition: all ease 0.3s;
   transition: all ease 0.3s;
 }

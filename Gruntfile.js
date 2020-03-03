@@ -4,8 +4,9 @@ module.exports = function (grunt) {
     /**
      * Project configuration
      */
-    var autoprefixer = require('autoprefixer');
-    var flexibility = require('postcss-flexibility');
+    const autoprefixer = require('autoprefixer');
+    const sass = require('node-sass');
+    const flexibility = require('postcss-flexibility');
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -61,8 +62,10 @@ module.exports = function (grunt) {
          */
         sass: {
             options: {
+                implementation: sass,
                 sourcemap: 'none',
-                outputStyle: 'expanded'
+                outputStyle: 'expanded',
+                linefeed: 'lf',
             },
             dist: {
                 files: [
