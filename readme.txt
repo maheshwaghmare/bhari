@@ -22,7 +22,7 @@ Bhari is lightweight, responsive theme for bloggers who love to write articles, 
 
 == Copyright ==
 
-Bhari WordPress Theme, Copyright 2017 WordPress.org
+Bhari WordPress Theme, Copyright (C) 2020, Mahesh M. Waghmare
 Bhari is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify

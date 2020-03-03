@@ -1,0 +1,62 @@
+Theme Review - Bhari Version 1.0.5
+review of theme not updated in more than 2 years.
+
+# License and Readme Checks.
+
+```
+ERROR: Theme Name must be included in the header of the readme.text file. Please see https://make.wordpress.org/themes/handbook/review/required/#readme-txt-file.* Please ignore this ERROR, your theme name is fine.
+```
+> Yes. Theme name is fine so not have any change related this.
+
+```
+ERROR: Requires PHP minimum version must be included in the header of the readme.text file. Please see https://make.wordpress.org/themes/handbook/review/required/#readme-txt-file.
+```
+> Added minimum PHP version into the readme.txt file.
+
+```
+ERROR: The the author you listed in your style.css file header should be the same as the copyright author in the License Declaration. Also consider putting the License declaration in your style.css, readme.txt and readme.ms (if you have one). The following format is recommended:
+
+Bhari WordPress Theme, Copyright (C) YYYY, Mahesh M. Waghmare
+Bhari is distributed under the terms of the GNU GPL
+```
+> Done. Added the above copyrights into the readme.txt and style.css file.
+
+Errors and warnings not related to file checks.
+
+ERROR: Themes are required to add wp_body_open() immediately after the tag. See https://make.wordpress.org/themes/2019/03/29/addition-of-new-wp_body_open-hook/
+I suspect you have un-minimized and minimized versions of your js and css files, but they appear in different directorie? Please go through the WARNING's below and let me know.
+
+FILE: bhari\assets\css\min\rtl\style.min-rtl.css
+line 1, WARNING, File appears to be minified and cannot be processed. The non-minified file must be included too, preferably in the same folder as the minified one. If you are supplying accepted development files such as less files, you can ignore this warning. Also ignore if you have supplied the unminified version in a separate file.
+
+FILE: bhari\assets\css\min\style.min.css
+line 1, WARNING, File appears to be minified and cannot be processed. The non-minified file must be included too, preferably in the same folder as the minified one. If you are supplying accepted development files such as less files, you can ignore this warning. Also ignore if you have supplied the unminified version in a separate file.
+
+FILE: bhari\assets\js\min\style.min.js
+line 1, WARNING, File appears to be minified and cannot be processed. The non-minified file must be included too, preferably in the same folder as the minified one. If you are supplying accepted development files such as less files, you can ignore this warning. Also ignore if you have supplied the unminified version in a separate file.
+
+FILE: bhari\functions.php
+line 135, ERROR, add_theme_support() for custom-logo used but not found in tags list in style.css
+
+FILE: bhari\inc\assets\css\min\customizer-control-slider.min.css
+line 1, WARNING, File appears to be minified and cannot be processed. The non-minified file must be included too, preferably in the same folder as the minified one. If you are supplying accepted development files such as less files, you can ignore this warning. Also ignore if you have supplied the unminified version in a separate file.
+
+FILE: bhari\inc\assets\css\min\jquery-ui-structure.min.css
+line 1, WARNING, File appears to be minified and cannot be processed. The non-minified file must be included too, preferably in the same folder as the minified one. If you are supplying accepted development files such as less files, you can ignore this warning. Also ignore if you have supplied the unminified version in a separate file.
+
+FILE: bhari\inc\assets\css\min\jquery-ui-theme.min.css
+line 1, WARNING, File appears to be minified and cannot be processed. The non-minified file must be included too, preferably in the same folder as the minified one. If you are supplying accepted development files such as less files, you can ignore this warning. Also ignore if you have supplied the unminified version in a separate file.
+
+FILE: bhari\inc\assets\js\min\customizer-control-slider.min.js
+line 1, WARNING, File appears to be minified and cannot be processed. The non-minified file must be included too, preferably in the same folder as the minified one. If you are supplying accepted development files such as less files, you can ignore this warning. Also ignore if you have supplied the unminified version in a separate file.
+
+FILE: bhari\inc\assets\js\min\customizer.min.js
+line 1, WARNING, File appears to be minified and cannot be processed. The non-minified file must be included too, preferably in the same folder as the minified one. If you are supplying accepted development files such as less files, you can ignore this warning. Also ignore if you have supplied the unminified version in a separate file.
+line 146, ERROR, Strings should have translatable content
+line 174, ERROR, Strings should have translatable content
+line 198, ERROR, Strings should have translatable content
+line 218, ERROR, Strings should have translatable content
+
+FILE: bhari\style.css
+line 11, WARNING, Found accessibility-ready tag in style.css file. Please make sure your theme is accessible ready or remove the tag. A second review will be required. @poena not sure if this required here but thought I would ping you just in case.
+line 11, ERROR, post-formats exists in the style.css tags list but it appears this feature is not supported.
