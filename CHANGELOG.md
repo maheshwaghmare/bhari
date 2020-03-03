@@ -1,6 +1,9 @@
 === CHANGELOG ===
 
 = 1.0.5 =
+* Improvement: Added minimum PHP version requirement.
+* Improvement: Added hook `wp_body_open()` immediately after the `<body>` tag.
+* Improvement: Missing theme tag `custom-logo` in style.css.
 * Improvement: Updated WordPress 5.3 compatibility.
 
 = 1.0.4.9 =
