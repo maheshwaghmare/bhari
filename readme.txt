@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, three-columns, right-sidebar, left-sidebar, blog, custom-header, custom-background, custom-menu, custom-colors, threaded-comments, translation-ready, accessibility-ready, featured-images, theme-options, custom-logo
 Requires PHP: 5.3
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 
 Bhari is simple theme for bloggers.
 
